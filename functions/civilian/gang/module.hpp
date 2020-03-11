@@ -1,0 +1,20 @@
+class Gang {
+    class create {};
+    class invite {};
+    class join {};
+    class kick {};
+    class leave {};
+    class list {};
+    class lock {};
+    class manage {};
+    class members {};
+    class name {};
+    class new {};
+    class open {};
+    class rank {};
+    class rename {};
+    class setRank {};
+    class refresh {};
+    class init {};
+    class getMembers {};
+};

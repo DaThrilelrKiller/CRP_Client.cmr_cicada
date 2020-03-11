@@ -1,0 +1,42 @@
+﻿
+whitelist_data = [
+["Developer","SwagDevs",{SwagDevs}],
+["Senior Administrator","adminlevel4",{SwagDevs or adminlevel4}],
+["Administrator","adminlevel3",{SwagDevs or adminlevel4}],
+["Moderator","adminlevel2",{SwagDevs or adminlevel4}],
+
+["Chief of Police","Chief_ID",{SwagDevs}],
+["Police Captain","Cpt_id",{SwagDevs}],
+["Police Lieutenant","Lt_id",{SwagDevs}],
+["Sergeant","Sgt_id",{SwagDevs}],
+["Corporal","Cpl_id",{SwagDevs  or Cpt_id or Lt_id}],
+["Senior Patrol Officer","PO3_id",{SwagDevs  or Cpt_id or Lt_id}],
+["Patrol Officer","PO2_id",{SwagDevs  or Cpt_id or Lt_id}],
+["Rookie Patrol Officer","PO1_id",{SwagDevs  or Cpt_id or Lt_id}],
+
+["K-9 Officer","K9_id",{SwagDevs  or Cpt_id or Lt_id}],
+["Police Avation","PDAviation_id",{SwagDevs  or Cpt_id or Lt_id}],
+["S.W.A.T","SWAT_id",{SwagDevs  or Cpt_id or Lt_id}],
+["Coast Guard","CoastGuard_id",{SwagDevs  or Cpt_id or Lt_id}],
+["Undercover","Undercover_id",{SwagDevs  or Cpt_id or Lt_id}],
+["D.O.C","DOC_id",{SwagDevs  or Cpt_id or Lt_id}],
+["Highway Patrol","HWP_id",{SwagDevs  or Cpt_id or Lt_id}],
+
+["EMS Chief","EMSChiefs_id",{SwagDevs}],
+["EMS Command","EMSCommand_id",{SwagDevs or EMSChiefs_id}],
+["EMS Supervisor","EMSSupervisor_id",{SwagDevs or EMSChiefs_id or EMSCommand_id}],
+["EMS Avation","EMSAirUnit_id",{SwagDevs or EMSChiefs_id or EMSCommand_id}],
+["Firefighter I","FF2_id",{SwagDevs or EMSChiefs_id or EMSCommand_id}],
+["Firefighter II","FF1_id",{SwagDevs or EMSChiefs_id or EMSCommand_id}],
+["Paramedic","EMTAdavnced_id",{SwagDevs or EMSChiefs_id or EMSCommand_id}],
+["Advanced EMT","EMTBasic_id",{SwagDevs or EMSChiefs_id or EMSCommand_id}]
+
+];
+
+tag_default = "data\images\tags\member";
+tag_default_icon = "member";
+dtk_tags = [
+"Developer",
+"Administrator",
+"Moderator"
+];

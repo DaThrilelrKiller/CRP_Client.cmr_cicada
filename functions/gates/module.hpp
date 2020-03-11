@@ -1,0 +1,3 @@
+class Gates {
+    class init {};
+};

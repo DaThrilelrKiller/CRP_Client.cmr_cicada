@@ -1,0 +1,3 @@
+class Gas {
+    class fix {};
+};

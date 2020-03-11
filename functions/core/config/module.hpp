@@ -1,0 +1,21 @@
+class Config {
+    class array {};
+    class buycost {};
+    class class {};
+    class code {};
+    class displayname {};
+    class dropable {};
+    class giveable {};
+    class illegal {};
+    class kind {};
+    class licence2 {};
+    class license1 {};
+    class looseable {};
+    class name {};
+    class sellcost {};
+    class storage {};
+    class type {};
+    class weight {};
+    class classtoname {};
+    class image {};
+};

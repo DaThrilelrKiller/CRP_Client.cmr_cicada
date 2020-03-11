@@ -1,0 +1,3 @@
+class Drugs {
+    class init {};
+};

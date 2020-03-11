@@ -1,0 +1,9 @@
+﻿dtk_house_actions = [
+["Storage",{[BuildingCollapesLogic]call storage_trunk;}],
+["Gear",{[BuildingCollapesLogic]call gear_open}],
+["Lock/Unlock",{[player,dtk_home_mrk]call house_lock}],
+["Garage",{call stats_RetriveVehicleLand}],
+["Save Nearby Vehicle",{call stats_SaveVehicle; closeDialog 0}]
+];
+
+dtk_houseLimit = 2;

@@ -1,0 +1,26 @@
+﻿module_admin = true;
+admin_move_obj = objNull;
+admin_handler_running = false;
+admin_selected = 2;
+dtk_sound_preview = true;
+dtk_source = objNull;
+
+
+admin_actions = [
+"Delete",
+"Teleport",
+"Console",
+"Move",
+"Inventory",
+"Licenses",
+"Vehicles",
+"Logs",
+"Spectate",
+"Camera",
+"Revive",
+"Clothing",
+"Sounds"
+];
+
+
+v_admin_recents = profileNameSpace getVariable ["v_admin_recents",[]];

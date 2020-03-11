@@ -1,0 +1,1 @@
+﻿(getNumber (configFile >> "CfgVehicles" >> (typeOf (_this select 0)) >> "attendant") == 1)

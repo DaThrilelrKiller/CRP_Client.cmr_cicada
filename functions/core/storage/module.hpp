@@ -1,0 +1,19 @@
+class Storage {
+    class add {};
+    class array {};
+    class set {};
+    class todialog {};
+    class amount {};
+    class kg {};
+    class maxkg {};
+    class remove {};
+    class setAmount {};
+    class trunk {};
+    class move {};
+    class isNumber {};
+    class dropall {};
+    class RemoveKind {};
+    class seach {};
+    class RemoveIllegal {};
+    class money {};
+};
