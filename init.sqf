@@ -12,7 +12,7 @@ if (isNil "server_auth" && {dtk_client})then {
 
 waitUntil {(!isNull player && {!isNull(findDisplay 46)}) or dtk_server}; 
 
-startLoadingScreen ["","dtk_loading"]; 
+startLoadingScreen ["Loading Crimson Roleplay Client","dtk_loading"]; 
 
 /* Go ahead and figure out what side the player is on */
 if (dtk_client)then {
@@ -22,6 +22,8 @@ if (dtk_client)then {
 		if (playerSide == west)exitWith {"PD"};
 		"unknown"
 	};
+
+startLoadingScreen ["Loading Side Variables","dtk_loading"]; 
 call compile preprocessFile format ['configuration\sidevariables\%1variables.sqf',dtk_side];
 };
 
@@ -30,6 +32,7 @@ call compile preprocessFile "functions\post_init.sqf";
 
 
 if (dtk_client) then {
+	startLoadingScreen ["Loading Actions","dtk_loading"]; 
 	[] execVM "scripts\shopfarmfaclicenseactions.sqf";
 	call compile preprocessFile format ['actions\%1actions.sqf',dtk_side];
 	call compile preprocessFile 'actions\actions.sqf';

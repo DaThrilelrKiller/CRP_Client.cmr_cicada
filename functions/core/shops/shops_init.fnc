@@ -2,6 +2,8 @@
 
 private ["_data","_img","_text","_color","_shop"];
 
+startLoadingScreen ["Loading Shops","dtk_loading"]; 
+
 {
 	_shop = _x select 0;	
 	if (!isNil "_shop")then {	

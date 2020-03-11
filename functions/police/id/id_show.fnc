@@ -12,22 +12,21 @@ Prams:
 	0. Use -Default for all items
 */
 
-private ["_art"];
+private ["_art","_unit","_data","_Month","_Day","_Year","_Face"];
 _art = _this select 0;
 
 if ((typeName _art) == "STRING")then
 {
-	format['if (player distance %1 < 5 or player == %1)then {[%1]call id_show;};',player]call network_broadcast;
+	format['if (player distance %1 < 5 or player == %1)then {[%1,%2] call id_show;};',player,dtk_dob]call network_broadcast;
 }
 else
 {
-	_PlayerIDSettings = _art getVariable "PlayerSettings";
-	_PlayerSide = _PlayerIDSettings select 1;
-	_Array = _PlayerIDSettings select 0;
-	_Face = _Array select 0;
-	_Month = _Array select 1;
-	_Day = _Array select 2;
-	_Year = _Array select 3;
+	_data = _this select 1;
+	
+	_Month = _data select 0;
+	_Day = _data select 1;
+	_Year = _data select 2;
+	_Face = _data select 3;
 	
 	private ["_ui","_FaceUI"];
 	disableSerialization;
@@ -35,12 +34,13 @@ else
 
 	_ui = uiNameSpace getVariable "IDCard";
 	_background = _ui displayCtrl 1201;
-	_FaceUI = _ui displayCtrl 1202;
+	_FaceUI = _ui displayCtrl 1404;
 	_Name = _ui displayCtrl 1400;
 	_Idnum = _ui displayCtrl 1402;
 	_rank = _ui displayCtrl 1403;
 	_dob = _ui displayCtrl 1401;
 
+	_FaceUI ctrlSetText format["\crp_data\images\faces\%1.pac",_Face];
 	_Name ctrlSetText format["%1",name _art];
 	_Idnum ctrlSetText format["%1",getPlayerUID _art];
 	_rank ctrlSetText format["%1","n/a"];

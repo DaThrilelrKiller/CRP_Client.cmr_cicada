@@ -6,6 +6,4 @@ dtk_cam cameraEffect ["internal", "back"];
 dtk_cam camSetFOV 0.700;
 dtk_cam camCommit 0;
 
-dtk_nation = ["North","South"]call bis_SelectRandom;
-
 []spawn spawn_openMenu;

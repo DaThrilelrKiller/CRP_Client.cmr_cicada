@@ -1,5 +1,7 @@
 ﻿private ["_units","_find"];
 
+startLoadingScreen ["Loading Network System","dtk_loading"]; 
+
 _units = call core_units;
 _units set [count _units,"server"];
 _find = if (isServer)then {"server"}else{str player};

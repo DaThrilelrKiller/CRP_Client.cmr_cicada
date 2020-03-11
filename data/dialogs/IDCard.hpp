@@ -70,5 +70,15 @@ class IDCard
 			sizeEx = 0.055;
 			
 		};
+		class face : RscPicture 
+		{
+			idc = 1404;
+			x = safeZoneX + safeZoneW * 0.069375;
+			y = safeZoneY + safeZoneH * 0.17111112;
+			w = safeZoneW * 0.09;
+			h = safeZoneH * 0.17333334;
+			text = "";
+			
+		};
 	};
 };

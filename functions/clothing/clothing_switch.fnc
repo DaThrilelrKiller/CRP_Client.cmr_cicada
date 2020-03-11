@@ -46,14 +46,8 @@ player addEventHandler ["fired", { _this call setup_fired;}];
 
 {player addWeapon _x}count _oldweapons;
 {player addMagazine _x} count _oldmags;
-
-_PlayerSettings = [profileNamespace getVariable "tickleme",dtk_side];
-player setVariable ["PlayerSettings",_PlayerSettings, true];
 player setVariable ["dtk_tag",_tag,true];
 
-_face = (_PlayerSettings select 0);
-player setVehicleInit format["this setFace '%1';", _face];
-processInitCommands;
 ["ALL",player,{_this addaction ["","noscript.sqf",format['%1 call core_interact;',_this],25,false,true,"LeanRight",format["player distance _target < 5 && {!([_target,'Interact (E)','%1']call tag_show)}",player getVariable ["dtk_tag",tag_default]]];},false,false]call network_MPExec;
 	
 call gps_diary;

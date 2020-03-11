@@ -1,4 +1,6 @@
 
+startLoadingScreen ["Loading Housing System","dtk_loading"]; 
+
 if (dtk_server)exitWith {};
 
 {

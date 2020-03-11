@@ -685,3 +685,99 @@ class test_map
 	};
 };
 
+
+class dtk_infomation
+{
+	idd = 1601;
+	movingEnable = false;
+	objects[] = {};
+	onLoad = "_this call display_keypress";
+	
+	class ControlsBackground
+	{
+		class RscPicture_1200 : RscBackground 
+		{
+			idc = -1;
+			x = 0.00206971;
+			y = 0.00354552;
+			w = 0.99539;
+			h = 0.992435;
+		};
+		class RscPicture_1201 : Rsc_lable 
+		{
+			idc = -1;
+			x = 0.00206971;
+			y = -0.000395358;
+			w = 0.998345;
+			h = 0.0763596;
+		};
+		class Lable : Rsc_lable 
+		{
+			idc = -1;
+			x = safeZoneX + safeZoneW * 0.309375;
+			y = safeZoneY + safeZoneH * 0.44111112;
+			w = safeZoneW * 0.181875;
+			h = safeZoneH * 0.04222223;
+			style = 0+2;
+			text = "Faces";
+			
+		};
+	};
+	class Controls
+	{
+		class kndr_MapControl : RscPicture
+		{
+			idc = 5;
+			x = safeZoneX + safeZoneW * 0.511875;
+			y = safeZoneY + safeZoneH * 0.28;
+			w = safeZoneW * 0.1825;
+			h = safeZoneH * 0.31444445;
+			
+		};
+		class Month : RscCombo
+		{
+			idc = 1;
+			x = safeZoneX + safeZoneW * 0.308125;
+			y = safeZoneY + safeZoneH * 0.29111112;
+			w = safeZoneW * 0.1875;
+			h = safeZoneH * 0.03111112;			
+		};
+		class Day : RscCombo
+		{
+			idc = 2;
+			x = safeZoneX + safeZoneW * 0.308125;
+			y = safeZoneY + safeZoneH * 0.34;
+			w = safeZoneW * 0.1875;
+			h = safeZoneH * 0.03111112;			
+		};
+		class Year : RscCombo
+		{
+			idc = 3;
+			x = safeZoneX + safeZoneW * 0.308125;
+			y = safeZoneY + safeZoneH * 0.38888889;
+			w = safeZoneW * 0.1875;
+			h = safeZoneH * 0.03111112;			
+		};
+		class Faces : RscListBox
+		{
+			idc = 4;
+			x = safeZoneX + safeZoneW * 0.31;
+			y = safeZoneY + safeZoneH * 0.48555556;
+			w = safeZoneW * 0.180625;
+			h = safeZoneH * 0.25888889;			
+			onLBSelChanged = "[]call id_update;";
+		};
+		class Spawn : RscButton 
+		{
+			idc = 1601;
+			x = 0.520685;
+			y = 0.848699;
+			w = 0.4487;
+			h = 0.10197;
+			text = "Save Infomation";
+			action = "[]call id_save";
+			
+		};
+	};
+	
+};

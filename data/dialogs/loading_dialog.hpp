@@ -36,14 +36,16 @@ class dtk_loading
 		};
 		class Name2: RscText 
 		{
-			idc = 101;
-			x = 0.05;
-			y = 0.029412;
-			w = 0.9;
-			h = 0.04902;
+			idc = 101;			
+			x = safeZoneX + safeZoneW * 0.314375;
+			y = safeZoneY + safeZoneH * 0.70888889;
+			w = safeZoneW * 0.37125;
+			h = safeZoneH * 0.05111112;
+			style = 0+2;
 			text = "";
-			sizeEx = 0.05;
-			colorText[] = {0.543,0.5742,0.4102,1.0};
+			colorText[] = {1,1,1,1};
+			sizeEx = 0.08;
+			shadow = 2;
 		};
 	};
 };

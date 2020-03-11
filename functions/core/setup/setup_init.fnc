@@ -1,4 +1,6 @@
 ﻿
+startLoadingScreen ["Initializing Modules","dtk_loading"]; 
+
 {
 	call _x;
 }forEach DTK_INIT;

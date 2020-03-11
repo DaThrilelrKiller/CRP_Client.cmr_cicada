@@ -1,6 +1,12 @@
 ﻿
-createDialog "AR_SpawnMenu";
+closeDialog 0;
 
-if (!dtk_civ || {!isNil "dtk_spawned"})then {
-	ctrlEnable [1602, false];
+if (count dtk_dob > 0)then {
+	createDialog "AR_SpawnMenu";
+
+	if (!dtk_civ || {!isNil "dtk_spawned"})then {
+		ctrlEnable [1602, false];
+	};
+}else{
+	[]call id_menu;
 };

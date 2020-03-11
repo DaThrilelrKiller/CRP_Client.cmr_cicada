@@ -15,7 +15,7 @@ if (isClass _config)then {
 _group = (group player);
 _unit = _group createUnit [_type, (position player), [], 0, "NONE"];
 _unit setDir (getDir player);
-_init = format['this setVehicleVarName "%1"; %1 = this;', vehicleVarName player];
+_init = format['this setVehicleVarName "%1"; %1 = this; this setFace "%1";', vehicleVarName player,dtk_dob select 3];
 _unit setVariable ["type",_this select 0,true];
 
 {

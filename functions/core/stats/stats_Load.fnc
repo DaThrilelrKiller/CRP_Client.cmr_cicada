@@ -12,6 +12,8 @@ Prams:
 	none
 */
 
+startLoadingScreen ["Loading Player Statitics","dtk_loading"]; 
+
 private ["_stats","_UID"];
 _UID = _this select 0;
 dtk_id = _this select 1;
@@ -25,6 +27,13 @@ if ((getPlayerUID player) != _UID)exitWith {
 
 dtk_bank = (_stats select 0);
 dtk_hunger = (_stats select 1);
+dtk_dob = (_stats select 23);
+
+if (count dtk_dob != 0)then {
+	player setVehicleInit format["this setFace '%1';", dtk_dob select 3];
+	processInitCommands;
+};
+
 player setVariable ["dtk_storage",(_stats select 2), true];
 player setVariable ["cdb_license",(_stats select 3),true];
 INVVehiclesLand = (_stats select 4);

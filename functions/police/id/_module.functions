@@ -1,6 +1,6 @@
 ﻿[
-"generate",
-"setFace",
-"init",
-"show"
+"show",
+"save",
+"update",
+"menu"
 ];
