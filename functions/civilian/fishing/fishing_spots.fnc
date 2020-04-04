@@ -1,7 +1,5 @@
 private ["_marker","_name","_pos","_size","_marker1"];
 
-startLoadingScreen ["Syncing Finshing Locations","dtk_loading"]; 
-
 {
 	_name = (_x select 0) call config_displayname;
 	_pos = _x select 1;

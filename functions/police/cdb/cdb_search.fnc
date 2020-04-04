@@ -1,4 +1,4 @@
-﻿private ["_warrants","_license","_notes"];
+﻿private ["_warrants","_license","_notes","_houses"];
 
 lbClear 2;
 lbClear 3;
@@ -25,17 +25,20 @@ if !(cdb_object isKindOf "Man")then{
 _warrants = cdb_object getVariable ["cdb_warrants",[]];
 _license = cdb_object getVariable ["cdb_license",[]];
 _notes = cdb_object getVariable ["cdb_notes",[]];
+_houses = cdb_object call house_address;
 
 if (count _warrants > 0)then
 {
 	{
-		_index = lbadd [2, format['Active Warrant: %1 for %2',_x select 0,[_x select 1]call main_formatMoney]];
+		_index = lbadd [2, format['Warrant: %1 for %2',_x select 0,[_x select 1]call main_formatMoney]];
 		lbSetColor [2,_index,[0.23,0.34,0.98, 1]];
 	}count _warrants;
 }else{
-	_index = lbadd [2, 'No active warrants found'];
+	_index = lbadd [2, 'Warrants: None found'];
 	lbSetColor [2,_index,[0.23,0.34,0.98, 1]];
 };
+
+lbadd [2, ''];
 
 if (count _license > 0)then
 {
@@ -46,9 +49,11 @@ if (count _license > 0)then
 }
 else
 {
-	_index = lbadd [3, 'No License Found'];
+	_index = lbadd [3, 'License: None Found'];
 	lbSetColor [3,_index,[0.23,0.34,0.98, 1]];
 };
+
+lbadd [2, ''];
 
 if (count _notes > 0)then
 {
@@ -59,6 +64,23 @@ if (count _notes > 0)then
 }
 else
 {
-	_index = lbadd [2, 'No Notes Found'];
+	_index = lbadd [2, 'Notes: None Found'];
 	lbSetColor [2,_index,[0.23,0.34,0.98, 1]];
 };
+
+lbadd [2, ''];
+
+if (count _houses > 0)then
+{
+	{
+		_index = lbAdd [2,format['House: %1 - %2 %3',_forEachIndex + 1,mapGridPosition _x,[_x]call locations_nearest]];
+		lbSetColor [2,_index,[0.23,0.34,0.98, 1]];
+	}forEach _houses;
+}
+else
+{
+	_index = lbadd [2, 'House: No Address'];
+	lbSetColor [2,_index,[0.23,0.34,0.98, 1]];
+};
+
+

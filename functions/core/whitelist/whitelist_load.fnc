@@ -1,7 +1,5 @@
 private ["_value","_tag"];
 
-startLoadingScreen ["Loading Player Whitelist","dtk_loading"]; 
-
 {
 	_value = _this select _forEachIndex;
 	if (_value)then {

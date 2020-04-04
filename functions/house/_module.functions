@@ -13,5 +13,6 @@
 "market",
 "preview",
 "limitReached",
-"owned"
+"owned",
+"address"
 ];

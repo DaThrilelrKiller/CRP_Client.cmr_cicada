@@ -2,11 +2,13 @@
 class RscProgress;
 class dtk_loading
 { 
-	idd = -1;
+	idd = 20;
 	duration = 10e10;
 	fadein = 0;
 	fadeout = 0;
 	name = "loading screen";
+	onload = "";
+
 	class controlsBackground
 	{
 		class blackBG : RscText
@@ -32,7 +34,7 @@ class dtk_loading
 	{
 		class Title1 : RscLoadingText
 		{
-			text = "$STR_LOADING"; 
+			text = "Crimson Roleplay"; 
 		};
 		class Name2: RscText 
 		{

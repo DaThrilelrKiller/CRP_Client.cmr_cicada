@@ -7,16 +7,18 @@ if ([paint_unit,["Man"]]call core_isKindOf)then {
 		((lbData[150,lbCurSel 150]) call config_buycost)
 	};
 	
-	if ([player,"geld",-_cost] call storage_add)then {
+	if (_cost call storage_RemoveMoney)then {
+		DTK_Painting = true;
 		[paint_type] call clothing_switch;
 		player setVariable ["textures",dtk_paint];
 		player call clothing_texture;
 		closeDialog 0;
 	}else{
+		DTK_Painting = false;
 		systemchat format["You need %1 to buy a this skin",[_cost] call Main_FormatMoney];
 	};
 }else{
-	if ([player,"geld", -5000] call storage_add)then {
+	if (5000 call storage_RemoveMoney)then {
 		DTK_Painting = true;
 		closeDialog 0;
 		paint_temp_vehicle say "Spray";

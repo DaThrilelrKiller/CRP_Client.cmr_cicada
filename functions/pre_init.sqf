@@ -135,8 +135,14 @@ dtk_active_modules =
 	{
 		if (_x in DTK_Events && {_module != "Setup"})then {
 			_array = missionNamespace getVariable [format["DTK_%1",_x],[]];
-			_array = _array + [compile preprocessFile format["functions\%3\%1_%2.fnc",_module,_x,_path]];
+			
+			if (_x == "init")then {
+				_array = _array + [[compile preprocessFile format["functions\%3\%1_%2.fnc",_module,_x,_path],_module]];
+			}else{
+				_array = _array + [compile preprocessFile format["functions\%3\%1_%2.fnc",_module,_x,_path]];
+			};
 			missionNamespace setVariable [format["DTK_%1",_x],_array];
+
 		}else{
 			_fn = format ["%1_%2",_module,_x];
 			missionNamespace setVariable [_fn,compile preprocessFile format["functions\%1\%2.fnc",_path,_fn]];

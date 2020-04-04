@@ -1,4 +1,0 @@
-
-class Fire {
-    class fired {};
-};

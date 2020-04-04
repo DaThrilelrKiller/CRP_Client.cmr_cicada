@@ -13,7 +13,7 @@ if (markerText _house != "")exitWith {
 	systemchat format ["%1, someone already owns this house!",name player];
 };
 
-if ([player,"geld", -_price] call storage_add)then {
+if (_price call storage_RemoveMoney)then {
 	systemchat format ["%1 you have bought this house",name player];
 	["SERVER",[player,_house],"s_house_buy",false,false]call network_MPExec;
 }else{

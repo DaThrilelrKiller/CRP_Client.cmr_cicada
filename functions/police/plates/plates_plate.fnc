@@ -2,16 +2,20 @@
 
 ar_plates = !ar_plates;
 
+_text = ["Disabled","Enabled"]select ar_plates;
+
+systemchat format ["Licences Plates: %1",_text];
+
 while {ar_plates} do 
 {
 	waitUntil {!isNull cursorTarget || {!ar_plates}};
 	if !(ar_plates)exitWith {};
 	_vehicle = CursorTarget;
 
-	if ([player,_vehicle,1]call bis_isInFrontOf && {!([_vehicle,player,1]call bis_isInFrontOf)} && {player distance _vehicle < 15})then 
+	if ([player,_vehicle,1]call bis_isInFrontOf && {!local _vehicle} && {!([_vehicle,player,1]call bis_isInFrontOf)} && {player distance _vehicle < 15})then 
 	{
 
-	_plate = _vehicle getVariable "dtk_plate";
+		_plate = _vehicle getVariable "dtk_plate";
 
 		if (!isNil '_plate')then 
 		{

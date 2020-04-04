@@ -1,3 +1,0 @@
-class Roads {
-    class near {};
-};

@@ -12,8 +12,6 @@ Prams:
 	none
 */
 
-startLoadingScreen ["Loading Player Statitics","dtk_loading"]; 
-
 private ["_stats","_UID"];
 _UID = _this select 0;
 dtk_id = _this select 1;

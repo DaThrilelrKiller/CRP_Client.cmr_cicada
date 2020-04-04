@@ -5,6 +5,6 @@ waitUntil{
 		findDisplay 53 closeDisplay 1;
 		true
 	};
-	if (time > 1)exitWith {true};
-false
+
+(time > 1)
 };

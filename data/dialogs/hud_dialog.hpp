@@ -87,7 +87,7 @@ class ar_hud
 				size = 0.033;
 				x = safeZoneX;
 				y = safeZoneY;
-				w = SafeZoneW * 0.5; 
+				w = SafeZoneW * 0.4; 
 				h = SafeZoneH;
 				colorText[] = {1,1,1,1};
 				colorBackground[] = {0,0,0,0};
