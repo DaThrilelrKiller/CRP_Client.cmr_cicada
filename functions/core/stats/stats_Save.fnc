@@ -11,7 +11,7 @@ _save =
 		[dtk_side, "Vehicles", INVVehiclesLand],
 		[dtk_side, "Pistol", (player getVariable ["Pistol",""])], 	
 		[dtk_side, "Rifle", (player getVariable ["Rifle",""])], 
-		[dtk_side, "x26", (player getVariable ["x26",""])], 
+		[dtk_side, "DDOPP_X3", (player getVariable ["DDOPP_X3",""])], 
 		[dtk_side, "Weapons", weapons player], 
 		[dtk_side, "Magazines", magazines player],
 		[dtk_side, "Warrants",(player getvariable "cdb_warrants")],

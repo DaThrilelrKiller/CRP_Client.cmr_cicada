@@ -26,19 +26,14 @@ class DevCon
 	};
 	class Controls
 	{
-		class RscLablePrev
+		class RscLablePrev : RscText
 		{
-			type = 0;
-			idc = -1;
+			idc = 89;
 			x = safeZoneX + safeZoneW * 0.069375;
 			y = safeZoneY + safeZoneH * 0.71222223;
 			w = safeZoneW * 0.0875;
 			h = safeZoneH * 0.04111112;
-			style = 0;
 			text = "Live Preview";
-			colorBackground[] = {0.5569,0.6784,0.6078,0};
-			colorText[] = {1,1,1,1};
-			font = "PuristaMedium";
 			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
 			
 		};
@@ -96,7 +91,7 @@ class DevCon
 			y = safeZoneY + safeZoneH * 0.27666667;
 			w = safeZoneW * 0.13625;
 			h = safeZoneH * 0.03444445;
-			onLBSelChanged =  "[]call DEV_RefreshConfig";
+			onLBSelChanged =  "[]spawn DEV_RefreshConfig";
 		};
 		
 	};

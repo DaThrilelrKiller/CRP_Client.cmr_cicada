@@ -5,6 +5,7 @@ _type = if (_type == "")then {_this select 0}else{_type};
 _config =  (missionConfigFile >> "CfgVehicles" >> _type);
 _init = "";
 _textures = [];
+_name = vehicleVarName player;
 
 if (isClass _config)then {
 	_type = inheritsFrom _config; 
@@ -15,7 +16,8 @@ if (isClass _config)then {
 _group = (group player);
 _unit = _group createUnit [_type, (position player), [], 0, "NONE"];
 _unit setDir (getDir player);
-_init = format['this setVehicleVarName "%1"; %1 = this; this setFace "%1";', vehicleVarName player,dtk_dob select 3];
+player setVehicleVarName format["old_%1", _name];
+_init = format['this setVehicleVarName "%1"; %1 = this; this setFace "%2";',_name,dtk_dob select 3];
 _unit setVariable ["type",_this select 0,true];
 
 {

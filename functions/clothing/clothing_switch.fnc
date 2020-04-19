@@ -1,6 +1,5 @@
 ﻿private ["_old","_oldweapons","_oldmags","_skin","_pos","_skinsold","_camera","_actions","_clothing"];
 
-
 _skin = (_this select 0);
 dtk_clothing = player getVariable ["type",typeOf player];
 
@@ -16,7 +15,6 @@ _license = player getVariable ['cdb_license',[]];
 _notes = player getVariable ['cdb_notes',[]];
 _actions = player getVariable ['dtk_actions',[]];
 _tag = player getVariable ['dtk_tag',tag_default];
-_camera = cameraView;
 call TFAR_RemoveRadios;
 
 if (_skinsold == _skin) exitWith {
@@ -25,12 +23,22 @@ if (_skinsold == _skin) exitWith {
 
 _unit = [_skin]call clothing_create;
 addSwitchableUnit _unit;
-	
-titleCut["", "BLACK in",2];
-	
 selectPlayer _unit;
-_unit switchCamera _camera;
-deleteVehicle _old;
+
+_old spawn {
+	waitUntil {!(isPlayer _this)};
+	uiSleep 2;
+	_this setPosATL [-1, -1, 0];
+	_this setDamage 1;
+	private["_i"];
+	_i = 0;
+	while { _i < 10 } do {
+		hideBody _this;
+		_i = _i + 1;
+	};
+	deleteVehicle _this;
+};
+
 removeAllWeapons _unit;
 player setPosATL _pos;
 player setVariable ['dtk_storage',_storage,true];
@@ -48,7 +56,7 @@ player addEventHandler ["fired", { _this call setup_fired;}];
 {player addMagazine _x} count _oldmags;
 player setVariable ["dtk_tag",_tag,true];
 
-["ALL",player,{_this addaction ["","noscript.sqf",format['%1 call core_interact;',_this],25,false,true,"LeanRight",format["player distance _target < 5 && {!([_target,'Interact (E)','%1']call tag_show)}",player getVariable ["dtk_tag",tag_default]]];},false,false]call network_MPExec;
+["ALL",player,{_this addaction ["","noscript.sqf",format['%1 call core_interact;',_this],25,false,true,"LeanRight",format["player distance _target < 5 && {alive _target} && {!([_target,'Interact (E)','%1']call tag_show)}",player getVariable ["dtk_tag",tag_default]]];},false,false]call network_MPExec;
 	
 call gps_diary;
 call TFAR_addRadios;

@@ -8,7 +8,7 @@ if ([paint_unit,["Man"]]call core_isKindOf)then {
 	};
 	
 	if (_cost call storage_RemoveMoney)then {
-		DTK_Painting = true;
+		DTK_Painting = false;
 		[paint_type] call clothing_switch;
 		player setVariable ["textures",dtk_paint];
 		player call clothing_texture;

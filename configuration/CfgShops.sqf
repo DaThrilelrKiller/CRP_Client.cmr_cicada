@@ -1584,9 +1584,9 @@ _td7 = [
 	"olrpg_gmc_breast_ambo",											
 	"wulf",																
 	"Bread",															
-	"doshd"
+	"doshd",
+	"MBG_D7H_Civ"
 ];
-
 
 _rm = [													
 	"reparaturkit",							

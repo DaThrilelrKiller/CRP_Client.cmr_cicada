@@ -12,6 +12,7 @@ if (dtk_server)then {
 
 call compile preprocessFile "functions\spawn_points.sqf";
 call compile preprocessFile "configuration\CfgFunctions.fnc";
+call compile preprocessFile "scripts\admin.sqf";
 call compile preprocessFile  "scripts\miscfunctions.sqf";
 call compile preprocessFile "configuration\CfgMaster.sqf";
 call compile preprocessFile "configuration\CfgShops.sqf";

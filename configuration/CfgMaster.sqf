@@ -589,14 +589,14 @@
   ["FN_FAL",["weapon","rifle"],["FN_FAL","FN FAL"],[300000,1000],[1,"",""],[]],
 
   ["sheetrockhookshort",["weapon","rifle"],["sheetrockhookshort","Short Sheetrock Hook"],[1200,1200],[1,"",""],[]],
-  ["sheetrockhooklong",["weapon","rifle"],["sheetrockhookshort","Long Sheetrock Hook"],[1500,1500],[1,"",""],[]],
-  ["pikepoleshort",["weapon","rifle"],["sheetrockhookshort","Short Pike Pole"],[1200,1200],[1,"",""],[]],
-  ["pikepolelong",["weapon","rifle"],["sheetrockhookshort","Long Pike Pole"],[1700,1700],[1,"",""],[]],
-  ["pikepolemed",["weapon","rifle"],["sheetrockhookshort","Medium Pike Pole"],[1500,1500],[1,"",""],[]],
-  ["trashhook",["weapon","rifle"],["sheetrockhookshort","Trash Hook"],[1000,1000],[1,"",""],[]],
-  ["firerake",["weapon","rifle"],["sheetrockhookshort","Fire Rake"],[1200,1200],[1,"",""],[]],
-  ["fireshovel",["weapon","rifle"],["sheetrockhookshort","Shovel"],[1200,1200],[1,"",""],[]],
-  ["firebroom",["weapon","rifle"],["sheetrockhookshort","Broom"],[1200,1200],[1,"",""],[]]
+  ["sheetrockhooklong",["weapon","rifle"],["sheetrockhooklong","Long Sheetrock Hook"],[1500,1500],[1,"",""],[]],
+  ["pikepoleshort",["weapon","rifle"],["pikepoleshort","Short Pike Pole"],[1200,1200],[1,"",""],[]],
+  ["pikepolelong",["weapon","rifle"],["pikepolelong","Long Pike Pole"],[1700,1700],[1,"",""],[]],
+  ["pikepolemed",["weapon","rifle"],["pikepolemed","Medium Pike Pole"],[1500,1500],[1,"",""],[]],
+  ["trashhook",["weapon","rifle"],["trashhook","Trash Hook"],[1000,1000],[1,"",""],[]],
+  ["firerake",["weapon","rifle"],["firerake","Fire Rake"],[1200,1200],[1,"",""],[]],
+  ["fireshovel",["weapon","rifle"],["fireshovel","Shovel"],[1200,1200],[1,"",""],[]],
+  ["firebroom",["weapon","rifle"],["firebroom","Broom"],[1200,1200],[1,"",""],[]]
 ];
 
 dtk_magazines = [
@@ -1179,6 +1179,7 @@ dtk_vehicles =
   ["Tanker146",["vehicle","car"],["Tanker146","Tanker 146 (Plane)"],[20000,15000],[2,"","",300],[]],
   ["Aircrane",["vehicle","car"],["Aircrane","Air Crane"],[20000,15000],[2,"","",300],[]],
   ["AIRCRANE_LIFT",["vehicle","car"],["AIRCRANE_LIFT","Aire Crane Bucket"],[20000,15000],[2,"","",300],[]],
+  ["MBG_D7H_Civ",["vehicle","car"],["MBG_D7H_Civ","Dozer"],[20000,15000],[2,"","",300],[]],
 
   ["a2l_squad",["vehicle","car"],["a2l_squad","F350 Squad"],[10000,5000],[2,"DTK_License_emt_emtCommand","DTK_License_emt_emtCommand",300],[]],
   ["a2l_medsquad",["vehicle","car"],["a2l_medsquad","F350 EMS Support"],[10000,5000],[2,"DTK_License_emt_emtCommand","DTK_License_emt_emtCommand",300],[]],

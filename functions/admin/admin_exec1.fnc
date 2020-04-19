@@ -20,6 +20,18 @@ switch (_text) do
 		closeDialog 0;
 		call admin_console;
 	};
+	case "Tags": 
+	{
+		closeDialog 0;
+		if (!isNil "t_admin_tags")then {
+			terminate "t_admin_tags";
+			t_admin_tags = nil;
+			systemchat "Tags: Disabled";
+		};
+		
+		systemchat "Tags: Enabled";
+		t_admin_tags = []spawn admin_tags;
+	};
 	case "Move": 
 	{
 		closeDialog 0;
@@ -77,5 +89,35 @@ switch (_text) do
 	{
 		closeDialog 0;
 		[]call admin_sounds;
+	};
+	case "TP2ME": 
+	{
+		_to = (call compile lbData [2100, lbCurSel 2100]select 1);
+		_to setPos getPos player;
+	};
+	case "TPME2THEM": 
+	{
+		_to = (call compile lbData [2100, lbCurSel 2100]select 1);
+		player setPos getPos _to;
+	};
+	case "Comp 100k": 
+	{
+		_to = (call compile lbData [2100, lbCurSel 2100]select 1);
+		[_to,player,{
+		dtk_bank = dtk_bank + 100000;
+		systemchat format ["Comp of 100K has been given by %1",name _this];
+		},false,false]call network_MPExec;
+	
+		closeDialog 0;
+	};
+	case "Comp 1M": 
+	{
+		_to = (call compile lbData [2100, lbCurSel 2100]select 1);
+		[_to,player,{
+		dtk_bank = dtk_bank + 1000000;
+		systemchat format ["Comp of 1M has been given by %1",name _this];
+		},false,false]call network_MPExec;
+	
+		closeDialog 0;
 	};
 };

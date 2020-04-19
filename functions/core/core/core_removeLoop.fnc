@@ -1,9 +1,10 @@
-﻿private ["_return","_index"];
+﻿private ["_index","_thread"];
 _index = _this;
 
-_return = {
-	if ((_x select 2) == _index)exitWith {_ForEachIndex};
-}forEach core_loop_array;
+_thread = core_loop_array select _index;
+if !(scriptDone _thread)then {
+	terminate _thread;
+};
 
-core_loop_array set [_return,""];
+core_loop_array set [_index,""];
 core_loop_array = core_loop_array - [""];

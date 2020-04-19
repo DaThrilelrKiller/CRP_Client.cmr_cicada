@@ -18,6 +18,7 @@ player allowDamage true;
 closeDialog 0;
 
 player setPos _array; 
+[]call core_reveal;
 
 if (isNil "dtk_loaded")then {
 	disableSerialization;

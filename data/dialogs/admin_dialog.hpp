@@ -88,7 +88,7 @@
 			w = safeZoneW * 0.183125;
 			h = safeZoneH * 0.05111112;
 			text = "Change Clothes";
-			action = "[(lbData [1501, (lbCurSel 1501)])]spawn clothing_switch;";
+			action = "[(lbData [1501, (lbCurSel 1501)])]call clothing_switch;";
 			
 		};
 		class RscListbox_1501_copy1 : RscListBox 

@@ -9,7 +9,7 @@ _whitelist = _data select 1;
 _condition = whitelist_data select (lbCurSel 56)select 2;
 
 if !(call _condition)exitWith {
-	systemchat format ["%1 you are not a hight enought rank to whitelist people for %2",name player,_whitelist];
+	systemchat format ["%1 you are not a high enought rank to whitelist people for %2",name player,_whitelist];
 };
 
 

@@ -1,8 +1,19 @@
-﻿_time = _this select 0;
-_code = _this select 1;
-_id = format ["%1_%2_%3",time,_time,round random 10]; 
+﻿
+private ["_id","_index"];
 
-core_loop_array set [count core_loop_array, [_time,_code,_id]];
+_id = _this spawn {
+	private ["_time","_code"];
+	_time = _this select 0;
+	_code = _this select 1;
+	
+	waitUntil {
+		sleep _time;
+		[]call _code;
+		false
+	};
+};
 
-/*return the id so it can be used to seach later if the loop needs to be removed*/
-_id
+_index = count core_loop_array;
+core_loop_array set[_index,_id];
+
+_index

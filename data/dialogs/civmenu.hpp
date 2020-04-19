@@ -1,20 +1,4 @@
-﻿class civmenu1
-
-{
-
-idd = -1;
-movingEnable = true;
-controlsBackground[] = {DLG_BACK1, background};
-objects[] = { };
-controls[] = {button_disarm, button_drugs, ticket_eingabe};
-
-class button_drugs : RscButton           {idc = 2;x = 0.41; y = 0.33;w = 0.20; h = 0.04;text = $STRD_description_civmenu_drugs;    action = "[1] execVM ""scripts\civmenuinit.sqf""; closedialog 0";};
-
-};
-
-
-
-class civmenu
+﻿class menu_pd
 {
 	idd = -1;
 	
@@ -116,6 +100,298 @@ class civmenu
 			h = safeZoneH*0.03666667;
 			text = "Get ID";	
 			action = "closeDialog 0;[dtk_unit]call id_show;";
+		};
+		class button_extra2 : RscButton 
+		{
+			x = safeZoneX+safeZoneW*0.44;
+			y = safeZoneY+safeZoneH*0.62111112;
+			w = safeZoneW*0.143125;
+			h = safeZoneH*0.03666667;
+			text = "";			
+		};
+		class button_extra3 : RscButton 
+		{
+			x = safeZoneX + safeZoneW * 0.44;
+			y = safeZoneY + safeZoneH * 0.67;
+			w = safeZoneW * 0.143125;
+			h = safeZoneH * 0.03666667;
+			text = "";			
+		};
+		class lable_top : Rsc_lable 
+		{
+			idc = 2201;
+			x = safeZoneX+safeZoneW*0.43;
+			y = safeZoneY+safeZoneH*0.17666667;
+			w = safeZoneW*0.1625;
+			h = safeZoneH*0.03444445;
+			text = "";
+			
+		};
+		class close : RscButton 
+		{
+			idc = 1602;
+			x = safeZoneX+safeZoneW*0.57375;
+			y = safeZoneY+safeZoneH*0.17555556;
+			w = safeZoneW*0.016875;
+			h = safeZoneH*0.03333334;
+			text = "X";
+			action = "closeDialog 0";
+			
+		};
+		
+	};
+};
+
+class menu_civ
+{
+	idd = -1;
+	
+	class ControlsBackground
+	{
+		class RscBackground_2200 : RscBackground 
+		{
+			x = safeZoneX + safeZoneW * 0.43;
+			y = safeZoneY + safeZoneH * 0.21111112;
+			w = safeZoneW * 0.161875;
+			h = safeZoneH * 0.51222223;
+		};	
+	};
+	
+	class Controls
+	{
+		class Control2125696138
+		{
+			type = 0;
+			idc = 20;
+			x = safeZoneX+safeZoneW*0.76875;
+			y = safeZoneY+safeZoneH*1.00666667;
+			w = safeZoneW*0.4125;
+			h = safeZoneH*0.55;
+			style = 0+48;
+			text = "";
+			colorBackground[] = {0.6784,0.5412,0.3176,1};
+			colorText[] = {0.3216,0.4588,0.6824,1};
+			font = "Zeppelin32";
+			sizeEx = (((((safezoneW/safezoneH)min1.2)/1.2)/25)*1);
+			
+		};
+		class button_steal : RscButton 
+		{
+			x = safeZoneX+safeZoneW*0.44;
+			y = safeZoneY+safeZoneH*0.23;
+			w = safeZoneW*0.143125;
+			h = safeZoneH*0.03666667;
+			text = $STRD_description_civmenu_steal;
+			action="[20] execVM ""scripts\civmenuinit.sqf""; closedialog 0";
+		};
+		class button_Inventory : RscButton 
+		{
+			x = safeZoneX+safeZoneW*0.44;
+			y = safeZoneY+safeZoneH*0.27888889;
+			w = safeZoneW*0.143125;
+			h = safeZoneH*0.03666667;
+			text = $STRD_description_civmenu_inventar;
+			action = "[6] execVM ""scripts\civmenuinit.sqf""; closedialog 0";
+		};
+		class button_Tieup : RscButton 
+		{
+			x = safeZoneX+safeZoneW*0.44;
+			y = safeZoneY+safeZoneH*0.32777778;
+			w = safeZoneW*0.143125;
+			h = safeZoneH*0.03666667;
+			text = $STRD_description_civmenu_ZipTie;	
+			action = "execVM ""scripts\ziptie.sqf""; closedialog 0";
+		};
+		class button_Licence : RscButton 
+		{
+			x = safeZoneX+safeZoneW*0.44;
+			y = safeZoneY+safeZoneH*0.37666667;
+			w = safeZoneW*0.143125;
+			h = safeZoneH*0.03666667;
+			text = "";	
+			action="";
+		};
+		class button_arrest : RscButton 
+		{
+			x = safeZoneX + safeZoneW * 0.44;
+			y = safeZoneY + safeZoneH * 0.42555556;
+			w = safeZoneW * 0.143125;
+			h = safeZoneH * 0.03666667;
+			text = "";
+			action="";
+		};
+		class button_ticket : RscButton 
+		{
+			x = safeZoneX+safeZoneW*0.44;
+			y = safeZoneY+safeZoneH*0.47444445;
+			w = safeZoneW*0.143125;
+			h = safeZoneH*0.03666667;
+			text = "";	
+			action = "";			
+		};
+		class button_cuff : RscButton 
+		{
+			x = safeZoneX+safeZoneW*0.44;
+			y = safeZoneY+safeZoneH*0.52333334;
+			w = safeZoneW*0.143125;
+			h = safeZoneH*0.03666667;
+			action = "";
+			text = "";			
+		};
+		class button_id : RscButton 
+		{
+			x = safeZoneX+safeZoneW*0.44;
+			y = safeZoneY+safeZoneH*0.57222223;
+			w = safeZoneW*0.143125;
+			h = safeZoneH*0.03666667;
+			text = "";	
+			action = "";
+		};
+		class button_extra2 : RscButton 
+		{
+			x = safeZoneX+safeZoneW*0.44;
+			y = safeZoneY+safeZoneH*0.62111112;
+			w = safeZoneW*0.143125;
+			h = safeZoneH*0.03666667;
+			text = "";			
+		};
+		class button_extra3 : RscButton 
+		{
+			x = safeZoneX + safeZoneW * 0.44;
+			y = safeZoneY + safeZoneH * 0.67;
+			w = safeZoneW * 0.143125;
+			h = safeZoneH * 0.03666667;
+			text = "";			
+		};
+		class lable_top : Rsc_lable 
+		{
+			idc = 2201;
+			x = safeZoneX+safeZoneW*0.43;
+			y = safeZoneY+safeZoneH*0.17666667;
+			w = safeZoneW*0.1625;
+			h = safeZoneH*0.03444445;
+			text = "";
+			
+		};
+		class close : RscButton 
+		{
+			idc = 1602;
+			x = safeZoneX+safeZoneW*0.57375;
+			y = safeZoneY+safeZoneH*0.17555556;
+			w = safeZoneW*0.016875;
+			h = safeZoneH*0.03333334;
+			text = "X";
+			action = "closeDialog 0";
+			
+		};
+		
+	};
+};
+
+class menu_un
+{
+	idd = -1;
+	
+	class ControlsBackground
+	{
+		class RscBackground_2200 : RscBackground 
+		{
+			x = safeZoneX + safeZoneW * 0.43;
+			y = safeZoneY + safeZoneH * 0.21111112;
+			w = safeZoneW * 0.161875;
+			h = safeZoneH * 0.51222223;
+		};	
+	};
+	
+	class Controls
+	{
+		class Control2125696138
+		{
+			type = 0;
+			idc = 20;
+			x = safeZoneX+safeZoneW*0.76875;
+			y = safeZoneY+safeZoneH*1.00666667;
+			w = safeZoneW*0.4125;
+			h = safeZoneH*0.55;
+			style = 0+48;
+			text = "";
+			colorBackground[] = {0.6784,0.5412,0.3176,1};
+			colorText[] = {0.3216,0.4588,0.6824,1};
+			font = "Zeppelin32";
+			sizeEx = (((((safezoneW/safezoneH)min1.2)/1.2)/25)*1);
+			
+		};
+		class button_steal : RscButton 
+		{
+			x = safeZoneX+safeZoneW*0.44;
+			y = safeZoneY+safeZoneH*0.23;
+			w = safeZoneW*0.143125;
+			h = safeZoneH*0.03666667;
+			text = "";
+			action="";
+		};
+		class button_Inventory : RscButton 
+		{
+			x = safeZoneX+safeZoneW*0.44;
+			y = safeZoneY+safeZoneH*0.27888889;
+			w = safeZoneW*0.143125;
+			h = safeZoneH*0.03666667;
+			text = "";
+			action = "";
+		};
+		class button_Tieup : RscButton 
+		{
+			x = safeZoneX+safeZoneW*0.44;
+			y = safeZoneY+safeZoneH*0.32777778;
+			w = safeZoneW*0.143125;
+			h = safeZoneH*0.03666667;
+			text = "";	
+			action = "";
+		};
+		class button_Licence : RscButton 
+		{
+			x = safeZoneX+safeZoneW*0.44;
+			y = safeZoneY+safeZoneH*0.37666667;
+			w = safeZoneW*0.143125;
+			h = safeZoneH*0.03666667;
+			text = "";	
+			action="";
+		};
+		class button_arrest : RscButton 
+		{
+			x = safeZoneX + safeZoneW * 0.44;
+			y = safeZoneY + safeZoneH * 0.42555556;
+			w = safeZoneW * 0.143125;
+			h = safeZoneH * 0.03666667;
+			text = "";
+			action="";
+		};
+		class button_ticket : RscButton 
+		{
+			x = safeZoneX+safeZoneW*0.44;
+			y = safeZoneY+safeZoneH*0.47444445;
+			w = safeZoneW*0.143125;
+			h = safeZoneH*0.03666667;
+			text = "";	
+			action = "";			
+		};
+		class button_cuff : RscButton 
+		{
+			x = safeZoneX+safeZoneW*0.44;
+			y = safeZoneY+safeZoneH*0.52333334;
+			w = safeZoneW*0.143125;
+			h = safeZoneH*0.03666667;
+			action = "";
+			text = "";			
+		};
+		class button_id : RscButton 
+		{
+			x = safeZoneX+safeZoneW*0.44;
+			y = safeZoneY+safeZoneH*0.57222223;
+			w = safeZoneW*0.143125;
+			h = safeZoneH*0.03666667;
+			text = "";	
+			action = "";
 		};
 		class button_extra2 : RscButton 
 		{
@@ -456,25 +732,4 @@ class vehicle_menu_un
 		};
 		
 	};
-};
-
-
-
-class civinteraktion
-
-{
-
-idd = -1;movingEnable = true;
-controlsBackground[] = {DLG_BACK1, background};
-objects[] = { };
-controls[] = {button_steal, cancel, button_inventarsearch, dummybutton, button_Ziptie};
-
-class DLG_BACK1: RscBackground                  {x = 0.40; y = 0.25;w = 0.22; h = 0.58;};
-class background : RscBgRahmen                  {x = 0.40;  y = 0.25;w = 0.22; h = 0.58;text = $STRD_description_civmenu_header;};
-class button_steal : RscButton         {idc = 1; x = 0.41; y = 0.28;w = 0.20; h = 0.04; text = $STRD_description_civmenu_steal;   action = "[20] execVM ""scripts\civmenuinit.sqf""; closedialog 0";};
-class button_inventarsearch : RscButton{idc = 14;x = 0.41; y = 0.33;w = 0.20; h = 0.04; text = $STRD_description_civmenu_inventar;action = "[6] execVM ""scripts\civmenuinit.sqf""; closedialog 0";};
-class button_Ziptie : RscButton{idc = 14;x = 0.41; y = 0.38;w = 0.20; h = 0.04; text = $STRD_description_civmenu_ZipTie;action = "execVM ""scripts\ziptie.sqf""; closedialog 0";};
-class cancel : RscButton                        {x = 0.41; y = 0.78;w = 0.20; h = 0.04; text = $STRD_description_cancel;          action = "closedialog 0";};
-class dummybutton : RscDummy           {idc = 1006;};
-
 };

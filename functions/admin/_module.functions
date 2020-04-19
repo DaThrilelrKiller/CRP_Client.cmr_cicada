@@ -28,5 +28,6 @@
 "clothes",
 "sounds",
 "sound_change",
-"sound_mode"
+"sound_mode",
+"tags"
 ];

@@ -9,5 +9,6 @@ if (dtk_client)then
 		}forEach (weapons player);
 		player addWeapon "ItemRadio";
 		[]spawn tfar_fnc_clientinit;
+		[]spawn tfar_channelCheck;
 	};
 };

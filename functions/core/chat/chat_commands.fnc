@@ -10,7 +10,7 @@ switch (_command) do
 {
 	case "!comp": 
 	{
-		if (SwagDevs) then 
+		if (SwagDevs || {adminlevel2} || {adminlevel3} || {adminlevel4}) then 
 		{
 		private ["_player","_amount"];
 		_player = call compile (_stringElements select 1);

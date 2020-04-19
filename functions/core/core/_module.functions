@@ -6,7 +6,6 @@
 "performance",
 "isKindOf",
 "AddLoop",
-"loop",
 "init",
 "waitUnitl",
 "removeLoop",
@@ -28,5 +27,6 @@
 "sideNumber",
 "NearbyVehicle",
 "check",
-"getName"
+"getName",
+"reveal"
 ];

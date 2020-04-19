@@ -2,9 +2,6 @@
 
 _unit = _this;
 
-if (!dtk_civ)then {
-	call compile format['[0,0,0, ["civmenu", "%1", %1]] execVM "scripts\interact.sqf";', _unit];
-}else{
-	call compile format['[0,0,0, ["civinteraktion", "%1", %1]] execVM "scripts\interact.sqf";', _unit];
-};
-
+createDialog format ["menu_%1",dtk_side];
+civmenu_civ = str _unit;	
+dtk_unit  = _unit;	

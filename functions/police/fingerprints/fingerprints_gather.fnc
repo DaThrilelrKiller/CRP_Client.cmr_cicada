@@ -1,6 +1,11 @@
-﻿_object = cursorTarget;
+﻿_object = _this select 0;
+
+if (isNull _object)then {
+	_object = cursorTarget;
+};
+
 if (isNull _object)exitWith {
-systemchat "You must be staring at the object you are trying to get finger prints from";
+	systemchat "You must be staring at the object you are trying to get finger prints from";
 };
 
 _name = _object call fingerprints_name;

@@ -39,7 +39,7 @@ INVVehiclesLand = (_stats select 4);
 {player addMagazine _x} count (_stats select 6);
 player setVariable ["Pistol",(_stats select 7),true];
 player setVariable ["Rifle",(_stats select 8),true];
-player setVariable ["x26",(_stats select 9),true];
+player setVariable ["DDOPP_X3",(_stats select 9),true];
 player setVariable ["cdb_warrants",(_stats select 10),true];
 player setVariable ["cdb_notes",(_stats select 11),true];
 BuildingCollapesLogic setVariable ["dtk_storage",(_stats select 22)];

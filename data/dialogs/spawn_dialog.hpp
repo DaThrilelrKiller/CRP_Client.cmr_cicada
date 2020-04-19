@@ -779,5 +779,259 @@ class dtk_infomation
 			
 		};
 	};
+};
+
+class dtk_credit
+{
+	idd = -1;
+	
+	class ControlsBackground
+	{
+		class RscPicture_1200 : RscBackground 
+		{
+			idc = 33333;
+			x = safeZoneX + safeZoneW * 0.294375;
+			y = safeZoneY + safeZoneH * 0.22666667;
+			w = safeZoneW * 0.410625;
+			h = safeZoneH * 0.54555556;
+			text = "";
+			
+		};
+		class RscPicture_1201 : Rsc_lable 
+		{
+			idc = 1201;
+			x = 0.00206971;
+			y = -0.000395358;
+			w = 0.998345;
+			h = 0.0763596;
+			text = "Welcome To Crimson Role Play!";
+			
+		};
+		
+	};
+	class Controls
+	{
+		class Logo : RscPicture
+		{
+			idc = 10023;
+			x = safeZoneX + safeZoneW * 0.511875;
+			y = safeZoneY + safeZoneH * 0.28;
+			w = safeZoneW * 0.1825;
+			h = safeZoneH * 0.31444445;
+			text = "\crp_data\images\logo.paa";
+			
+		};
+		class lable_website : Rsc_lable
+		{
+			idc = -1;
+			x = safeZoneX + safeZoneW * 0.311875;
+			y = safeZoneY + safeZoneH * 0.29777778;
+			w = safeZoneW * 0.1875;
+			h = safeZoneH * 0.02444445;
+			text = "Website";
+			colorBackground[] = {0.5569,0.9412,0.1804,0};
+			colorText[] = {0.8,0.4,0.2,1};
+			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
+			
+		};
+		class lable_ts3 : Rsc_lable
+		{
+			idc = -1;
+			x = safeZoneX + safeZoneW * 0.310625;
+			y = safeZoneY + safeZoneH * 0.35;
+			w = safeZoneW * 0.1875;
+			h = safeZoneH * 0.02;
+			text = "Teamspeak 3";
+			colorBackground[] = {0.5569,0.9412,0.1804,0};
+			colorText[] = {0.8,0.4,0.2,1};
+			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
+			
+		};
+		class lable_rules : Rsc_lable
+		{
+			idc = -1;
+			x = safeZoneX + safeZoneW * 0.3125;
+			y = safeZoneY + safeZoneH * 0.45;
+			w = safeZoneW * 0.1875;
+			h = safeZoneH * 0.01888889;
+			text = "Server Rules";
+			colorBackground[] = {0.5569,0.9412,0.1804,0};
+			colorText[] = {0.8,0.4,0.2,1};
+			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
+			
+		};
+		class lable_applications : Rsc_lable
+		{
+			idc = -1;
+			x = safeZoneX + safeZoneW * 0.31375;
+			y = safeZoneY + safeZoneH * 0.50222223;
+			w = safeZoneW * 0.1875;
+			h = safeZoneH * 0.01777778;
+			text = "Deptment Applications";
+			colorText[] = {0.8,0.4,0.2,1};
+			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
+			
+		};
+		class lable_Discord : Rsc_lable
+		{
+			idc = -1;
+			x = safeZoneX + safeZoneW * 0.311875;
+			y = safeZoneY + safeZoneH * 0.38888889;
+			w = safeZoneW * 0.1875;
+			h = safeZoneH * 0.03666667;
+			text = "Discord";
+			colorText[] = {0.8,0.4,0.2,1};
+			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
+			
+		};
+		class url_website : RscEdit
+		{
+			type = 2;
+			idc = -1;
+			x = safeZoneX + safeZoneW * 0.31625;
+			y = safeZoneY + safeZoneH * 0.32444445;
+			w = safeZoneW * 0.1575;
+			h = safeZoneH * 0.02222223;
+			text = "www.google.com";
+			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
+			
+		};
+		class url_teamspeak : RscEdit
+		{
+			type = 2;
+			idc = -1;
+			x = safeZoneX + safeZoneW * 0.31625;
+			y = safeZoneY + safeZoneH * 0.36888889;
+			w = safeZoneW * 0.1575;
+			h = safeZoneH * 0.02222223;
+			text = "ts.crimsonRP.net";
+			autocomplete = "";
+			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
+			
+		};
+		class url_rules : RscEdit
+		{
+			type = 2;
+			idc = -1;
+			x = safeZoneX + safeZoneW * 0.318125;
+			y = safeZoneY + safeZoneH * 0.52555556;
+			w = safeZoneW * 0.1575;
+			h = safeZoneH * 0.01888889;
+			text = "ts.crimsonRP.net";
+			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
+			
+		};
+		class url_appications : RscEdit
+		{
+			type = 2;
+			idc = -1;
+			x = safeZoneX + safeZoneW * 0.31625;
+			y = safeZoneY + safeZoneH * 0.42222223;
+			w = safeZoneW * 0.1575;
+			h = safeZoneH * 0.02;
+			text = "ts.crimsonRP.net";
+			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
+			
+		};
+		class url_discord : RscEdit
+		{
+			type = 2;
+			idc = -1;
+			x = safeZoneX + safeZoneW * 0.316875;
+			y = safeZoneY + safeZoneH * 0.47333334;
+			w = safeZoneW * 0.1575;
+			h = safeZoneH * 0.02222223;
+			text = "ts.crimsonRP.net";
+			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
+			
+		};
+		
+		class Textures_brandon : RscText
+		{
+			idc = -1;
+			x = safeZoneX + safeZoneW * 0.311875;
+			y = safeZoneY + safeZoneH * 0.71333334;
+			w = safeZoneW * 0.1875;
+			h = safeZoneH * 0.03666667;
+			text = "A. Brandon";
+			colorBackground[] = {0.5569,0.9412,0.1804,0};
+			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
+			
+		};
+		class DeveloperFramework : RscText
+		{
+			idc = -1;
+			x = safeZoneX + safeZoneW * 0.311875;
+			y = safeZoneY + safeZoneH * 0.59111112;
+			w = safeZoneW * 0.1875;
+			h = safeZoneH * 0.03666667;
+			text = "Framework Developer";
+			colorBackground[] = {0.5569,0.9412,0.1804,0};
+			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
+			
+		};
+		class Framework_DaThrillerKiller : RscText
+		{
+			idc = -1;
+			x = safeZoneX + safeZoneW * 0.311875;
+			y = safeZoneY + safeZoneH * 0.61555556;
+			w = safeZoneW * 0.1875;
+			h = safeZoneH * 0.03666667;
+			text = "DaThrillerKiller/ Tucker H";
+			colorBackground[] = {0.5569,0.9412,0.1804,0};
+			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
+			
+		};
+		class Map_Developer : RscText
+		{
+			idc = -1;
+			x = safeZoneX + safeZoneW * 0.311875;
+			y = safeZoneY + safeZoneH * 0.64;
+			w = safeZoneW * 0.1875;
+			h = safeZoneH * 0.03666667;
+			text = "Map Developer";
+			colorBackground[] = {0.5569,0.9412,0.1804,0};
+			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
+			
+		};
+		class Map_DayzRunner : RscText
+		{
+			idc = -1;
+			x = safeZoneX + safeZoneW * 0.311875;
+			y = safeZoneY + safeZoneH * 0.66444445;
+			w = safeZoneW * 0.1875;
+			h = safeZoneH * 0.03666667;
+			text = "DayzRunner";
+			colorBackground[] = {0.5569,0.9412,0.1804,0};
+			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
+			
+		};
+		class Texture_Developer : RscText
+		{
+			idc = -1;
+			x = safeZoneX + safeZoneW * 0.311875;
+			y = safeZoneY + safeZoneH * 0.68888889;
+			w = safeZoneW * 0.1875;
+			h = safeZoneH * 0.03666667;
+			text = "Texture Developer";
+			colorBackground[] = {0.5569,0.9412,0.1804,0};
+			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
+			
+		};
+		class Continue : RscButton 
+		{
+			idc = 1601;
+			x = 0.520685;
+			y = 0.848699;
+			w = 0.4487;
+			h = 0.10197;
+			text = "Continue ";
+			action = "closeDialog 0";
+			
+		};
+		
+	};
 	
 };
+
+

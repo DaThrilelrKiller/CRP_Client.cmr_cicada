@@ -14,6 +14,8 @@ _total = count DTK_INIT;
 	};
 }forEach DTK_INIT;
 
+DTK_INIT = nil;
+
 diag_log text "[LOG]Modules Initlization Finished!";
 
 
