@@ -29,7 +29,17 @@ whitelist_data = [
 ["Firefighter I","FF2_id",{SwagDevs or EMSChiefs_id or EMSCommand_id}],
 ["Firefighter II","FF1_id",{SwagDevs or EMSChiefs_id or EMSCommand_id}],
 ["Paramedic","EMTAdavnced_id",{SwagDevs or EMSChiefs_id or EMSCommand_id}],
-["Advanced EMT","EMTBasic_id",{SwagDevs or EMSChiefs_id or EMSCommand_id}]
+["Advanced EMT","EMTBasic_id",{SwagDevs or EMSChiefs_id or EMSCommand_id}],
+
+["PMC General","PMC_General",{SwagDevs}],
+["PMC Commander","PMC_Commander",{SwagDevs or PMC_General}],
+["PMC Lieutenant","PMC_Lieutenant",{SwagDevs or PMC_General}],
+["PMC Sergant","PMC_Sergeant",{SwagDevs or PMC_General}],
+["PMC Corporal","PMC_Corporal",{SwagDevs or PMC_General}],
+["PMC Private","PMC_Private",{SwagDevs or PMC_General}],
+["PMC Recruit","PMC_Recruit",{SwagDevs or PMC_General}],
+["PMC Marksman","PMC_Marksman",{SwagDevs or PMC_General}],
+["PMC Aviation","PMC_Aviation",{SwagDevs or PMC_General}]
 
 ];
 

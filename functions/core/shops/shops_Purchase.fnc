@@ -114,7 +114,7 @@ switch(_itemtype)do
 	};
 	case "maintenance":
 	{
-		[_className,(vehicle player)]spawn garage_serviceVehicle;
+		[_className,(vehicle player)]spawn garage_repair;
 		closeDialog 0;
 		_return = true;
 	};

@@ -11,8 +11,6 @@ _return = [];
 	if (player == _x && {_votes == 0})then {
 		_return set [count _return,[_x,_votes]];
 	};
-	
-	true
-}count playableUnits;
+}forEAch playableUnits;
 
 _return

@@ -60,7 +60,10 @@ if (_clothing != "" && {typeOf player != _clothing})then {
 	[_clothing]call clothing_switch;
 	player setVariable ["textures",(_stats select 21)];
 	player call clothing_texture;
+}else {
+	[]call setup_newPlayer;
 };
+
 
 if ((_side select 0) != dtk_side && {(_side select 1) == s_seasion})then {
 	["ALL",[name player,(_side select 0),dtk_side],{systemchat format ["%1 switched from %2 to %3",_this select 0,_this select 1,_this select 2];},false,true]call network_MPExec;

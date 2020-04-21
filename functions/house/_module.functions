@@ -14,5 +14,6 @@
 "preview",
 "limitReached",
 "owned",
-"address"
+"address",
+"sell"
 ];

@@ -1833,83 +1833,6 @@ _copcptdeputy = [
 	"Bait_Kit"														
 ];
 
-
-
-_PMC = [
-	"ziptie",						 													 		
-	"medikit", 														
-	"bjerk", 																											
-	"M24_PMC", 														
-	"5Rnd_762x51_M24", 										
-	"m8_carbine", 												
-	"m8_compact", 												
-	"m8_compact_pmc", 										
-	"m8_carbine_pmc", 										
-	"m8_sharpshooter",  									
-	"30Rnd_556x45_G36", 									
-	"RH_m4eotech_pmc", 										
-	"RH_m4aim_pmc", 											
-	"RH_m4acog_pmc", 											
-	"RH_m16a4_pmc",												
-	"RH_M16A4aim_pmc",										
-	"RH_M16A4eotech_pmc",									
-	"30Rnd_556x45_Stanag_pmc",  					
-	"G36C_camo_pmc",											
-	"30Rnd_556x45_G36_pmc",								
-	"RH_usp_pmc",													
-	"RH_15Rnd_9x19_usp",									
-	"RH_browninghp_pmc",									
-	"RH_13Rnd_9x19_bhp_pmc",							
-	"olrpg_pmccharger",										
-	"olrpg_pmctahoe",											
-	"olrpg_pmcsub6",											
-	"olrpg_pmcsub12"											
-];
-
-
-_CommandPMC = [
-	"ziptie", 														
-	"medikit", 														
-	"bjerk", 																												
-	"M24_PMC", 														
-	"5Rnd_762x51_M24", 										
-	"m8_carbine", 												
-	"m8_compact", 												
-	"m8_compact_pmc", 										
-	"m8_carbine_pmc", 										
-	"m8_sharpshooter",  									
-	"30Rnd_556x45_G36", 									
-	"RH_m4eotech_pmc", 										
-	"RH_m4aim_pmc", 											
-	"RH_m4acog_pmc", 											
-	"RH_acraim_pmc", 											
-	"RH_acreotech_pmc", 									
-	"RH_acracog_pmc", 										
-	"RH_m16a4_pmc",												
-	"RH_M16A4aim_pmc",										
-	"RH_M16A4eotech_pmc",									
-	"30Rnd_556x45_Stanag_pmc",  					
-	"G36C_camo_pmc",											
-	"30Rnd_556x45_G36_pmc",								
-	"RH_usp_pmc",													
-	"RH_15Rnd_9x19_usp",									
-	"RH_m1911_pmc",												
-	"RH_8Rnd_45cal_m1911_pmc",						
-	"RH_browninghp_pmc",									
-	"RH_13Rnd_9x19_bhp_pmc",							
-	"olrpg_pmccharger",										
-	"olrpg_pmctahoe",											
-	"olrpg_pmcsub6",											
-	"olrpg_pmcsub12"											
-];
-
-
-_PMCAIR = [
-	"MH6J_EP1", 													
-	"pmo_mh6dl_urban",									 	
-	"olrpg_pmcjayhunarmed" 								
-];
-
 _copk9sheriff = [
 	"olrpg_sdk9cv_pb",											
 	"olrpg_sdk9_charger", 								
@@ -1927,6 +1850,113 @@ _copavsh = [
 	"olrpg_sdbell206"											
 ];
 
+_PMC_General = [
+"RH_M4a1acog",
+"RH_M4sdaim",
+"RH_acracog",
+"RH_mp7sd",
+"RH_krisssdRFX",
+"RH_mk14tsdacog",
+"RH_M4macog",
+"RH_M4maim",
+"RH_M4meotech",
+"RH_M4m",
+"glock17_EP1",
+"30Rnd_556x45_Stanag_bm",
+"olrpg_pmcgen",
+"olrpg_pmccharger",
+"olrpg_pmctahoe"
+];
+
+_PMC_Commander = [
+"RH_acracog",
+"RH_mp7sd",
+"RH_krisssdRFX",
+"RH_mk14tsdacog",
+"RH_M4macog",
+"RH_M4maim",
+"RH_M4meotech",
+"RH_M4m",
+"M1014",
+"30Rnd_556x45_Stanag_bm",
+"glock17_EP1",
+"olrpg_pmccom",
+"olrpg_pmccharger",
+"olrpg_pmctahoe"
+];
+
+_PMC_Lieutenant = [
+"RH_M4macog",
+"RH_M4maim",
+"RH_M4meotech",
+"RH_M4m",
+"M1014",
+"glock17_EP1",
+"30Rnd_556x45_Stanag_bm",
+"olrpg_pmclt",
+"olrpg_pmccharger"
+];
+
+_PMC_Sergeant = [
+"RH_M4maim",
+"RH_M4meotech",
+"RH_M4m",
+"M1014",
+"glock17_EP1",
+"30Rnd_556x45_Stanag_bm",
+"olrpg_pmcsgt",
+"olrpg_pmctahoe"
+];
+
+_PMC_Corporal = [
+"RH_M4meotech",
+"RH_M4m",
+"M1014",
+"glock17_EP1",
+"30Rnd_556x45_Stanag_bm",
+"olrpg_pmccpl",
+"olrpg_pmctahoe"
+];
+
+_PMC_Private = [
+"RH_M4m",
+"M1014",
+"glock17_EP1",
+"30Rnd_556x45_Stanag_bm",
+"olrpg_pmcpvt",
+"olrpg_pmctahoe"
+];
+
+_PMC_Recruit = [
+"M1014",
+"glock17_EP1",
+"30Rnd_556x45_Stanag_bm",
+"olrpg_pmcpvt"
+];
+
+_PMC_Marksman  = [
+"RH_mk14ebrgc",
+"BAF_LRR_scoped",
+"RH_hk417sdsp",
+"RH_g17sd",
+"RH_uspsd",
+"30Rnd_556x45_Stanag_bm",
+"olrpg_pmcmark",
+"olrpg_pmcsub6",
+"olrpg_pmcsub12"
+];
+
+_PMC_Aviation  = [
+"RH_HK53",
+"RH_umpsdaim",
+"RH_UMP",
+"RH_g19",
+"RH_uspm",
+"30Rnd_556x45_Stanag_bm",
+"olrpg_pmcpilot",
+"MH6J_EP1",
+"olrpg_pmcjayhunarmed",
+];
 
 INV_ItemShops = [
 [DTK_Shop_SWAT,["SWAT","S.W.A.T. Shops"], [
@@ -2210,9 +2240,15 @@ INV_ItemShops = [
 	[["Sheriff","Captain Deputy"], _copcptdeputy, _copcptdeputy, {dtk_cop}, nil, true]
 ]],
 [OL_Shop_PMC, ["Sheriff","PMC Equipment"], [
-	[["Sheriff","PMC Operator"], _PMC, _PMC, {true}, "OL_Shop_PMCVehSpawn", true],
-	[["Sheriff","PMC Command"], _CommandPMC, _CommandPMC, {true}, "OL_Shop_PMCVehSpawn", true],
-	[["Sheriff","PMC Air"], _PMCair, _PMCair, {true}, "OL_Shop_PMCVehSpawn", false]
+	[["Sheriff","General"], _PMC_General, _PMC_General, {PMC_General}, "OL_Shop_PMCVehSpawn", true],
+	[["Sheriff","Commander"], _PMC_Commander, _PMC_Commander, {PMC_Commander}, "OL_Shop_PMCVehSpawn", true],
+	[["Sheriff","Lieutenant"], _PMC_Lieutenant, _PMC_Lieutenant, {PMC_Lieutenant}, "OL_Shop_PMCVehSpawn", true],
+	[["Sheriff","Sergeant"], _PMC_Sergeant, _PMC_Sergeant, {PMC_Sergeant}, "OL_Shop_PMCVehSpawn", true],
+	[["Sheriff","Corporal"], _PMC_Corporal, _PMC_Corporal, {PMC_Corporal}, "OL_Shop_PMCVehSpawn", true],
+	[["Sheriff","Private"], _PMC_Private, _PMC_Private, {PMC_Private}, "OL_Shop_PMCVehSpawn", true],
+	[["Sheriff","Recruit"], _PMC_Recruit, _PMC_Recruit, {PMC_Recruit}, "OL_Shop_PMCVehSpawn", true],
+	[["Sheriff","Marksman"], _PMC_Marksman, _PMC_Marksman, {PMC_Marksman}, "OL_Shop_PMCVehSpawn", true],
+	[["Sheriff","Aviation"], _PMC_Aviation, _PMC_Aviation, {PMC_Aviation}, "OL_Shop_PMCVehSpawn", true]
 ]],
 
 [DTK_Shop_Cop_SheriffEquipment, ["Sheriff","Sheriff Equipment"], [

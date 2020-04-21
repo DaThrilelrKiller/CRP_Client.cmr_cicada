@@ -3,3 +3,9 @@ taxi_minDistance = 2000;
 taxi_maxDistance = 7000;
 taxi_active = false;
 taxi_marker = "taxi_marker";
+
+taxi_blacklist = [
+[[2794.46,6104.36,0.00304413],600],
+[[4567.58,6675.26,0.00489044],200],
+[[4875.97,5238.23,0.00144196],100]
+];
