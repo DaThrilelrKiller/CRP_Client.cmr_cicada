@@ -94,11 +94,18 @@ switch (_text) do
 	{
 		_to = (call compile lbData [2100, lbCurSel 2100]select 1);
 		_to setPos getPos player;
+		closeDialog 0;
 	};
 	case "TPME2THEM": 
 	{
 		_to = (call compile lbData [2100, lbCurSel 2100]select 1);
-		player setPos getPos _to;
+
+		if (vehicle _to != _to)then {
+			[(vehicle _to)]call vehicle_getin
+		}else{
+			player setPos getPos _to;
+		};
+		closeDialog 0;
 	};
 	case "Comp 100k": 
 	{

@@ -11,6 +11,8 @@ _corps setDamage 0;
 player setVariable ["id",dtk_id,true];
 
 removeAllWeapons _unit;
+player setVariable ["tf_unable_to_use_radio", true, true];
+player setVariable ["tf_voiceVolume", 0, true];
 [_unit,_corps]call storage_dropall;
 
 []spawn medical_Effect; 

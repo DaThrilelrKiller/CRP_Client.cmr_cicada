@@ -1,4 +1,4 @@
-﻿private ["_return"];
+﻿private ["_return","_side"];
 
 _return = call {
 	if (local _this)exitWith {
@@ -6,6 +6,9 @@ _return = call {
 		if (playerSide == resistance)exitWith {"UN"};
 		if (playerSide == west)exitWith {"PD"};
 	};
+	
+	_side = _this getVariable "dtk_side";
+	if !(isNil "_side")exitWith {_side};
 	
 	if (side _this == civilian)exitWith {"CIV"};
 	if (side _this == resistance)exitWith {"UN"};

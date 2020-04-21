@@ -411,7 +411,38 @@ _tahoe = [
 
 
 _ps = [
-	"DD_FOR16F150_Black",									
+	"a2l_corvettezr1_black",
+	"a2l_f100_black",
+	"cl_f150_1_black",	
+	"cl_f150_1_blue",	
+	"cl_f150_1_darkgreen",	
+	"cl_f150_1_darkred",	
+	"cl_f150_1_gray",	
+	"cl_f150_1_green",	
+	"cl_f150_1_orange",	
+	"cl_f150_1_purple",	
+	"cl_f150_1_red",	
+	"cl_f150_1_white",	
+	"cl_f350_black",	
+	"cl_f350_blue",	
+	"cl_f350_brown",	
+	"cl_f350_darkgreen",	
+	"cl_f350_darkred",	
+	"cl_f350_gray",	
+	"cl_f350_green",	
+	"cl_f350_orange",	
+	"cl_f350_purple",	
+	"cl_f350_red",	
+	"cl_ram_3500_black",	
+	"cl_ram_3500_blue",	
+	"cl_ram_3500_brown",	
+	"cl_ram_3500_darkgreen",	
+	"cl_ram_3500_gray",	
+	"cl_ram_3500_green",	
+	"cl_ram_3500_orange",	
+	"cl_ram_3500_purple",	
+	"cl_ram_3500_red",	
+	"DD_FOR16F150_Black",		
 	"DD_FOR16F150_Blue",									
 	"DD_FOR16F150_Camo",									
 	"DD_FOR16F150_DarkGreen",							
@@ -516,9 +547,23 @@ _qbss = [
 	"tcg_aprilia_yellow_2"								
 ];
 
-
+	["Scania_420",["vehicle","car"],["Scania_420","Scania 420"],[120000,120000],[1,"DTK_License_civ_truck","",150],[]],
+	["mackr",["vehicle","car"],["mackr","Mack R Model"],[100000,100000],[1,"DTK_License_civ_truck","",150],[]],
+	["cl_flat_mackr",["vehicle","car"],["cl_flat_mackr","Mack R Cargo"],[100000,100000],[1,"DTK_License_civ_truck","",150],[]],
+	["VIL_asistvan",["vehicle","car"],["VIL_asistvan","Road Asistance"],[100000,100000],[1,"DTK_License_civ_Towing","",150],[]],
+	["VIL_transit_truck",["vehicle","car"],["VIL_transit_truck","Transit truck"],[100000,100000],[1,"DTK_License_civ_truck","",150],[]],
+	["VIL_Star_S2000",["vehicle","car"],["VIL_Star_S2000","Star truck (blue white)"],[100000,100000],[1,"DTK_License_civ_truck","",150],[]],
+	["VIL_Star_S2000o",["vehicle","car"],["VIL_Star_S2000o","Star truck (orange)"],[100000,100000],[1,"DTK_License_civ_truck","",150],[]],
+	
 _ts = [
-	"cl_del_mackr",												
+	"Scania_420",	
+	"mackr",	
+	"cl_flat_mackr",	
+	"VIL_asistvan",	
+	"VIL_transit_truck",	
+	"VIL_Star_S2000",	
+	"VIL_Star_S2000o",	
+	"cl_del_mackr",		
 	"cl_trucktest_mackr",									
 	"cl_flatbed_mackr",										
 	"Ural_TK_CIV_EP1",										
@@ -1790,6 +1835,99 @@ _copcptdeputy = [
 
 
 
+_PMC = [
+	"ziptie",						 													 		
+	"medikit", 														
+	"bjerk", 																											
+	"M24_PMC", 														
+	"5Rnd_762x51_M24", 										
+	"m8_carbine", 												
+	"m8_compact", 												
+	"m8_compact_pmc", 										
+	"m8_carbine_pmc", 										
+	"m8_sharpshooter",  									
+	"30Rnd_556x45_G36", 									
+	"RH_m4eotech_pmc", 										
+	"RH_m4aim_pmc", 											
+	"RH_m4acog_pmc", 											
+	"RH_m16a4_pmc",												
+	"RH_M16A4aim_pmc",										
+	"RH_M16A4eotech_pmc",									
+	"30Rnd_556x45_Stanag_pmc",  					
+	"G36C_camo_pmc",											
+	"30Rnd_556x45_G36_pmc",								
+	"RH_usp_pmc",													
+	"RH_15Rnd_9x19_usp",									
+	"RH_browninghp_pmc",									
+	"RH_13Rnd_9x19_bhp_pmc",							
+	"olrpg_pmccharger",										
+	"olrpg_pmctahoe",											
+	"olrpg_pmcsub6",											
+	"olrpg_pmcsub12"											
+];
+
+
+_CommandPMC = [
+	"ziptie", 														
+	"medikit", 														
+	"bjerk", 																												
+	"M24_PMC", 														
+	"5Rnd_762x51_M24", 										
+	"m8_carbine", 												
+	"m8_compact", 												
+	"m8_compact_pmc", 										
+	"m8_carbine_pmc", 										
+	"m8_sharpshooter",  									
+	"30Rnd_556x45_G36", 									
+	"RH_m4eotech_pmc", 										
+	"RH_m4aim_pmc", 											
+	"RH_m4acog_pmc", 											
+	"RH_acraim_pmc", 											
+	"RH_acreotech_pmc", 									
+	"RH_acracog_pmc", 										
+	"RH_m16a4_pmc",												
+	"RH_M16A4aim_pmc",										
+	"RH_M16A4eotech_pmc",									
+	"30Rnd_556x45_Stanag_pmc",  					
+	"G36C_camo_pmc",											
+	"30Rnd_556x45_G36_pmc",								
+	"RH_usp_pmc",													
+	"RH_15Rnd_9x19_usp",									
+	"RH_m1911_pmc",												
+	"RH_8Rnd_45cal_m1911_pmc",						
+	"RH_browninghp_pmc",									
+	"RH_13Rnd_9x19_bhp_pmc",							
+	"olrpg_pmccharger",										
+	"olrpg_pmctahoe",											
+	"olrpg_pmcsub6",											
+	"olrpg_pmcsub12"											
+];
+
+
+_PMCAIR = [
+	"MH6J_EP1", 													
+	"pmo_mh6dl_urban",									 	
+	"olrpg_pmcjayhunarmed" 								
+];
+
+_copk9sheriff = [
+	"olrpg_sdk9cv_pb",											
+	"olrpg_sdk9_charger", 								
+	"olrpg_sdtaurusk9", 									
+	"olrpg_sdk9t",
+	"olrpg_sdk9sub6"
+];
+
+_copavsh = [
+	"RH_m9",															
+	"Rnd_9x19_M9",												
+	"RH_mp5a5aim_av",											
+	"30rnd_9x19_MP5",											
+	"Donut",															
+	"olrpg_sdbell206"											
+];
+
+
 INV_ItemShops = [
 [DTK_Shop_SWAT,["SWAT","S.W.A.T. Shops"], [
     [["SWAT","Basic Police Gear"], _copbasic, _copbasic, {SWAT_id},'DTK_Shop_Cop_POVehSpawn', true],
@@ -2071,6 +2209,33 @@ INV_ItemShops = [
 	[["Sheriff","Lieutenant Deputy"], _copltdeputy, _copltdeputy, {dtk_cop}, nil, true],
 	[["Sheriff","Captain Deputy"], _copcptdeputy, _copcptdeputy, {dtk_cop}, nil, true]
 ]],
+[OL_Shop_PMC, ["Sheriff","PMC Equipment"], [
+	[["Sheriff","PMC Operator"], _PMC, _PMC, {true}, "OL_Shop_PMCVehSpawn", true],
+	[["Sheriff","PMC Command"], _CommandPMC, _CommandPMC, {true}, "OL_Shop_PMCVehSpawn", true],
+	[["Sheriff","PMC Air"], _PMCair, _PMCair, {true}, "OL_Shop_PMCVehSpawn", false]
+]],
+
+[DTK_Shop_Cop_SheriffEquipment, ["Sheriff","Sheriff Equipment"], [
+	[["Sheriff","Basic Police Gear"], _copbasic, _copbasic, {true}, "DTK_COP_LANDSPAWN2", true],
+	[["Sheriff","Junior Deputy"], _copjrdeputy, _copjrdeputy, {true}, "DTK_COP_LANDSPAWN2", true],
+	[["Sheriff","Deputy"], _copdeputy, _copdeputy, {true}, "DTK_COP_LANDSPAWN2", true],
+	[["Sheriff","Senior Deputy"], _copsrdeputy, _copsrdeputy, {true}, "DTK_COP_LANDSPAWN2", true],
+	[["Sheriff","Corporal Deputy"], _copcpldeputy, _copcpldeputy, {true}, "DTK_COP_LANDSPAWN2", true],
+	[["Sheriff","Sergeant Deputy"], _copsgtdeputy, _copsgtdeputy, {true}, "DTK_COP_LANDSPAWN2", true],
+	[["Sheriff","Lieutenant Deputy"], _copltdeputy, _copltdeputy, {true}, "DTK_COP_LANDSPAWN2", true],
+	[["Sheriff","Captain Deputy"], _copcptdeputy, _copcptdeputy, {true}, "DTK_COP_LANDSPAWN2", true]
+]],
+[DTK_Shop_Cop_SheriffDivision, ["Sheriff","Sheriff Division Equipment"], [
+	[["Sheriff","Basic Police Gear"], _copbasic, _copbasic, {true}, "DTK_COP_LANDSPAWN2", true],
+	[["Sheriff","Sheriff K-9"], _copk9sheriff, _copk9sheriff, {true}, "DTK_COP_LANDSPAWN2", false],
+	[["Sheriff","Sheriff Marksman"], _copsheriffmks, _copsheriffmks, {true}, "DTK_COP_LANDSPAWN2", true],
+	[["Sheriff","Sheriff D.N.R. Equipment"], _copsheriffdnr, _copsheriffdnr, {true}, "DTK_COP_LANDSPAWN2", false]
+]],
+[DTK_Shop_Cop_SheriffAvitaion, ["Sheriff","Sheriff Aviation Equipment"], [
+	[["Sheriff","Basic Police Gear"], _copbasic, _copbasic,{true}, "OL_Shop_Cop_SheriffAviationVehSpawn", true],
+	[["Sheriff","Sheriff Aviation"], _copavsh, _copavsh,{true}, "OL_Shop_Cop_SheriffAviationVehSpawn", true]
+]],
+	
 [DTK_Shop_BM,["picture","Black Market"], [
     [["picture","Black Market"], _bm, _bm, {true},'dummyobj', true]
 ]],

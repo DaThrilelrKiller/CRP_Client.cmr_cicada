@@ -30,6 +30,7 @@ whitelist_data = [
 ["Firefighter II","FF1_id",{SwagDevs or EMSChiefs_id or EMSCommand_id}],
 ["Paramedic","EMTAdavnced_id",{SwagDevs or EMSChiefs_id or EMSCommand_id}],
 ["Advanced EMT","EMTBasic_id",{SwagDevs or EMSChiefs_id or EMSCommand_id}]
+
 ];
 
 tag_default = "data\images\tags\member";

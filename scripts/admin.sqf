@@ -25,7 +25,8 @@ DEV_CfgVehicles = [
 	"Thing",
 	"Building",
 	"House",
-	"Man"
+	"Man",
+	"Motorcycle"
 ];
 
 DEV_CfgSounds = [
@@ -55,9 +56,20 @@ DEV_CfgVehicles_Actions = [
 ];
 
 DEV_LogTemplate = {
-	private ["_name"];
+	private ["_name","_configEntry"];
 	_name = lbText [1501, (lbCurSel 1501)];
-	diag_log formatText ['["%1",["vehicle","car"],["%1","%2"],[100000,100000],[1,"DTK_License_civ_drivers","",150],[]],',(_this select 0),_name];
+	_configEntry = lbText [2100, (lbCurSel 2100)];
+	
+	if (_configEntry == "CfgVehicles")then {
+		diag_log formatText ['["%1",["vehicle","car"],["%1","%2"],[100000,100000],[1,"DTK_License_civ_drivers","",150],[]],',(_this select 0),_name];
+	};
+	if (_configEntry == "CfgWeapons")then {
+		diag_log formatText ['["%1",["weapon","pistol"],["%1","%2"],[100000,100000],[1,"",""],[]],',(_this select 0),_name];
+	};
+	if (_configEntry == "CfgMagazines")then {
+		diag_log formatText ['["%1",["magazin",""],["%1","%2"],[100000,100000],[1,"",""],[]],',(_this select 0),_name];
+	};
+	systemchat format ["DevCon: Template logged for: %1",_name];
 };
 
 DEV_PreviewVehicle = {
@@ -134,13 +146,15 @@ DEV_CamHandler = {
 DEV_CfgWeapons_Actions = [
 	[{_this call DEV_PreviewWeapon;},"Preview"],
 	[{_this call DEV_AddWeapon;},"Create"],
-	[{_this call DEV_LogName;},"Log Classname"]
+	[{_this call DEV_LogName;},"Log Classname"],
+	[{_this call DEV_LogTemplate;},"Log Template"]
 ];
 
 DEV_CfgMagazines_Actions = [
 	[{_this call DEV_PreviewMagazine;},"Preview"],
 	[{_this call DEV_AddMagazine;},"Create"],
-	[{_this call DEV_LogName;},"Log Classname"]
+	[{_this call DEV_LogName;},"Log Classname"],
+	[{_this call DEV_LogTemplate;},"Log Template"]
 ];
 DEV_CfgSounds_Actions = [
 	[{(_this select 0) say (_this select 1);},"Preview"],
@@ -217,16 +231,18 @@ DEV_LoadMagazinesCurrent = {
 		if (isClass _class)then {
 			_name = configName(_class);	
 			
-			_kind  = lbText [2101, (lbCurSel 2101)];
-			
+			if !(_name call TFAR_fnc_isRadio)then {
+				_kind  = lbText [2101, (lbCurSel 2101)];
 				
-			_display = getText(_class >> "displayName");
-			_display = if (_display == "")then {_name}else{_display};
-			_picture = _class call DEV_GetPicture;
-							
-			_index = lbAdd [1501,format ["%2",_name,_display]];
-			lbSetPicture [1501, _index, format ["%1",_picture]];
-			lbSetData [1501, _index, _name];
+					
+				_display = getText(_class >> "displayName");
+				_display = if (_display == "")then {_name}else{_display};
+				_picture = _class call DEV_GetPicture;
+								
+				_index = lbAdd [1501,format ["%2",_name,_display]];
+				lbSetPicture [1501, _index, format ["%1",_picture]];
+				lbSetData [1501, _index, _name];
+			};
 		};
 	}forEach _magazines;
 };
@@ -265,11 +281,11 @@ DEV_RefreshConfig = {
 				lbSetPicture [1501, _index, format ["%1",_picture]];
 				lbSetData [1501, _index, _name];
 				
-				if (_configEntry == "CfgVehicles")then {
-					if (isNil format['%1',_name])then {
-						lbSetColor [1501,_index,[0,1,0, 1]];
-					};
+
+				if (isNil format['%1',_name])then {
+					lbSetColor [1501,_index,[0,1,0,1]];
 				};
+				
 			};
 		};
 	};
@@ -338,12 +354,12 @@ DEV_CreateVehicle = {
 		CloseDialog 0;	
 	};
 
-	if (isNull (driver DTK_Veh))then {
-		deleteVehicle DTK_Veh;
+	if (isNull (driver DTK_Vehicle))then {
+		deleteVehicle DTK_Vehicle;
 	};
 
-	DTK_Veh =  createVehicle [_classname,_pos, [], 0, "CAN_COLLIDE"];
-	DTK_Veh setVehicleInit format [
+	DTK_Vehicle =  createVehicle [_classname,_pos, [], 0, "CAN_COLLIDE"];
+	DTK_Vehicle setVehicleInit format [
 	"
 		this setVehicleVarName ""vehicle_%2_%1"";
 		vehicle_%2_%1 = this; 
@@ -355,32 +371,33 @@ DEV_CreateVehicle = {
 	, round(random 10), round(time)];
 	processInitCommands;
 	
-	DTK_Veh setDir _dir;
+	DTK_Vehicle setDir _dir;
 	_data = [[getPlayerUID (_this select 1)],_classname,dtk_side,name player];
-	DTK_Veh setVariable ["DTK_OwnerUID",_data, true];
-	DTK_Veh setVariable ["dtk_keys",[getPlayerUID player], true];
-	DTK_Veh setVariable ["dtk_storage",[[],[]], true];
-	DTK_Veh setvariable ["tuning",1.008, true];
-	DTK_Veh addeventhandler ["HandleDamage",'_this call vehicle_handleDamage' ];	
-	["ALL",[DTK_Veh,['','noscript.sqf',format["[%1]call vehicle_getIn;",DTK_Veh],-1,false,true,'LeanRight','vehicle player == _target']],"network_addAction",false,true]call network_MPExec;
-	["ALL",[DTK_Veh,['','noscript.sqf',format["[%1]call vehicle_getIn;",DTK_Veh],-1,false,true,'LeanRight','player distance _target < 5 && {(_target call vehicle_side) == dtk_side or dtk_side == "CIV"} && {vehicle player == player} && {!(locked _target)} && {!([_target,"Get In (E)",""]call tag_show)}']],"network_addAction",false,true]call network_MPExec;
-	["ALL",[DTK_Veh,['','noscript.sqf',format["[%1]call vehicle_menu;",DTK_Veh],-1,false,true,'LeanRight','player distance _target < 5 && {(_target call vehicle_side) != dtk_side} && {vehicle player == player} && {dtk_side == "PD"} && {!([_target,"Vehicle Menu (E)",""]call tag_show)}']],"network_addAction",false,true]call network_MPExec;
+	DTK_Vehicle setVariable ["DTK_OwnerUID",_data, true];
+	DTK_Vehicle setVariable ["dtk_keys",[getPlayerUID player], true];
+	DTK_Vehicle setVariable ["dtk_storage",[[],[]], true];
+	DTK_Vehicle setvariable ["tuning",1.008, true];
+	DTK_Vehicle addeventhandler ["HandleDamage",'_this call vehicle_handleDamage' ];	
+	["ALL",[DTK_Vehicle,['','noscript.sqf',format["[%1]call vehicle_getIn;",DTK_Vehicle],-1,false,true,'LeanRight','vehicle player == _target']],"network_addAction",false,true]call network_MPExec;
+	["ALL",[DTK_Vehicle,['','noscript.sqf',format["[%1]call vehicle_getIn;",DTK_Vehicle],-1,false,true,'LeanRight','player distance _target < 5 && {(_target call vehicle_side) == dtk_side or dtk_side == "CIV"} && {vehicle player == player} && {!(locked _target)} && {!([_target,"Get In (E)",""]call tag_show)}']],"network_addAction",false,true]call network_MPExec;
+	["ALL",[DTK_Vehicle,['','noscript.sqf',format["[%1]call vehicle_menu;",DTK_Vehicle],-1,false,true,'LeanRight','player distance _target < 5 && {(_target call vehicle_side) != dtk_side} && {vehicle player == player} && {dtk_side == "PD"} && {!([_target,"Vehicle Menu (E)",""]call tag_show)}']],"network_addAction",false,true]call network_MPExec;
 
-	[DTK_Veh] call plates_setplate;
+	[DTK_Vehicle] call plates_setplate;
 	
 	if (dtk_cop || {dtk_ems}) then {
 		if !(_classname isKindOf "Air")then 
 		{
-			DTK_Veh setVariable ["dtk_sirens",["dtk_HighWail","dtk_Yelp","dtk_LowPhasser"],true];
+			DTK_Vehicle setVariable ["dtk_sirens",["dtk_HighWail","dtk_Yelp","dtk_LowPhasser"],true];
 		};
 	};
 
 	if (_classname in dtk_towers)then {
-		DTK_Veh setVariable["towing","",true];
+		DTK_Vehicle setVariable["towing","",true];
 	};				
 
-	[_classname,DTK_Veh]call vehicle_texture;														
-	player reveal DTK_Veh;
+	[_classname,DTK_Vehicle]call vehicle_texture;														
+	player reveal DTK_Vehicle;
+	deleteVehicle DTK_Veh;
 	
 	CloseDialog 0;	
 };

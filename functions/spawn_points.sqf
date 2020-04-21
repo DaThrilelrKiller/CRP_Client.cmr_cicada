@@ -114,3 +114,6 @@ Hostagespawn2 setPos [7260.33,7392.6,0];
 Hostagespawn1 = 'Logic'  createVehicleLocal [0,0,0];
 Hostagespawn1 setDir 180;
 Hostagespawn1 setPos [7258.48,7392.82,0];
+DTK_COP_LANDSPAWN2 = 'Logic'  createVehicleLocal [0,0,0];
+DTK_COP_LANDSPAWN2 setDir 359.829;
+DTK_COP_LANDSPAWN2 setPos [3596.1,3118,48];

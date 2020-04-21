@@ -41,6 +41,7 @@ _old spawn {
 
 removeAllWeapons _unit;
 player setPosATL _pos;
+player setVariable ["dtk_side",dtk_side,true];
 player setVariable ['dtk_storage',_storage,true];
 player setVariable ["cdb_warrants",_warrants,true];
 player setVariable ["cdb_license",_license,true];
@@ -51,6 +52,8 @@ player setVariable ["dtk_actions",_actions,false];
 
 player addEventHandler ["respawn", {_this call setup_respawn; _this}]; 
 player addEventHandler ["fired", { _this call setup_fired;}];
+player addEventHandler ["handleDamage", {_this call events_sethit}];
+player addMPEventHandler ["MPKilled",{_this call killfeed_display;}];
 
 {player addWeapon _x}count _oldweapons;
 {player addMagazine _x} count _oldmags;

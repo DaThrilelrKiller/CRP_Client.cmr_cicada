@@ -1,6 +1,8 @@
 ﻿private ["_return","_data","_item","_info","_itemcost","_costwithTax","_amount","_cost","_itemtype","_classname","_array","_fahne","_crate","_logic","_license","_license1","_license2","_invspace","_menge"];
 
-if(dtk_shopactive)exitWith {};
+if(dtk_shopactive)exitWith {
+	systemchat "Shop script is already running";
+};
 dtk_shopactive = true;
 
 _return = false;
@@ -21,9 +23,16 @@ _amount = _this select 0;
  _license2   = _info call config_license2;
  
 
-if (!(_amount call string_isInteger)) exitWith {systemChat  localize "STRS_inv_no_valid_number";};
+if (!(_amount call string_isInteger)) exitWith {
+	systemChat  localize "STRS_inv_no_valid_number";
+	dtk_shopactive = false;
+};
+
 _amount = _amount call string_toInt;  
-if (_amount <= 0) exitWith {};
+if (_amount <= 0) exitWith {
+	dtk_shopactive = false;
+};
+
 _cost = _amount*_costwithTax; 
  _cost =  round (_cost);
 

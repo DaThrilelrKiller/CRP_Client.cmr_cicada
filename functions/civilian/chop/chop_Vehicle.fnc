@@ -5,6 +5,11 @@ if (isNil "chopping")then {
 chopping = true;
 
 _vehicle = [getPos player,20]call core_NearbyVehicle;
+
+if (isNil "_vehicle")exitWith {
+	systemchat "No vehicles found nearby";
+};
+
 _speed = _vehicle getVariable ["tuning",0];
 _storage = _vehicle getVariable ["dtk_upgrade",0];
 _test = (_vehicle getVariable "DTK_OwnerUID" select 1);

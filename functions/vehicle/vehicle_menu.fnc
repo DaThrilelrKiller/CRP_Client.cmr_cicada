@@ -5,11 +5,11 @@ dtk_unit = driver dtk_vehicle;
 
 if (dtk_side == "PD")exitWith {
 	if (isNull dtk_unit)then {
-		ctrlEnable [99, false];
-		ctrlEnable [101, false];
+		ctrlEnable [100, false];
 		ctrlEnable [102, false];
 		ctrlEnable [103, false];
 		ctrlEnable [104, false];
+		ctrlEnable [105, false];
 	}else{
 		ctrlEnable [106, false];
 		ctrlEnable [107, false];

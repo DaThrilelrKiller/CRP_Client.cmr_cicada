@@ -28,4 +28,4 @@ admin_actions = [
 ];
 
 
-v_admin_recents = profileNameSpace getVariable ["v_admin_recents",{SwagDevs}],[]];
+v_admin_recents = profileNameSpace getVariable ["v_admin_recents",[]];

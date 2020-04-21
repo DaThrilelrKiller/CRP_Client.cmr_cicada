@@ -22,6 +22,7 @@ if (dtk_client)then {
 		if (playerSide == west)exitWith {"PD"};
 		"unknown"
 	};
+	player setVariable ["dtk_side",dtk_side,true];
 
 startLoadingScreen ["Loading Side Variables","dtk_loading"]; 
 call compile preprocessFile format ['configuration\sidevariables\%1variables.sqf',dtk_side];

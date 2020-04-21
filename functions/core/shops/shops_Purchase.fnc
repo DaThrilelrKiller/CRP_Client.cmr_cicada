@@ -1,6 +1,8 @@
 ﻿private ["_weapons","_return","_data1","_item","_info","_itemcost","_costwithTax","_amount","_kind","_cost","_itemtype","_classname","_crate","_logic","_license","_license1","_license2","_invspace","_menge"];
 
-if(dtk_shopactive)exitWith {};
+if(dtk_shopactive)exitWith {
+	systemchat "Shop script is already running";
+};
 dtk_shopactive = true;
 
 _return = false;
@@ -20,13 +22,27 @@ _kind = _info call config_kind;
  _license1   = _info call config_license1;
  _license2   = _info call config_license2; 
 
-if (!(_amount call string_isInteger)) exitWith {systemChat  localize "STRS_inv_no_valid_number";};
+if (!(_amount call string_isInteger)) exitWith {
+	systemChat  localize "STRS_inv_no_valid_number";
+	dtk_shopactive = false;
+};
+
+
 _amount = _amount call string_toInt;  
-if (_amount <= 0) exitWith {};
+if (_amount <= 0) exitWith {
+	dtk_shopactive = false;
+};
 _cost = _amount*_costwithTax; 
  
-if !([_cost,false,_info,0] call shops_ProcessMoney)exitWith {systemChat "you do not have enought money";dtk_shopactive = false;};
-if (!(_license1 call licenses_has) and dtk_civ and _license) exitWith {systemChat  format[localize "STRS_inv_buyitems_nolicense", (_license1 call licenses_name)];dtk_shopactive = false;};
+if !([_cost,false,_info,0] call shops_ProcessMoney)exitWith {
+	systemChat "you do not have enought money";
+	dtk_shopactive = false;
+};
+
+if (!(_license1 call licenses_has) and dtk_civ and _license) exitWith {
+	systemChat  format[localize "STRS_inv_buyitems_nolicense", (_license1 call licenses_name)];
+	dtk_shopactive = false;
+};
 
 switch(_itemtype)do
 {
