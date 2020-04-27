@@ -10,15 +10,8 @@ _pos        = [(_pos select 0) + ((sin _dir) * 10), (_pos select 1) + ((cos _dir
 _fire = "Land_Campfire_burning" createVehicle _pos;																
 _tent = "Land_tent_east" CreateVehicle _pos; 															
 
-_box = "TKOrdnanceBox_EP1" createVehicle [0,0,0];												
-_box setDir _dir; 
-_box setpos (_tent buildingPos 2);
-ClearMagazineCargo _box; 
-ClearWeaponCargo _box;
-
 _fire call core_setVarName;
 _tent call core_setVarName;
-_box call core_setVarName;
 
 _tent addaction ["Remove your hideout", "noscript.sqf", 
 format['
@@ -26,6 +19,6 @@ format['
 	deleteVehicle %2;
 	deleteVehicle %3;																						
 	[player,"hideout",1] call storage_add;
-',_tent,_fire,_box],1,false,true,"",""];
+',_tent,_fire],1,false,true,"",""];
 																			
 [player,_item,-1] call storage_add;

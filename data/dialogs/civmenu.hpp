@@ -107,7 +107,8 @@
 			y = safeZoneY+safeZoneH*0.62111112;
 			w = safeZoneW*0.143125;
 			h = safeZoneH*0.03666667;
-			text = "";			
+			text = "Put in Vehicle";		
+			action = "[]spawn other_putplayerincar;"
 		};
 		class button_extra3 : RscButton 
 		{

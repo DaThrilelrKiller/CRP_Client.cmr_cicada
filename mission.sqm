@@ -1928,6 +1928,75 @@ class Mission
 				};
 			};
 		};
+		class Item85
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10261.616,5.4786577,-3786.8418};
+					azimut=-544.005;
+					special="NONE";
+					id=97;
+					side="GUER";
+					vehicle="ibr_paramedic";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="EMS_10";
+					init=" removeallweapons this; ";
+					description="Emergency Medical Technician";
+				};
+			};
+		};
+		class Item86
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10261.616,5.4786577,-3786.8418};
+					azimut=-544.005;
+					special="NONE";
+					id=98;
+					side="GUER";
+					vehicle="ibr_paramedic";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="EMS_11";
+					init=" removeallweapons this; ";
+					description="Emergency Medical Technician";
+				};
+			};
+		};
+		class Item87
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10261.616,5.4786577,-3786.8418};
+					azimut=-544.005;
+					special="NONE";
+					id=96;
+					side="GUER";
+					vehicle="ibr_paramedic";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="EMS_12";
+					init=" removeallweapons this; ";
+					description="Emergency Medical Technician";
+				};
+			};
+		};
 	};
 	class Vehicles
 	{

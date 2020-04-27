@@ -29,5 +29,6 @@
 "sounds",
 "sound_change",
 "sound_mode",
-"tags"
+"tags",
+"open"
 ];

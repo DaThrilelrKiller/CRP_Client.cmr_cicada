@@ -1,5 +1,9 @@
 private ["_cache","_weapons","_mags"];
 
+if (gear_box_open)exitWith {
+	systemchat "Gear is already open";
+};
+
 gear_box_open = true;
 
 gear_object = _this select 0;

@@ -4,14 +4,14 @@
 [DTK_Shop_Pub3,"Macks Bar"],
 [DTK_Shop_Pub4,"Hermanns Haxe Cellar"],
 [DTK_Shop_Pub5,"Binkys Casket Saloon"],
-[donutguy,"East Dunkin Bronuts"],
-[donutguy2,"West Dunkin Bronuts"],
 [DTK_Shop_Pharmacy,"Pharmacy"],
 [DTK_Shop_Fuel_2,"Gas n Porn"],
 [DTK_Shop_Fuel_4,"Gas n Pit"],
 [DTK_Shop_Fuel_5,"Gas n Chips"],
 [DTK_Shop_Fuel_1,"Mikes Hard Gas"],
-[DTK_Shop_Fuel_3,"Gas Hause"]
+[DTK_Shop_Fuel_3,"Gas Hause"],
+[donutguy2,"West Dunkin Donuts"],
+[donutguy,"East Dunkin Donuts"]
 ];
 
 robbery_dialog_array = 

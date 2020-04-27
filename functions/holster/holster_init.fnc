@@ -3,7 +3,6 @@
 
 if (dtk_civ)exitWith {
 	["Holster Pistol","ku",["1",false,true,false],[["Pistol"],holster_add]]call keypress_add;
-	["Holster Rifle","ku",["2",false,true,false],[["Rifle"],holster_add]]call keypress_add;
 };
 
 if (dtk_ems)exitWith {
@@ -12,6 +11,5 @@ if (dtk_ems)exitWith {
 
 if (dtk_cop)exitWith {
 	["Holster Pistol","ku",["1",false,true,false],[["Pistol"],holster_add]]call keypress_add;
-	["Holster Rifle","ku",["2",false,true,false],[["Rifle"],holster_add]]call keypress_add;
 	["Holster Taser","ku",["3",false,true,false],[["DDOPP_X3"],holster_add]]call keypress_add;
 };

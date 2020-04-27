@@ -1,4 +1,5 @@
 ﻿[]spawn core_check;
+[]spawn core_version;
 
 if (dtk_client)then {
 	[]spawn core_paycheck;

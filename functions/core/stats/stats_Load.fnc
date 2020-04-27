@@ -20,7 +20,10 @@ removeAllWeapons player;
 
 if ((getPlayerUID player) != _UID)exitWith {
 	systemChat format ["Almost loaded with (%1`s) stats requesting stats again",_UID];
-	["SERVER",[player,dtk_side],"s_stats_load",false,false]call network_MPExec;
+	[]spawn {
+		sleep 10;
+		["SERVER",[player,dtk_side],"s_stats_load",false,false]call network_MPExec;
+	};
 };
 
 dtk_bank = (_stats select 0);

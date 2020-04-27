@@ -1,14 +1,15 @@
-﻿if (typeName _this != "OBJECT")then {
+﻿private ["_vehicle","_spike"];
+
+if (typeName _this != "OBJECT")exitWith {
 	
 	
 	_pos = ScreenToWorld [0.5,0.7];
 	_pos = if (_pos distance getPos player > 10)then {getPos player}else{_pos};
 	
-	_this = "spikestrip" createVehicle [0, 0, 0];
-	_this setDir (getDir player) + 90;
-	_this setPos _pos;
-	_this setDammage 1;
-	["ALL",_this,"police_spikes",true,false]call network_MPExec;
+	_spike = "spikestrip" createVehicle [0, 0, 0];
+	_spike setDir (getDir player) + 90;
+	_spike setPos _pos;
+	["ALL",_spike,"police_spikes",true,false]call network_MPExec;
 	[player,"spikestrip",-1] call storage_add;
 };
 

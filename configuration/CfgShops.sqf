@@ -64,32 +64,30 @@ _pub = [
 	"wine2"																
 ];
 
-
 _ass = [
-	"RH_m9sd",														
-	"15Rnd_9x19_M9SD",										
-	"RH_g17sd",														
-	"RH_17Rnd_9x19_g17SD",								
-	"RH_m1911sd",													
-	"RH_8Rnd_45cal_m1911",								
-	"RH_mk22sd",													
-	"RH_8Rnd_9x19_Mksd",									
-	"RH_uzisd",														
-	"RH_9mm_32RND_SD_Mag",								
+	"RH_m9sd_ass",														
+	"15Rnd_9x19_M9SD_ass",										
+	"RH_g17sd_ass",														
+	"RH_17Rnd_9x19_g17SD_ass",								
+	"RH_m1911sd_ass",													
+	"RH_8Rnd_45cal_m1911_ass",								
+	"RH_mk22sd_ass",													
+	"RH_8Rnd_9x19_Mksd_ass",									
+	"RH_uzisd_ass",														
+	"RH_9mm_32RND_SD_Mag_ass",								
 	"RH_mp5sd6eot_ass",										
-	"30rnd_9x19_MP5SD",										
+	"30rnd_9x19_MP5SD_ass",										
 	"RH_mp7sd_ass",												
 	"RH_mp7sdaim_ass",										
 	"RH_mp7sdeot_ass",										
-	"RH_46x30mm_40RND_SD_Mag",						
+	"RH_46x30mm_40RND_SD_Mag_ass",						
 	"RH_mk12mod1sd_ass",									
-	"20Rnd_556x45_Stanag",								
-	"VSS_vintorez",												
-	"10Rnd_9x39_SP5_VSS",									
-	"C1987_P99_black_sd",									
-	"15Rnd_9x19_p99_sd"										
+	"20Rnd_556x45_Stanag_ass",								
+	"VSS_vintorez_ass",												
+	"10Rnd_9x39_SP5_VSS_ass",									
+	"C1987_P99_black_sd_ass",									
+	"15Rnd_9x19_p99_sd_ass"										
 ];
-
 
 _mgs = [
 	"RH_mk22",														
@@ -111,13 +109,13 @@ _mgs = [
 	"ilpd_ags_cvpi"												
 ];
 
-
 _es = [
 	"Binocular",												
 	"GPS",													
 	"NVGoggles",												
 	"hideout",												
-	"fishing_rod",										
+	"fishing_rod",
+	"radio",	
 	"bunnyhop"											
 ];
 
@@ -248,18 +246,7 @@ _sc4 = [
 ];
 
 
-_sc5 = [
-	"DD_MCL13P1_Black",										
-	"DD_MCL13P1_Blue",										
-	"DD_MCL13P1_Camo",										
-	"DD_MCL13P1_DarkGreen",								
-	"DD_MCL13P1_DarkRed",									
-	"DD_MCL13P1_Green",										
-	"DD_MCL13P1_Orange",									
-	"DD_MCL13P1_Red",											
-	"DD_MCL13P1_UrbanCamo",								
-	"DD_MCL13P1_White",										
-	"DD_MCL13P1_Yellow",									
+_sc5 = [									
 	"CL_PORSCHE_997",											
 	"CL_LAMBORGHINI_GT3",									
 	"KOENIGSEGG_CCX",											
@@ -320,18 +307,7 @@ _sc7 = [
 
 
 _sc8 =
-[
-	"DD_FOR13Mustang_Black",							
-	"DD_FOR13Mustang_Blue",								
-	"DD_FOR13Mustang_Camo",								
-	"DD_FOR13Mustang_DarkGreen",					
-	"DD_FOR13Mustang_DarkRed",						
-	"DD_FOR13Mustang_Green",							
-	"DD_FOR13Mustang_Orange",							
-	"DD_FOR13Mustang_Red",								
-	"DD_FOR13Mustang_UrbanCamo",					
-	"DD_FOR13Mustang_White",							
-	"DD_FOR13Mustang_Yellow",							
+[							
 	"tcg_taurus_civ1",										
 	"tcg_taurus_civ2",										
 	"tcg_taurus_civ3",										
@@ -343,33 +319,11 @@ _sc8 =
 	"il_fordcv_black",										
 	"il_fordcv_darkblue",									
 	"il_fordcv_maroon",										
-	"il_fordcv_sandstone",								
-	"DD_CHE10Impala_Black",								
-	"DD_CHE10Impala_Blue",								
-	"DD_CHE10Impala_Camo",								
-	"DD_CHE10Impala_DarkGreen",						
-	"DD_CHE10Impala_DarkRed",							
-	"DD_CHE10Impala_Green",								
-	"DD_CHE10Impala_Orange",							
-	"DD_CHE10Impala_Red",									
-	"DD_CHE10Impala_UrbanCamo",						
-	"DD_CHE10Impala_White",								
-	"DD_CHE10Impala_Yellow"								
+	"il_fordcv_sandstone"								
 ];
 
 
-_sc9 = [
-	"DD_BMWM5_Black",											
-	"DD_BMWM5_Blue",											
-	"DD_BMWM5_Camo",											
-	"DD_BMWM5_DarkGreen",									
-	"DD_BMWM5_DarkRed",										
-	"DD_BMWM5_Green",											
-	"DD_BMWM5_Orange",										
-	"DD_BMWM5_Red",												
-	"DD_BMWM5_UrbanCamo",									
-	"DD_BMWM5_White",											
-	"DD_BMWM5_Yellow",										
+_sc9 = [										
 	"BMW_M6",															
 	"BMW_M3_GTR",													
 	"BMW_M3",															
@@ -441,18 +395,7 @@ _ps = [
 	"cl_ram_3500_green",	
 	"cl_ram_3500_orange",	
 	"cl_ram_3500_purple",	
-	"cl_ram_3500_red",	
-	"DD_FOR16F150_Black",		
-	"DD_FOR16F150_Blue",									
-	"DD_FOR16F150_Camo",									
-	"DD_FOR16F150_DarkGreen",							
-	"DD_FOR16F150_DarkRed",								
-	"DD_FOR16F150_Green",									
-	"DD_FOR16F150_Orange",								
-	"DD_FOR16F150_Red",										
-	"DD_FOR16F150_UrbanCamo",							
-	"DD_FOR16F150_White",									
-	"DD_FOR16F150_Yellow",								
+	"cl_ram_3500_red",									
 	"DD_CHE15Suburban_Black",							
 	"DD_CHE15Suburban_Blue",							
 	"DD_CHE15Suburban_Camo",							
@@ -556,7 +499,6 @@ _qbss = [
 	["VIL_Star_S2000o",["vehicle","car"],["VIL_Star_S2000o","Star truck (orange)"],[100000,100000],[1,"DTK_License_civ_truck","",150],[]],
 	
 _ts = [
-	"Scania_420",	
 	"mackr",	
 	"cl_flat_mackr",	
 	"VIL_asistvan",	
@@ -802,8 +744,7 @@ _psc = [
 	"medikit",														
 	"pharm",															
 	"GymMem1",														
-	"GymMem2",														
-	"cl_wheelchair"
+	"GymMem2"
 ];
 
 
@@ -831,7 +772,8 @@ _copbasic = [
 	"medikit",														
 	"Binocular",													
 	"NVGoggles",													
-	"GPS",																
+	"GPS",
+	"radio",
 	"reparaturkit"																		
 ];
 
@@ -856,42 +798,43 @@ _copuntrained = [
 	"DDOPP_3Rnd_X3",											
 	"rh_G19_pd",													
 	"RH_19Rnd_9x19_g18",									
-	"tcg_remington_pd",										
+	"tcg_remington_SD",										
 	"8Rnd_B_Beneli_Pellets_fix",							
 	"olrpg_pdcv_pb" 											
 ];
 
 
 _coppo1 = [
-	"DDOPP_X3",														
-	"DDOPP_3Rnd_X3",											
-	"revolver_EP1",
-	"Rnd_45ACP",
-	"rh_p226_pd",													
-	"RH_15Rnd_9x19_usp_pd",								
-	"rh_G19_pd",													
-	"RH_19Rnd_9x19_g18",									
-	"M1014_pd",														
-	"8Rnd_B_Beneli_Pellets_fix",							
-	"RH_hk416eotech_pd",									
-	"30Rnd_556x45_Stanag",								
+	"tcg_mossberg_SD", 
+	"tcg_remington_SD", 
+	"RH_M16A4eotech_SD", 
+	"RH_M16A4acog_SD",
+	"RH_g17_SD", 
+	"RH_p226_SD", 
+	"x26",										
+	"30Rnd_556x45_Stanag_SD",
+	"8Rnd_B_Beneli_Pellets_fix", 
+	"x26_Mag", 
+	"Rnd_9x19_glock17_SD",
+	"RH_15Rnd_9x19_usp_SD",						
 	"olrpg_pdcv_pb", 											
 	"olrpg_m5pd"										
 ];
 
 
 _coppo2 = [
-	"DDOPP_X3",														
-	"DDOPP_3Rnd_X3",											
-	"rh_p226_pd",													
-	"RH_15Rnd_9x19_usp_pd",								
-	"rh_G19_pd",													
-	"RH_19Rnd_9x19_g18",									
-	"M1014_pd",														
-	"8Rnd_B_Beneli_Pellets_fix",							
-	"RH_hk416aim_pd",											
-	"RH_hk416eotech_pd",									
-	"30Rnd_556x45_Stanag",								
+	"tcg_mossberg_SD", 
+	"tcg_remington_SD", 
+	"RH_M16A4eotech_SD", 
+	"RH_M16A4acog_SD",
+	"RH_g17_SD", 
+	"RH_p226_SD", 
+	"x26",										
+	"30Rnd_556x45_Stanag_SD",
+	"8Rnd_B_Beneli_Pellets_fix", 
+	"x26_Mag", 
+	"Rnd_9x19_glock17_SD",
+	"RH_15Rnd_9x19_usp_SD",			
 	"olrpg_pdcv_pb", 											
 	"olrpg_m5pd", 												
 	"olrpg_pdtaurus"									
@@ -899,20 +842,22 @@ _coppo2 = [
 
 
 _coppo3 = [
-	"DDOPP_X3",														
-	"DDOPP_3Rnd_X3",											
-	"revolver_EP1",
-	"Rnd_45ACP",
-	"rh_p226_pd",													
-	"RH_15Rnd_9x19_usp_pd",								
-	"rh_G19_pd",													
-	"RH_19Rnd_9x19_g18",									
-	"M1014_pd",														
-	"8Rnd_B_Beneli_Pellets_fix",							
-	"RH_hk416acog_pd",										
-	"RH_hk416aim_pd",											
-	"RH_hk416eotech_pd",									
-	"30Rnd_556x45_Stanag",								
+	"tcg_mossberg_SD", 
+	"tcg_remington_SD",
+	"RH_M16A4eotech_SD",
+	"RH_M16A4acog_SD",
+	"RH_M4a1eotech_SD", 
+	"RH_M4a1aim_SD", 
+	"RH_p226_SD", 
+	"RH_g17_SD", 
+	"revolver_SD", 
+	"x26",		
+	"8Rnd_B_Beneli_Pellets_fix",								
+	"30Rnd_556x45_Stanag_SD", 
+	"RH_15Rnd_9x19_usp_SD",	
+	"x26_Mag", 
+	"Rnd_9x19_glock17_SD",
+	"Rnd_45ACP_SD",									
 	"olrpg_pdcv_pb", 											
 	"olrpg_m5pd", 												
 	"olrpg_pd_charger", 									
@@ -921,19 +866,27 @@ _coppo3 = [
 
 
 _copcpl = [
-	"DDOPP_X3_b",												  
-	"DDOPP_3Rnd_X3",										  
-	"RH_python_sheriff",
-	"Rnd_45ACP",
-	"rh_G19_pd",													
-	"RH_19Rnd_9x19_g18",									
-	"rh_p226_pd",													
-	"RH_15Rnd_9x19_usp_pd",								
-	"M1014_pd",														
-	"8Rnd_B_Beneli_Pellets_fix",							
-	"RH_m4maim_pd",												
-	"RH_m4meotech_pd",										
-	"30Rnd_556x45_Stanag",								
+	"RH_M4a1acog_SD", 
+	"RH_Mk18eot_SD", 
+	"RH_Mk18aim_SD", 
+	"RH_pythonma_SD",
+	"tcg_mossberg_SD", 
+	"tcg_remington_SD",
+	"RH_M16A4eotech_SD",
+	"RH_M16A4acog_SD",
+	"RH_M4a1eotech_SD", 
+	"RH_M4a1aim_SD", 
+	"RH_p226_SD", 
+	"RH_g17_SD", 
+	"revolver_SD", 
+	"x26",		
+	"8Rnd_B_Beneli_Pellets_fix",								
+	"30Rnd_556x45_Stanag_SD", 
+	"RH_15Rnd_9x19_usp_SD",	
+	"x26_Mag", 
+	"Rnd_9x19_glock17_SD",
+	"Rnd_45ACP_SD",
+	"RH_6Rnd_357_Mag_SD",									
 	"olrpg_pdcv_pb", 											
 	"olrpg_m5pd", 												
 	"olrpg_pd_charger", 									
@@ -943,20 +896,31 @@ _copcpl = [
 
 
 _copsgt = [
-	"DDOPP_X3_b",												  
-	"DDOPP_3Rnd_X3",										  
-	"RH_python_sheriff",
-	"Rnd_45ACP",
-	"rh_G19_pd",													
-	"RH_19Rnd_9x19_g18",									
-	"rh_p226_pd",													
-	"RH_15Rnd_9x19_usp_pd",								
-	"M1014_pd",														
-	"8Rnd_B_Beneli_Pellets_fix",							
-	"RH_m4maim_pd",												
-	"RH_m4meotech_pd",										
-	"RH_m4macog_pd",											
-	"30Rnd_556x45_Stanag",								
+	"RH_Mk18acog_SD", 
+	"RH_M4meotech_SD", 
+	"RH_M4maim_SD", 
+	"RH_M4macog_SD", 
+	"RH_M4a1acog_SD", 
+	"RH_Mk18eot_SD", 
+	"RH_Mk18aim_SD", 
+	"RH_pythonma_SD",
+	"tcg_mossberg_SD", 
+	"tcg_remington_SD",
+	"RH_M16A4eotech_SD",
+	"RH_M16A4acog_SD",
+	"RH_M4a1eotech_SD", 
+	"RH_M4a1aim_SD", 
+	"RH_p226_SD", 
+	"RH_g17_SD", 
+	"revolver_SD", 
+	"x26",		
+	"8Rnd_B_Beneli_Pellets_fix",								
+	"30Rnd_556x45_Stanag_SD", 
+	"RH_15Rnd_9x19_usp_SD",	
+	"x26_Mag", 
+	"Rnd_9x19_glock17_SD",
+	"Rnd_45ACP_SD",
+	"RH_6Rnd_357_Mag_SD",									
 	"olrpg_pdupcv_slick_pb", 							
 	"olrpg_pd_charger_slk", 							
 	"olrpg_pdtaurus_slick", 							
@@ -966,21 +930,34 @@ _copsgt = [
 
 
 _coplt = [
-	"DDOPP_X3_b",												  
-	"DDOPP_3Rnd_X3",										  
-	"rh_G19_pd",													
-	"RH_19Rnd_9x19_g18",									
-	"rh_p226_pd",													
-	"RH_15Rnd_9x19_usp_pd",								
-	"RH_uspm_pd",													
-	"RH_12Rnd_45cal_usp",									
-	"M1014_pd",														
-	"8Rnd_B_Beneli_Pellets_fix",							
-	"RH_M16a4_ia",
-	"RH_M16A4aim_ia",
-	"RH_M16A4eotech_ia",
-	"RH_M16A4acog_ia",
-	"30Rnd_556x45_Stanag",								
+	"RH_acracog_SD", 
+	"RH_acraim_SD",
+	"RH_acreotech_SD",
+	"RH_Mk18acog_SD", 
+	"RH_M4meotech_SD", 
+	"RH_M4maim_SD", 
+	"RH_M4macog_SD", 
+	"RH_M4a1acog_SD", 
+	"RH_Mk18eot_SD", 
+	"RH_Mk18aim_SD", 
+	"RH_pythonma_SD",
+	"tcg_mossberg_SD", 
+	"tcg_remington_SD",
+	"RH_M16A4eotech_SD",
+	"RH_M16A4acog_SD",
+	"RH_M4a1eotech_SD", 
+	"RH_M4a1aim_SD", 
+	"RH_p226_SD", 
+	"RH_g17_SD", 
+	"revolver_SD", 
+	"x26",		
+	"8Rnd_B_Beneli_Pellets_fix",								
+	"30Rnd_556x45_Stanag_SD", 
+	"RH_15Rnd_9x19_usp_SD",	
+	"x26_Mag", 
+	"Rnd_9x19_glock17_SD",
+	"Rnd_45ACP_SD",
+	"RH_6Rnd_357_Mag_SD",							
 	"Stinger_swat",												
 	"Stinger_mag",												
 	"olrpg_pdlt", 												
@@ -995,21 +972,37 @@ _coplt = [
 ];
 
 
-_copcpt = [
-	"DDOPP_X3_b",												  
-	"DDOPP_3Rnd_X3",										  
-	"rh_G19_pd",													
-	"RH_19Rnd_9x19_g18",									
-	"rh_p226_pd",													
-	"RH_15Rnd_9x19_usp_pd",								
-	"RH_uspm_pd",													
-	"RH_12Rnd_45cal_usp",									
-	"M1014_pd",														
-	"8Rnd_B_Beneli_Pellets_fix",							
-	"RH_masbaim_pd",											
-	"RH_masbeotech_pd",										
-	"RH_masbacog_pd",											
-	"30Rnd_556x45_Stanag",								
+_copcpt = [	
+	"RH_acracog_SD", 
+	"RH_acraim_SD",
+	"RH_acreotech_SD",
+	"RH_Mk18acog_SD", 
+	"RH_M4meotech_SD", 
+	"RH_M4maim_SD", 
+	"RH_M4macog_SD", 
+	"RH_M4a1acog_SD", 
+	"RH_Mk18eot_SD", 
+	"RH_Mk18aim_SD", 
+	"RH_pythonma_SD",
+	"tcg_mossberg_SD", 
+	"tcg_remington_SD",
+	"RH_M16A4eotech_SD",
+	"RH_M16A4acog_SD",
+	"RH_M4a1eotech_SD", 
+	"RH_M4a1aim_SD", 
+	"RH_p226_SD", 
+	"RH_deaglemzb_SD",
+	"RH_g17_SD", 
+	"revolver_SD", 
+	"x26",		
+	"8Rnd_B_Beneli_Pellets_fix",								
+	"30Rnd_556x45_Stanag_SD", 
+	"RH_15Rnd_9x19_usp_SD",	
+	"x26_Mag", 
+	"Rnd_9x19_glock17_SD",
+	"RH_7Rnd_50_AE_SD",
+	"Rnd_45ACP_SD",
+	"RH_6Rnd_357_Mag_SD",									
 	"Stinger_swat",												
 	"Stinger_mag",												
 	"olrpg_pdcapt", 											
@@ -1025,21 +1018,7 @@ _copcpt = [
 ];
 
 
-_copastchief = [
-	"DDOPP_X3_b",												  
-	"DDOPP_3Rnd_X3",										  
-	"rh_G19_pd",													
-	"RH_19Rnd_9x19_g18",									
-	"rh_p226_pd",													
-	"RH_15Rnd_9x19_usp_pd",								
-	"RH_uspm_pd",													
-	"RH_12Rnd_45cal_usp",									
-	"RH_deaglemzb_cmd",										
-	"RH_7Rnd_50_AE",											
-	"M1014_pd",														
-	"8Rnd_B_Beneli_Pellets_fix",							
-	"LEXX_SCAR_H_CQC_CCO_BLACK_cmd",			
-	"20Rnd_762x51_B_SCAR_pd",							
+_copastchief = [						
 	"Stinger_swat",												
 	"Stinger_mag",												
 	"olrpg_pdassistantchief", 					  
@@ -1056,21 +1035,7 @@ _copastchief = [
 ];
 
 
-_copchief = [
-	"DDOPP_X3_b",												  
-	"DDOPP_3Rnd_X3",										  
-	"rh_G19_pd",													
-	"RH_19Rnd_9x19_g18",									
-	"rh_p226_pd",													
-	"RH_15Rnd_9x19_usp_pd",								
-	"RH_uspm_pd",													
-	"RH_12Rnd_45cal_usp",									
-	"RH_deaglemzb_cmd",										
-	"RH_7Rnd_50_AE",											
-	"M1014_pd",														
-	"8Rnd_B_Beneli_Pellets_fix",							
-	"LEXX_SCAR_H_CQC_CCO_BLACK_cmd",			
-	"20Rnd_762x51_B_SCAR_pd",							
+_copchief = [						
 	"Stinger_swat",												
 	"Stinger_mag",												
 	"sahco",															
@@ -1161,7 +1126,8 @@ _copswat1 = [
 	"SWAT",																
 	"Rnd_9x19_M9",												
 	"M1014_pd",														
-	"8Rnd_B_Beneli_Pellets_fix",							
+	"8Rnd_B_Beneli_Pellets_fix",
+	"30Rnd_556x45_Stanag",
 	"RH_M4a1_swat",												
 	"RH_M4a1gl_swat",											
 	"6Rnd_Smoke_M203",										
@@ -1176,7 +1142,8 @@ _copswat2 = [
 	"RAB_L111A1_swat",																				
 	"SWAT",																
 	"Rnd_9x19_M9",												
-	"RH_usp_swat",												
+	"RH_usp_swat",				
+	"30Rnd_556x45_Stanag",	
 	"RH_15Rnd_9x19_usp_swat",							
 	"RH_M4a1eotech_swat",									
 	"RH_M4a1gleotech_swat",								
@@ -1194,7 +1161,8 @@ _copswat3 = [
 	"SmokeShell",													
 	"RAB_L111A1_swat",																				
 	"SWAT",																
-	"Rnd_9x19_M9",												
+	"Rnd_9x19_M9",				
+	"30Rnd_556x45_Stanag",	
 	"RH_usp_swat",												
 	"RH_15Rnd_9x19_usp_swat",							
 	"RH_M4sdeotech_swat",									
@@ -1211,7 +1179,8 @@ _copswat3 = [
 
 _copswat4 = [
 	"DDOPP_X3",														
-	"DDOPP_3Rnd_X3",																						
+	"DDOPP_3Rnd_X3",	
+	"30Rnd_556x45_Stanag",	
 	"RH_uspsd_swat",											
 	"RH_M4sdaim_wdl_swat",								
 	"M40A3_sheriff",
@@ -1228,7 +1197,8 @@ _copswat5 = [
 	"DDOPP_3Rnd_X3",											
 	"SmokeShell",													
 	"RAB_L111A1_swat",																				
-	"SWAT",																
+	"SWAT",			
+	"30Rnd_556x45_Stanag",
 	"Rnd_9x19_M9",												
 	"RH_usp_swat",												
 	"RH_15Rnd_9x19_usp_swat",							
@@ -1252,22 +1222,23 @@ _copswat6 = [
 _copswatvehicle = [
 	"olrpg_swat", 												
 	"olrpg_swatf350",											
-	"olrpg_swat06",												
-	"olrpg_swat_command",									
+	"olrpg_swat06",	
+	"DD_DOD15Charger_U_P_Black",
+	"DD_DOD12Charger_U_P_Black",
+	"DD_CHE15Suburban_U_P_SWAT",									
 	"olrpg_swat_bearcat"									
 ];
 
 
 _cid = [
-	"DDOPP_X3",														
-	"DDOPP_3Rnd_X3",											
-	"RH_p226_cid",												
-	"RH_15Rnd_9x19_usp_pd",								
-	"RH_Mk18_cid",
-	"RH_Mk18eot_cid",
-	"RH_Mk18aim_cid",
-	"RH_Mk18acog_cid",
-	"30Rnd_556x45_Stanag",								
+	"RH_Mk18eot_SD",
+	"RH_Mk18aim_SD",
+	"RH_Mk18acog_SD",
+	"RH_usp_SD",
+	"x26",
+	"30Rnd_556x45_Stanag_SD",
+	"x26_Mag",
+	"RH_15Rnd_9x19_usp_SD",							
 	"olrpg_detcv_black", 									
 	"olrpg_detcv_sands", 									
 	"olrpg_detcv_maroon", 								
@@ -1287,18 +1258,14 @@ _cid = [
 
 
 _copia = [
-	"DDOPP_X3",														
-	"DDOPP_3Rnd_X3",											
-	"RH_M16a4_ia",
-	"RH_M16A4Aim_ia",
-	"RH_M16A4eotech_ia",
-	"RH_M16A4acog_ia",
-	"RH_acraim_pmc",
-	"RH_acreotech_pmc",
-	"RH_acracog_pmc",
-	"RH_m1911old",												
-	"RH_8Rnd_45cal_m1911",								
-	"30Rnd_556x45_Stanag",								
+	"RH_Mk18eot_SD",
+	"RH_Mk18aim_SD",
+	"RH_Mk18acog_SD",
+	"RH_usp_SD",
+	"x26",
+	"30Rnd_556x45_Stanag_SD",
+	"x26_Mag",
+	"RH_15Rnd_9x19_usp_SD",									
 	"olrpg_dettahoe_maroon", 							
 	"olrpg_dettahoe_grey", 								
 	"olrpg_dettahoe_blue", 								
@@ -1316,38 +1283,20 @@ _copia = [
 ];
 
 
-_copfto = [
-	"DDOPP_X3",														
-	"DDOPP_3Rnd_X3",											
-	"RH_m4sbreotech_cmd",										
-	"RH_m4sbraim_cmd",												
-	"RH_m4sbracog_cmd",
-	"30Rnd_556x45_Stanag",								
+_copfto = [								
 	"olrpg_pd_charger_slk",								
 	"olrpg_pdtaurus_slick",								
 	"olrpg_pdptcv_slick_pb"								
 ];
 
 
-_undercover = [
-	"DDOPP_X3",														
-	"DDOPP_3Rnd_X3",											
+_undercover = [											
 	"tcg_taurus_civ2",										
 	"tahoe_black_cb",											
 	"suburban_black",											
 	"transit_pink",												
 	"monaco_red",													
-	"CL_LAMBORGHINI_GT3",									
-	"RH_g19_cid",													
-	"RH_17Rnd_9x19_g19",									
-	"RH_bull_cid",												
-	"RH_6Rnd_44_Mag",											
-	"KPFS_KarSmaf_uc",										
-	"KPFS_10Rnd_762x39_SKS",							
-	"AK_47_M_uc",													
-	"30Rnd_762x39_AK47",									
-	"Huntingrifle_uc",										
-	"5x_22_LR_17_HMR",										
+	"CL_LAMBORGHINI_GT3",										
 	"reparaturkit",							
 	"Itembag",														
 	"bjerk",															
@@ -1394,7 +1343,8 @@ _terrorboatshop = [
 	"cl_container_boat",									
 	"cl_sport_fishing_boat",							
 	"Fishing_boat",												
-	"cl_inflatable",											
+	"cl_inflatable",
+	"radio",	
 	"lcu"																	
 ];
 
@@ -1528,16 +1478,19 @@ _gangshop_buy = [
 
 _td = [
 	"olrpg_f350_ambo_emt1",								
-	"olrpg_gmc_emt2_ambo",																					
+	"olrpg_gmc_emt2_ambo",
+	"olrpg_gmc_breast_ambo",																					
 	"wulf",																
-	"Bread",															
+	"Bread",
+	"radio",	
 	"doshd"
 ];
 
 
 _td2 = [
 	"olrpg_f350_ambo_untrained",					
-	"olrpg_gmc_untrained_ambo",						
+	"olrpg_gmc_untrained_ambo",
+	"olrpg_gmc_breast_ambo",						
 	"olrpg_brush_5",																								
 	"wulf",																
 	"Bread",															
@@ -1546,7 +1499,8 @@ _td2 = [
 
 
 _td3 = [
-	"olrpg_f350_ambo_emt2",								
+	"olrpg_f350_ambo_emt2",
+	"olrpg_gmc_breast_ambo",								
 	"olrpg_gmc_emt1_ambo",								
 	"olrpg_2006_paramedic",																				
 	"wulf",																
@@ -1609,7 +1563,8 @@ _td6 = [
 
 
 _td7 = [
-	"olrpg_emschief_cv",									
+	"DD_CHE15Suburban_U_P_DarkRed_FC",
+	"olrpg_emschief_cv",	
 	"olrpg_emschief",											
 	"olrpg_emsdistrictchief",						  
 	"olrpg_emsyoshi",											
@@ -1851,111 +1806,115 @@ _copavsh = [
 ];
 
 _PMC_General = [
-"RH_M4a1acog",
-"RH_M4sdaim",
-"RH_acracog",
-"RH_mp7sd",
-"RH_krisssdRFX",
-"RH_mk14tsdacog",
-"RH_M4macog",
-"RH_M4maim",
-"RH_M4meotech",
-"RH_M4m",
-"glock17_EP1",
-"30Rnd_556x45_Stanag_bm",
-"olrpg_pmcgen",
+"RH_M4a1acog_PMC",
+"RH_M4sdaim_PMC",
+"RH_acracog_PMC",
+"RH_mp7sd_PMC",
+"RH_krisssdRFX_PMC",
+"RH_mk14tsdacog_PMC",
+"RH_M4macog_PMC",
+"RH_M4maim_PMC",
+"RH_M4meotech_PMC",
+"RH_M4m_pmc",
+"M1014_PMC",
+"glock17_EP1_PMC",
+"30Rnd_556x45_Stanag_PMC",
+"Rnd_B_Beneli_Pellets_PMC",
+"RH_46x30mm_40RND_SD_Mag_PMC",
+"Rnd_9x19_glock17",
 "olrpg_pmccharger",
 "olrpg_pmctahoe"
 ];
 
 _PMC_Commander = [
-"RH_acracog",
-"RH_mp7sd",
-"RH_krisssdRFX",
-"RH_mk14tsdacog",
-"RH_M4macog",
-"RH_M4maim",
-"RH_M4meotech",
-"RH_M4m",
-"M1014",
-"30Rnd_556x45_Stanag_bm",
-"glock17_EP1",
-"olrpg_pmccom",
+"RH_acracog_PMC",
+"RH_mp7sd_PMC",
+"RH_krisssdRFX_PMC",
+"RH_mk14tsdacog_PMC",
+"RH_M4macog_PMC",
+"RH_M4maim_PMC",
+"RH_M4meotech_PMC",
+"RH_M4m_pmc",
+"M1014_PMC",
+"glock17_EP1_PMC",
+"30Rnd_556x45_Stanag_PMC",
+"Rnd_B_Beneli_Pellets_PMC",
+"RH_46x30mm_40RND_SD_Mag_PMC",
+"Rnd_9x19_glock17",
 "olrpg_pmccharger",
 "olrpg_pmctahoe"
 ];
 
 _PMC_Lieutenant = [
-"RH_M4macog",
-"RH_M4maim",
-"RH_M4meotech",
-"RH_M4m",
-"M1014",
-"glock17_EP1",
-"30Rnd_556x45_Stanag_bm",
-"olrpg_pmclt",
+"RH_M4macog_PMC",
+"RH_M4maim_PMC",
+"RH_M4meotech_PMC",
+"RH_M4m_pmc",
+"M1014_PMC",
+"glock17_EP1_PMC",
+"30Rnd_556x45_Stanag_PMC",
+"Rnd_B_Beneli_Pellets_PMC",
+"Rnd_9x19_glock17",
 "olrpg_pmccharger"
 ];
 
 _PMC_Sergeant = [
-"RH_M4maim",
-"RH_M4meotech",
-"RH_M4m",
-"M1014",
-"glock17_EP1",
-"30Rnd_556x45_Stanag_bm",
-"olrpg_pmcsgt",
+"RH_M4maim_PMC",
+"RH_M4meotech_PMC",
+"RH_M4m_pmc",
+"M1014_PMC",
+"glock17_EP1_PMC",
+"30Rnd_556x45_Stanag_PMC",
+"Rnd_B_Beneli_Pellets_PMC",
+"Rnd_9x19_glock17",
 "olrpg_pmctahoe"
 ];
 
 _PMC_Corporal = [
-"RH_M4meotech",
-"RH_M4m",
-"M1014",
-"glock17_EP1",
-"30Rnd_556x45_Stanag_bm",
-"olrpg_pmccpl",
+"RH_M4meotech_PMC",
+"RH_M4m_pmc",
+"M1014_PMC",
+"glock17_EP1_PMC",
+"30Rnd_556x45_Stanag_PMC",
+"Rnd_B_Beneli_Pellets_PMC",
+"Rnd_9x19_glock17",
 "olrpg_pmctahoe"
 ];
 
 _PMC_Private = [
-"RH_M4m",
-"M1014",
-"glock17_EP1",
-"30Rnd_556x45_Stanag_bm",
-"olrpg_pmcpvt",
+"RH_M4m_pmc",
+"M1014_PMC",
+"glock17_EP1_PMC",
+"30Rnd_556x45_Stanag_PMC",
+"Rnd_B_Beneli_Pellets_PMC",
+"Rnd_9x19_glock17",
 "olrpg_pmctahoe"
 ];
 
 _PMC_Recruit = [
-"M1014",
-"glock17_EP1",
-"30Rnd_556x45_Stanag_bm",
-"olrpg_pmcpvt"
+"M1014_PMC",
+"glock17_EP1_PMC",
+"Rnd_B_Beneli_Pellets_PMC",
+"Rnd_9x19_glock17"
 ];
 
 _PMC_Marksman  = [
-"RH_mk14ebrgc",
-"BAF_LRR_scoped",
-"RH_hk417sdsp",
-"RH_g17sd",
-"RH_uspsd",
-"30Rnd_556x45_Stanag_bm",
+"RH_mk14ebrgc_PMC",
+"BAF_LRR_scoped_PMC",
+"glock17_EP1_PMC",
+"5Rnd_86x70_L115A1_PMC",
+"20Rnd_762x51_DMR_PMC",
+"Rnd_9x19_glock17",
 "olrpg_pmcmark",
 "olrpg_pmcsub6",
 "olrpg_pmcsub12"
 ];
 
 _PMC_Aviation  = [
-"RH_HK53",
-"RH_umpsdaim",
-"RH_UMP",
-"RH_g19",
-"RH_uspm",
-"30Rnd_556x45_Stanag_bm",
+"sorry_pmc",
 "olrpg_pmcpilot",
 "MH6J_EP1",
-"olrpg_pmcjayhunarmed",
+"olrpg_pmcjayhunarmed"
 ];
 
 INV_ItemShops = [

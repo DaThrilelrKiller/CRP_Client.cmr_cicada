@@ -34,7 +34,7 @@ if (isNil '_closeVcl')exitWith {systemChat localize "STRS_inventar_lockpick_zuwe
 			};
 			
 			_keychain = _car getVariable ["dtk_keys",[]];
-			_keychain set[count _keychain,(getPlayerUID _play)];
+			_keychain set[count _keychain,(getPlayerUID player)];
 			_car setVariable ["dtk_keys",_keychain, true];
 			systemChat  localize "STRS_inventar_lockpick_success";																															
 			["ALL",[player," "],"network_SwitchMove",false,true]call network_MPExec;

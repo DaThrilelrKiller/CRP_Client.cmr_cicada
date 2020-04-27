@@ -112,9 +112,9 @@ dtk_active_modules =
 "Mounted",
 "Gates",
 "House",
-"Spawn",
 "Drugs",
 "Donuts",
+"Spawn",
 "TFAR"
 ];
 

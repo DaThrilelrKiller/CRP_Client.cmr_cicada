@@ -9,7 +9,7 @@ if (dtk_civ)then {
 
 	_holder = createVehicle ["weaponholder", getPosATL _corps, [], 0, "CAN_COLLIDE" ];
 	{
-		if (!(_x in ["ItemMap","ItemCompass","ItemRadio","ItemWatch"]) && {!(_x call TFAR_fnc_isRadio)})then {
+		if (!(_x in ["ItemMap","ItemCompass","ItemRadio","ItemWatch","ItemGPS"]) && {!(_x call TFAR_fnc_isRadio)})then {
 			_holder addWeaponCargoGlobal [_x,1];
 		};
 	} count _weps;

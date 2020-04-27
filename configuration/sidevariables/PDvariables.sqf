@@ -14,6 +14,7 @@ INV_apps = [
 ["app_store","\crp_data\images\ipad\store.PAA"," [(BuildingCollapesLogic call shops_index)]call shops_open; "],
 ["app_settings","\crp_data\images\ipad\controls.PAA","call keypress_menu"],
 ["app_background","\crp_data\images\ipad\background.PAA","call ipad_background"],
+["app_gangs","\crp_data\images\ipad\gangs.PAA","closeDialog 0;call gang_open"],
 ["app_vote","\crp_data\images\ipad\vote.PAA","call goverment_vote"]
 ];
 

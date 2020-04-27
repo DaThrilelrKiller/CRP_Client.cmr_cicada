@@ -951,5 +951,63 @@ class admin_sound
 	
 };
 
+class admin_menu
+{
+	idd = -1;
+	
+	class ControlsBackground
+	{
+		class RscBackground_2201 : Rsc_lable 
+		{
+			idc = 2201;
+			x = 0.180053*safezoneW+safezoneX;
+			y = 0.176985*safezoneH+safezoneY;
+			w = 0.167972*safezoneW;
+			h = 0.0340016*safezoneH;
+			
+		};
+		class RscBackground_2200 : RscBackground 
+		{
+			idc = 2200;
+			x = 0.180053*safezoneW+safezoneX;
+			y = 0.210987*safezoneH+safezoneY;
+			w = 0.167972*safezoneW;
+			h = 0.561026*safezoneH;
+			
+		};
+		
+	};
+	class Controls
+	{
+		class dummybutton : RscDummy 
+		{
+			idc = 2;
+			
+		};
+		class RscCombo_2100 : RscCombo 
+		{
+			idc = 2100;
+			x = 0.188052*safezoneW+safezoneX;
+			y = 0.227987*safezoneH+safezoneY;
+			w = 0.143976*safezoneW;
+			h = 0.0340016*safezoneH;
+			colorDisabled[] = {0.2,0.2,0.2,1};			
+		};
+		class RscListbox_1500 : RscListBox 
+		{
+			idc = 1500;
+			x = 0.188052*safezoneW+safezoneX;
+			y = 0.27899*safezoneH+safezoneY;
+			w = 0.143976*safezoneW;
+			h = 0.476022*safezoneH;
+			colorDisabled[] = {0.2,0.2,0.2,1};
+			colorSelectBackground[] = {0.5,0,0,0.5};
+			onLBSelChanged = "_this call admin_exec1;";			
+		};
+		
+	};
+	
+};
+
 
 

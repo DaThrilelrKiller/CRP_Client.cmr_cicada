@@ -6,6 +6,10 @@ _pos = if (vehicle player == player)then{[safeZoneX,SafeZoney]}else{[safeZoneX,S
 
 if !(call compile _condition)exitWith {};
 
+if (isNil "chat_messages")then {
+	chat_messages = [];
+};
+
 _message = "";
 chat_messages set [count chat_messages,_text];
 

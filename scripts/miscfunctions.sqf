@@ -87,21 +87,41 @@ ISSE_IsVictim =
 
 
 INV_CreateWeapon =
- 
 {
-	private["_class", "_menge"];
+	private["_class", "_menge", "_cache", "_weapons", "_names", "_amount","_index"];
 	_class = _this select 0;
 	_menge = _this select 1;
-	gear_box addWeaponCargo[_class,_menge];
+	_cache = shop_object getVariable ["Gear",[[[],[]],[[],[]]]];
+	_weapons = _cache select 0;
+	
+	_names = _weapons select 0;
+	_amount = _weapons select 1;
+	
+	_index = count _names;
+	_names set [_index,_class];
+	_amount set [_index,_menge];
+	_cache set [0,_weapons];
+
+	shop_object setVariable ["Gear",_cache];
 };
 
 INV_CreateMag =
- 
 {
-	private["_class", "_menge"];
+	private["_class", "_menge", "_cache", "_magazines", "_names", "_amount","_index"];
 	_class = _this select 0;
 	_menge = _this select 1;
-	gear_box addMagazineCargo[_class, _menge];
+	_cache = shop_object getVariable ["Gear",[[[],[]],[[],[]]]];
+	_magazines = _cache select 1;
+	
+	_names = _magazines select 0;
+	_amount = _magazines select 1;
+	
+	_index = count _names;
+	_names set [_index,_class];
+	_amount set [_index,_menge];
+	_cache set [1,_magazines];
+
+	shop_object setVariable ["Gear",_cache];
 };
 
 display_keypress = {

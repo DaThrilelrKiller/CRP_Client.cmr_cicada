@@ -21,3 +21,12 @@ if (_art == "steuernMayor") then
 	
 	"hint ""The Governor Has Changed The Taxes!"";"call network_broadcast;
 };
+
+if (_art == "clientgesetz") then
+{
+	_nummer = _this select 1;
+	_text   = _this select 2;
+	if (_nummer == -1) exitWith {};
+	format ["GesetzArray SET [%1, ""%2""];
+	hint format [localize ""STRS_gilde_gesetze_public"", %1, ""%2""];", _nummer, _text] call network_broadcast;
+};

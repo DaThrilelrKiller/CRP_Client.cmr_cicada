@@ -33,9 +33,6 @@ if (_amount <= 0) exitWith {
 	dtk_shopactive = false;
 };
 
-_cost = _amount*_costwithTax; 
- _cost =  round (_cost);
-
 switch(_itemtype)do
 {
 	case "Item":
@@ -57,6 +54,10 @@ switch(_itemtype)do
 			systemChat format ['You have made a extra %1$ by selling this item during your quest',_costIncreat];
 		};
 		
+		
+		_cost = _amount*_costwithTax; 
+		 _cost =  round (_cost);
+		
 		[player,"geld",_cost] call storage_add;
 		[player,_item,-_amount] call storage_add;
 		if(primaryweapon player == "" and secondaryweapon player == "")then{player playmove "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"}else{player playmove "AinvPknlMstpSlayWrflDnon"};																																														
@@ -66,7 +67,9 @@ switch(_itemtype)do
 	{
 		_weaps      = {_x == (_info call config_class)} count weapons player;																														
 		if (_weaps == 0) exitWith {systemChat  localize "STRS_inv_buyitems_sell_notenough";};	
-		if (_weaps < _amount) then {_amount = _weaps;};																												
+		if (_weaps < _amount) then {_amount = _weaps;};			
+		_cost = _amount*_costwithTax; 
+		 _cost =  round (_cost);
 		[player,"geld",_cost] call storage_add;
 		if(primaryweapon player == "" and secondaryweapon player == "")then{player playmove "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"}else{player playmove "AinvPknlMstpSlayWrflDnon"};																																														
 
@@ -84,7 +87,9 @@ switch(_itemtype)do
 	{																															
 		_mags      = {_x == (_info call config_class)} count magazines player;																														
 		if (_mags == 0) exitWith {systemChat  localize "STRS_inv_buyitems_sell_notenough"; _exitvar = 1};						
-		if (_mags < _amount) then {_amount = _mags;};																																																											
+		if (_mags < _amount) then {_amount = _mags;};		
+		_cost = _amount*_costwithTax; 
+		 _cost =  round (_cost);		
 		[player,"geld",_cost] call storage_add;
 		if(primaryweapon player == "" and secondaryweapon player == "")then{player playmove "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"}else{player playmove "AinvPknlMstpSlayWrflDnon"};																																														
 		
@@ -107,12 +112,20 @@ switch(_itemtype)do
 		if (not (alive _vehicle))            exitWith {systemChat  localize "STRS_inv_buyvehicles_destroyed"; _exitvar = 1};										
 		if ((_vehicle distance player) > 25) exitWith {systemChat  localize "STRS_inv_buyitems_sell_toofar"; _exitvar = 1};																												
 		deleteVehicle _vehicle;
+		
+		_cost = _amount*_costwithTax; 
+		 _cost =  round (_cost);
+		
 		[player,"geld",_cost] call storage_add;		
 		systemChat  format [localize "STRS_inv_shop_vehiclesold", (_cost call string_intToString)];																																
 	};
 	case "App":
 	{
 		if (_item in INVAppsInstalled)then {
+		
+		_cost = 1*_costwithTax; 
+		 _cost =  round (_cost);
+		
 		[player,"geld",_cost] call storage_add;
 		INVAppsInstalled = INVAppsInstalled - [_item];
 		
@@ -125,6 +138,9 @@ switch(_itemtype)do
 	{
 		if ((vehicle player) == player)exitWith {};
 		[vehicle player,_classname]call siren_remove;
+		
+		_cost = 1*_costwithTax; 
+		 _cost =  round (_cost);
 		[player,"geld",_cost] call storage_add;
 	};
 	default 

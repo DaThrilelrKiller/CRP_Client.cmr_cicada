@@ -8,7 +8,6 @@ if (dtk_side == "PD")exitWith {
 		ctrlEnable [100, false];
 		ctrlEnable [102, false];
 		ctrlEnable [103, false];
-		ctrlEnable [104, false];
 		ctrlEnable [105, false];
 	}else{
 		ctrlEnable [106, false];
@@ -25,7 +24,6 @@ if (dtk_side == "UN")exitWith {
 	};
 	ctrlEnable [102, false];
 	ctrlEnable [103, false];
-	ctrlEnable [104, false];
 	ctrlEnable [105, false];
 	ctrlEnable [106, false];
 	ctrlEnable [107, false];

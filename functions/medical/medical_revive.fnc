@@ -15,8 +15,8 @@ Prams:
 private ["_Deadplayer","_LifePack"];
 
 _Deadplayer = _this select 0;
-['ALL',player,{_this allowDamage true;},false,true]call network_MPExec;
-['ALL',player,{_this setUnconscious false;},false,true]call network_MPExec;
+['ALL',_Deadplayer,{_this allowDamage true;},false,true]call network_MPExec;
+['ALL',_Deadplayer,{_this setUnconscious false;},false,true]call network_MPExec;
 _Deadplayer setUnconscious false;
 _Deadplayer allowDamage true;
 

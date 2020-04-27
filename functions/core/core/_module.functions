@@ -28,5 +28,6 @@
 "NearbyVehicle",
 "check",
 "getName",
-"reveal"
+"reveal",
+"version"
 ];

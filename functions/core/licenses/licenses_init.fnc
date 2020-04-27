@@ -14,3 +14,6 @@ private ["_name","_price","_condition","_lic","_index"];
 	}count (_x select 1);
 	true
 }forEach dtk_licenses;
+
+["DTK_Shop_DMV_mrk",getPos DTK_Shop_DMV,nil,nil,"colorOrange","mil_dot",nil,"Licence Center"]call core_createMarkerLocal;
+["DTK_Shop_DMV2_mrk",getPos DTK_Shop_DMV2,nil,nil,"colorOrange","mil_dot",nil,"Licence Center"]call core_createMarkerLocal;
