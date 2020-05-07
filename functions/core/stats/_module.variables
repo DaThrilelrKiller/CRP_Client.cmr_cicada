@@ -10,7 +10,10 @@ statsave_ranks = [
 ["PMC Command", "PMCCommand_id"]
 ];
 
-v_save_locs = [];
+DTK_Land_Saves = [];
+DTK_Plane_Saves = [];
+DTK_Heli_Saves = [];
+DTK_Boat_Saves = [];
 
 adminlevel4 = false;
 adminlevel3 = false;

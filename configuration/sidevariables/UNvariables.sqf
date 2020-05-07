@@ -1,5 +1,6 @@
 ﻿dtk_civ         	= false;						
 dtk_cop          	= false;	
+iscop = false;
 dtk_ems       	= true;	
 dtk_sidename = "Emergency Medical Service";
 

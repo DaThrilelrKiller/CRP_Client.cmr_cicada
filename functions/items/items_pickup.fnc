@@ -26,6 +26,8 @@ if ([player,_item,_amount] call storage_add)then {
 	systemChat "You have reached your max weight";
 };
 
+sleep 1;
+
 pickingup = false;
 
 

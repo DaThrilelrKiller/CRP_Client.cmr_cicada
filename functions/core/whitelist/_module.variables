@@ -11,8 +11,8 @@ whitelist_data = [
 ["Sergeant","Sgt_id",{SwagDevs}],
 ["Corporal","Cpl_id",{SwagDevs  or Cpt_id or Lt_id}],
 ["Senior Patrol Officer","PO3_id",{SwagDevs  or Cpt_id or Lt_id}],
-["Patrol Officer","PO2_id",{SwagDevs  or Cpt_id or Lt_id}],
-["Rookie Patrol Officer","PO1_id",{SwagDevs  or Cpt_id or Lt_id}],
+["Patrol Officer","PO2_id",{SwagDevs  or Cpt_id or Lt_id or Sgt_id or Cpl_id}],
+["Rookie Patrol Officer","PO1_id",{SwagDevs  or Cpt_id or Lt_id or Sgt_id or Cpl_id}],
 
 ["K-9 Officer","K9_id",{SwagDevs  or Cpt_id or Lt_id}],
 ["Police Avation","PDAviation_id",{SwagDevs  or Cpt_id or Lt_id}],

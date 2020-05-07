@@ -8,5 +8,6 @@
 "tweet",
 "send",
 "emojis",
-"show"
+"show",
+"getName"
 ];

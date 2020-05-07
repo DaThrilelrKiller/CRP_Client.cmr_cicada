@@ -46,3 +46,7 @@ deleteMarker ("medical_" + name _Deadplayer);
 LifePack animate ["AEDFront", 0];;
 waitUntil {LifePack animationPhase "AEDFront" == 0};
 deleteVehicle LifePack;
+
+_msg = format ["%1 was revived by %2",name _Deadplayer,name player];
+["ALL",_msg,{systemchat _this},false,true]call network_MPExec;
+[player,"geld",5000] call storage_add;

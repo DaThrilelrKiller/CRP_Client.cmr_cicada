@@ -24,7 +24,9 @@ admin_actions = [
 ["TP2ME",{SwagDevs or adminlevel3 or adminlevel4}],
 ["TPME2THEM",{SwagDevs or adminlevel3 or adminlevel4}],
 ["Comp 100k",{SwagDevs or adminlevel3 or adminlevel4}],
-["Comp 1M",{SwagDevs or adminlevel4}]
+["Comp 1M",{SwagDevs or adminlevel4}],
+["Start Brush Fire",{SwagDevs or adminlevel4}],
+["Delete Brush Fires",{SwagDevs or adminlevel4}]
 ];
 
 

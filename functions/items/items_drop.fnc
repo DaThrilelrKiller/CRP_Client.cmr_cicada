@@ -27,7 +27,7 @@ if (_item call config_dropable) then {
 	_object call core_setVarName;	
 	
 	
-	["ALL",[_object,['','noscript.sqf',format['%1 call items_pickup',[_object, _item, _amount]],25,false,true,'LeanRight',format ['player distance _target < 5 && {!([_target,"Pick up (%3) %1 (E)","%2"]call tag_show)}',_name13,_image,_amount]]],"network_addAction",false,true]call network_MPExec;
+	["ALL",[_object,['','noscript.sqf',format['%1 spawn items_pickup',[_object, _item, _amount]],25,false,true,'LeanRight',format ['player distance _target < 5 && {!([_target,"Pick up (%3) %1 (E)","%2"]call tag_show)}',_name13,_image,_amount]]],"network_addAction",false,true]call network_MPExec;
 	
 	} else {
 		systemChat  localize "STRS_inv_inventar_drop_zuwenig";

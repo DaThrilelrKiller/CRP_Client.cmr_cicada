@@ -127,4 +127,17 @@ switch (_text) do
 	
 		closeDialog 0;
 	};
+	case "Start Brush Fire": 
+	{
+		["SERVER",[],"s_ems_brushFire",true,false]call network_MPExec;
+		systemchat "You have started a brush fire!";
+		closeDialog 0;
+	};
+	case "Delete Brush Fires": 
+	{
+		{
+			_x setDamage 1;
+		}forEach allMissionObjects "HeliHEmpty";
+		closeDialog 0;
+	};
 };

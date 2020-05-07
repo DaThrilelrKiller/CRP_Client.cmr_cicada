@@ -6,7 +6,6 @@ if (isNil "_location")then {
 };
 
 
-
 _pos = call{
 	if (typeName _location == "ARRAY")exitWith {_location};
 	if (typeName _location == "OBJECT")exitWith {getPos _location};
@@ -15,7 +14,10 @@ _pos = call{
 
 _dir = call{
 	if (typeName _location == "ARRAY")exitWith {getDir player};
-	if (typeName _location == "OBJECT")exitWith {getDir _location};
+	if (typeName _location == "OBJECT")exitWith {
+		if (typeOf _location == "Land_SS_hangar")exitWith {(getDir _location) - 180};
+		getDir _location
+	};
 	if (typeName _location == "STRING")exitWith {getDir (missionnamespace getVariable _location)};
 };
 
@@ -46,6 +48,7 @@ _classname =  _name call config_class;
 	["ALL",[_vehicle,['','noscript.sqf',format["[%1]call vehicle_getIn;",_vehicle],-1,false,true,'LeanRight','vehicle player == _target']],"network_addAction",false,true]call network_MPExec;
 	["ALL",[_vehicle,['','noscript.sqf',format["[%1]call vehicle_getIn;",_vehicle],-1,false,true,'LeanRight','player distance _target < 5 && {(_target call vehicle_side) == dtk_side or dtk_side == "CIV"} && {vehicle player == player} && {!(locked _target)} && {!([_target,"Get In (E)",""]call tag_show)}']],"network_addAction",false,true]call network_MPExec;
 	["ALL",[_vehicle,['','noscript.sqf',format["[%1]call vehicle_menu;",_vehicle],-1,false,true,'LeanRight','player distance _target < 5 && {(_target call vehicle_side) != dtk_side} && {vehicle player == player} && {dtk_side == "PD"} && {!([_target,"Vehicle Menu (E)",""]call tag_show)}']],"network_addAction",false,true]call network_MPExec;
+	["ALL",[_vehicle,"ems_SwitchGear",_vehicle],"network_syncJip",false,true]call network_MPExec;
 
 	
 	_plate = _this select 4;

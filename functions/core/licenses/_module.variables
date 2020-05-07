@@ -53,5 +53,6 @@ dtk_licenses = [
 	['DTK_License_cop_Undercover',["DTK_ATM_UC"],'Undercover License',10000,{Undercover_id}],
 	['DTK_License_civ_PMC',["OL_ATM_PMC"],'PMC License',50000,{true}],
 	['DTK_License_civ_PMCCommand',["OL_ATM_PMC"],'PMC Command License',50000,{true}],
+	["none",[],"n/a",0,"false"],
 	["",[],"n/a",0,"false"]
 ];

@@ -42,7 +42,7 @@ if ((player distance getmarkerpos "forest" < 175) or (player distance getmarkerp
 			{
 				_object = "Suitcase" createVehicle getPos player;
 				_object call core_setVarName;
-				["ALL",[_object,['','noscript.sqf',format['%1 call items_pickup',[_object, "wood", 1]],-1,false,true,'LeanRight',format ['!([_target,"Pick up %1 (E)","%2"]call tag_show)',"Wood","data\images\items\lummber"]]],"network_addAction",false,true]call network_MPExec;
+				["ALL",[_object,['','noscript.sqf',format['%1 spawn items_pickup',[_object, "wood", 1]],-1,false,true,'LeanRight',format ['!([_target,"Pick up %1 (E)","%2"]call tag_show)',"Wood","data\images\items\lummber"]]],"network_addAction",false,true]call network_MPExec;
 			};
 			
 			

@@ -3,14 +3,27 @@
 _object = _this select 0;
 _distance = _this select 1;
 
-if (isNil "v_save_locs")exitWith {false};
-if (count v_save_locs < 1)exitWith {false};
+_return = {
+	if (getMarkerPos _x distance getPos _object < _distance)exitWith {"Land"};
+}forEach DTK_Land_Saves;
 
-_return = 
-{
-	if (getMarkerPos _x distance getPos _object < _distance)exitWith {true};
+if (!isNil "_return")exitWith {_return};
 
-}forEach v_save_locs;
+_return = {
+	if (getMarkerPos _x distance getPos _object < _distance)exitWith {"Plane"};
+}forEach DTK_Plane_Saves;
 
-_return = [false,true]select !isNil "_return";
+if (!isNil "_return")exitWith {_return};
+
+_return = {
+	if (getMarkerPos _x distance getPos _object < _distance)exitWith {"Helicopter"};
+}forEach DTK_Heli_Saves;
+
+if (!isNil "_return")exitWith {_return};
+
+_return = {
+	if (getMarkerPos _x distance getPos _object < _distance)exitWith {"Boat"};
+	""
+}forEach DTK_Boat_Saves;
+
 _return

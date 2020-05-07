@@ -2,13 +2,6 @@
 
 if (processscriptrunning == 1) exitwith {
 	systemChat  "We're Working as fast as we can. Please wait till we are done before giving us another task";
-	spamcount = spamcount + 1; 
-	if (spamcount == 5) then {
-		systemChat "I have spammed the Process script 5 times, ignoring the text that tells me I cannot run this script multiple times"
-	};
-	if (spamcount == 10) then {
-		systemChat "I have spammed the Process script 10 times, ignoring the text that tells me I cannot run this script multiple times"
-	};
 }; 
 
 processscriptrunning = 1;

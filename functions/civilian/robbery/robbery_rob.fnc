@@ -14,6 +14,10 @@ Prams:
 
 private ["_place","_name","_message","_amount"];
 
+if(playersNumber west < 2) exitwith { 
+	systemChat "There must be atleast 2 Police Officers online to rob this!" 
+};
+
 
 _place = _this select 0;
 _name = _this select 1;
@@ -61,7 +65,7 @@ _place setVariable ["robbery_avalible",true,true];
 _object = createVehicle ["Suitcase", position player, [], 10, "NONE"];
 
 _object call core_setVarName;
-["ALL",[_object,['','noscript.sqf',format['%1 call items_pickup',[_object, "evidence", 1]],25,false,true,'LeanRight',format ['dtk_cop && {player distance _target < 5} && {!([_target,"Pick up %1 (E)","%2"]call tag_show)}',_name,"\crp_data\images\tags\oil"]]],"network_addAction",false,true]call network_MPExec;
+["ALL",[_object,['','noscript.sqf',format['%1 spawn items_pickup',[_object, "evidence", 1]],25,false,true,'LeanRight',format ['dtk_cop && {player distance _target < 5} && {!([_target,"Pick up %1 (E)","%2"]call tag_show)}',_name,"\crp_data\images\tags\oil"]]],"network_addAction",false,true]call network_MPExec;
 
 
 local_useBankPossible = false;

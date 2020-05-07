@@ -15,7 +15,7 @@ for "_i" from 20 to 1 step -1 do {
 			['Taking Money...','\crp_data\images\items\money',true,_object]call tag_notify;
 			
 			waitUntil{animationstate player != "AinvPknlMstpSlayWrflDnon_medic"};
-			[player,'geld',100000]call storage_add;
+			[player,'geld',60000]call storage_add;
 		_object animate [format["bun%1anim",_selection],1];
 	};
 

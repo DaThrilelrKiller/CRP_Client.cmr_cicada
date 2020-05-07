@@ -7,5 +7,7 @@ DTK_Shop_Gangarea3,
 DTK_Shop_Gangarea4
 ];
 
+DTK_GangLimit = 6;
+
 dtk_notAllowed = [
 ];

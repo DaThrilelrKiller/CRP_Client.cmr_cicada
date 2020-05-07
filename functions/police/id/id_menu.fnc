@@ -5,9 +5,13 @@ createDialog "dtk_infomation";
 }forEach dtk_months;
 {
 	lbAdd [2,_x];
-}forEach dtk_days;{
-	lbAdd [3,str _x];
-}forEach dtk_years;{
+}forEach dtk_days;
+
+for "_i" from 1930 to 2013 step 1 do {
+	lbAdd [3,str _i];
+};
+
+{
 	lbAdd [4,_x];
 }forEach dtk_faces;
 

@@ -43,7 +43,7 @@ if (_isInArea) exitwith {
 		_object setPos [ getPos _object select 0, (getPos _object select 1)+4, (getPos _object select 2)];
 			
 		_object call core_setVarName; 
-		["ALL",[_object,['','noscript.sqf',format['%1 call items_pickup',[_object, _resource, _amount]],25,false,true,'LeanRight',format ['player distance _target < 5 && {!([_target,"Pick up %1 (E)","%2"]call tag_show)}',_name,_icon]]],"network_addAction",false,true]call network_MPExec;
+		["ALL",[_object,['','noscript.sqf',format['%1 spawn items_pickup',[_object, _resource, _amount]],25,false,true,'LeanRight',format ['player distance _target < 5 && {!([_target,"Pick up %1 (E)","%2"]call tag_show)}',_name,_icon]]],"network_addAction",false,true]call network_MPExec;
 		titletext ["Restart the machine it has shut down...", "PLAIN DOWN", 3];
 	};
 	working=false;

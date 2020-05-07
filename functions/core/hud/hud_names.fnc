@@ -1,7 +1,9 @@
-﻿private ["_text","_paint","_control"];
+﻿private ["_text","_paint","_control","_save"];
 
-if ([player,2] call stats_nearSave)then {
-		_text = ["Retrive Vehicle (E)","Save Vehicle (E)"]select (vehicle player != player);
+_save = [player,10] call stats_nearSave;
+if (_save != "")then {
+		if (call tag_active)exitWith {};
+		_text = [format ["Retrive Vehicle (%1) (E)",_save],format["Save Vehicle (%1) (E)",_save]]select (vehicle player != player);
 		titleRsc["Rtags", "PLAIN"];
 		_control = (uiNamespace getVariable 'TAGS_HUD') displayCtrl 64438;
 		_control ctrlSetText _text;

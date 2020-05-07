@@ -17,6 +17,7 @@ _save =
 		[dtk_side, "Warrants",(player getvariable "cdb_warrants")],
 		[dtk_side, "Notes",(player getvariable "cdb_notes")],
 		[dtk_side, "Storage",BuildingCollapesLogic getVariable["dtk_storage",[]]],
+		[dtk_side, "House_Gear",BuildingCollapesLogic getVariable["Gear",""]],
 		[dtk_side, "Apps",INVAppsInstalled],
 		["Main", "lifestate", (lifeState player)],
 		[dtk_side, "seasion", [s_seasion,time,getPos player,dtk_side]],

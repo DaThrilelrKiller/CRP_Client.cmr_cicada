@@ -2,7 +2,7 @@ private ["_display","_control"];
 
 disableSerialization;
 
-_display = (uiNamespace getVariable 'tag_notify');
+_display = (uiNamespace getVariable 'tag');
 _control = _display displayCtrl 54;	
 
-(ctrlShown _control)
+((ctrlText _control) != "")

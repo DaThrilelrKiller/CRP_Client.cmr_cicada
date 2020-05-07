@@ -10,20 +10,20 @@ _speed = speed _vehicle;
 _random = floor random 2;
 
 
-if (isNil "_vehicle") exitwith {v_pitavailable = true; systemchat format["you are not in range to pit a vehicle."];};
+if (isNil "_vehicle") exitwith {v_pitavailable = true; systemchat format["You are not in range to pit a vehicle."];};
 if (_speed <= 39) exitwith {systemchat format["Your Target Must Be Going At Least 40 km/h!"];};
 
 if ((_random == 1) && {_vehicle distance player <= 7}) then {
-	_vehicle setVehicleInit 'this setfuel 0'; processInitCommands;
-	systemchat "You have disabled the fleeing vehicle!";
+	_vehicle setVehicleInit 'this setfuel .10'; processInitCommands;
+	systemchat "You have drained 90% of their fuel!";
 
 } else {
 	systemchat format["You have failed to disable the vehicle!"];
 };
 
-systemchat format["Your Pit Maneuver Is Now Disabled. It Will Be Available In 10 Seconds."];
+systemchat format["Your Pit Maneuver Is Now Disabled. It Will Be Available In 3 Minutes."];
 v_pitavailable = false;
-sleep 10;
+sleep 180;
 v_pitavailable = true;
 systemchat format["Your Pit Maneuver Is Now Available."];
 

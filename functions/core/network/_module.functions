@@ -17,5 +17,7 @@
 "log",
 "variable",
 "addAction",
-"execvm"
+"execvm",
+"syncJip",
+"JipRecive"
 ];

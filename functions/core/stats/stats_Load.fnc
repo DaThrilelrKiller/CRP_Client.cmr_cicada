@@ -47,6 +47,12 @@ player setVariable ["cdb_warrants",(_stats select 10),true];
 player setVariable ["cdb_notes",(_stats select 11),true];
 BuildingCollapesLogic setVariable ["dtk_storage",(_stats select 22)];
 
+if (count(_stats select 24) != 0)then {
+	BuildingCollapesLogic setVariable ["Gear",(_stats select 24)];
+};
+
+
+
 INVAppsInstalled = (_stats select 13);
 if ((_stats select 14) == "UNCONSCIOUS")then {
 ["ALL",["dtk_client",format ["[RELOG DETECTION] caught %2%1 loging in after being dead, this could be a mistake", name player, player],3],"network_chat",false,false]call network_MPExec;

@@ -1,5 +1,6 @@
 ﻿dtk_civ         	= true;						
 dtk_cop          	= false;	
+iscop = false;
 dtk_ems      	= false;
 dtk_sidename = "Civilian";
 

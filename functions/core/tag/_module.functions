@@ -5,5 +5,6 @@
 "handler",
 "notify",
 "motd",
-"screenPos"
+"screenPos",
+"active"
 ];

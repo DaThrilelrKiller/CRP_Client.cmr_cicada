@@ -11,7 +11,7 @@ switch(_action)do
 
 	case "pong":
 	{
-		[(_this select 2),["score",diag_fps,diag_fpsMin,(serverTime - (_this select 1)),count core_loop_array,(owner (_this select 2)),dtk_LagTime],'core_performance',false,false]call network_MPExec;
+		[(_this select 2),["score",diag_fps,diag_fpsMin,(serverTime - (_this select 1)),count core_loop_array,(owner (_this select 2)),dtk_LagTime,count DTK_Sync],'core_performance',false,false]call network_MPExec;
 	};
 	
 	case "score":
@@ -35,6 +35,7 @@ switch(_action)do
 		format ["Groups: %1",count allGroups],
 		format ["Number of Modules: %1",count dtk_active_modules],
 		format ["Number of Functions: %1",dtk_fnc_total],
+		format ["Active JIP Syncs: %1",_this select 7],
 		format ["Number of Active Keypress events: %1",count dtk_keypress]
 		];
 	};

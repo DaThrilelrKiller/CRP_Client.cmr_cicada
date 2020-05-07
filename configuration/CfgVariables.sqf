@@ -16,7 +16,6 @@ INV_FarmItemArray =
 [[["lsdfield_1",30]],"Unprocessed_lsd",15,4,["Man"]], 
 [[["cocainefield_4_1",30]],"Unprocessed_cocaine",20,9,["Man"]],
 [[["herionfield_2",30]],"Unprocessed_Heroin",20,9,["Man"]],
-[[["potfield_3",30]],"Unprocessed_Marijuana",20,9,["Man"]],
 
 [[["DiamondArea",20]],"Diamond rock",15,1,["Man"]],
 [[["farmarea2",90]],"getreide",20,10,["tractor","oldtruc2","oldtruc2a"]],

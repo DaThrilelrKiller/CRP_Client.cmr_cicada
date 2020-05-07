@@ -1,4 +1,5 @@
 ﻿dtk_cop			= true;
+iscop = true;
 dtk_civ	      	= false;		
 dtk_ems       	= false;
 dtk_sidename = "Police Officer";

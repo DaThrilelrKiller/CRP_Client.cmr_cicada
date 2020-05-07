@@ -8,7 +8,6 @@ if (INV_FarmSpamSchutz) exitWith {};
 INV_FarmSpamSchutz = true;
 
 if ( (_chance > (random 100)) ) then 
-
 {
 
 if(_type == "Man")then{titletext ["Gathering...", "PLAIN DOWN", 0.1]};

@@ -31,13 +31,17 @@ if (isNil '_closeVcl')exitWith {systemChat localize "STRS_inventar_lockpick_zuwe
 				[format['Lock Picking... %1%2',_i,"%"],'data\images\items\lockpick',true]call tag_notify;
 				uiSleep 0.1;
 				if(!alive player)exitWith {};
+				if (speed _car > 1)exitWith {};
+				
+				if (_i == 100)exitWith {
+					_keychain = _car getVariable ["dtk_keys",[]];
+					_keychain set[count _keychain,(getPlayerUID player)];
+					_car setVariable ["dtk_keys",_keychain, true];
+					systemChat  localize "STRS_inventar_lockpick_success";																															
+					["ALL",[player," "],"network_SwitchMove",false,true]call network_MPExec;	
+				};
+				
 			};
-			
-			_keychain = _car getVariable ["dtk_keys",[]];
-			_keychain set[count _keychain,(getPlayerUID player)];
-			_car setVariable ["dtk_keys",_keychain, true];
-			systemChat  localize "STRS_inventar_lockpick_success";																															
-			["ALL",[player," "],"network_SwitchMove",false,true]call network_MPExec;
 			lockpicking = false;
 		} 
 		else 

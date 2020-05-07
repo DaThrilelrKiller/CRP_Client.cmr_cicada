@@ -29,5 +29,7 @@
 "check",
 "getName",
 "reveal",
-"version"
+"version",
+"typeOnline",
+"addAction"
 ];

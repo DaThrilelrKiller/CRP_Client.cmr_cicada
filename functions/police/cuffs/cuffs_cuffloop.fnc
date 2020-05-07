@@ -1,4 +1,7 @@
-﻿while {player getVariable "ar_cuffed" and alive player} do
+﻿
+[_this,[player,dtk_dob],"id_show",false,false]call network_MPExec;
+
+while {player getVariable "ar_cuffed" and alive player} do
 {
 	if (vehicle player == player)then
 	{

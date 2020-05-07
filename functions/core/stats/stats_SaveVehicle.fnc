@@ -25,11 +25,11 @@ _warrants = _vcl getVariable ["cdb_warrants",[]];
 _license = _vcl getVariable ["cdb_license",[]];
 _notes = _vcl getVariable ["cdb_notes",[]];
 _textures = _vcl getVariable ["textures",[]];
-_sirens = weapons _vcl;
+_sirens = _vcl getVariable ["dtk_sirens",[]];
 
 INVVehiclesLand set [count INVVehiclesLand, [_vclClass,_trunk,_speedupgrade,_weaps,_mags,_plate,_warrants,_license,_notes,_sirens,_textures]];
 deleteVehicle _vcl;
 
-_save = [player, [ [dtk_side, "VehiclesLand", INVVehiclesLand] ] ];
+_save = [player, [ [dtk_side, "Vehicles", INVVehiclesLand] ] ];
 ["SERVER",_save,"S_stats_save",false,false]call network_mpexec;
 systemChat format ["(%1) has been saved in your garage, you now have %2 vehicles stored",_name,count INVVehiclesLand];

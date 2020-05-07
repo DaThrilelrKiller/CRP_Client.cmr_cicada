@@ -22,5 +22,4 @@ if (_art == "use") then {
 	{
 		[player,_item,-1] call storage_add;
 	};
-
 };
