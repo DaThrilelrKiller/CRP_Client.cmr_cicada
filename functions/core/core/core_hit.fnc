@@ -1,4 +1,7 @@
 ﻿private ["_unit"];
+
+if (lifeState player == "UNCONSCIOUS" or !alive player)exitWith {};
+
 if((vehicle player == player) && INV_isArmed) then 
 {
 	if (dtk_stunning)exitWith {};

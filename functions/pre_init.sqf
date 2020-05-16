@@ -86,6 +86,7 @@ dtk_active_modules =
 ["Civilian","Chop"],
 ["Civilian","Vault"],
 ["Civilian","CodePad"],
+["Civilian","Lab"],
 ["Civilian","Gallery"],
 
 "EMS",

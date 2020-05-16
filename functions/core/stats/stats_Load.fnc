@@ -45,10 +45,10 @@ player setVariable ["Rifle",(_stats select 8),true];
 player setVariable ["DDOPP_X3",(_stats select 9),true];
 player setVariable ["cdb_warrants",(_stats select 10),true];
 player setVariable ["cdb_notes",(_stats select 11),true];
-BuildingCollapesLogic setVariable ["dtk_storage",(_stats select 22)];
+DTK_House_Logic setVariable ["dtk_storage",(_stats select 22)];
 
 if (count(_stats select 24) != 0)then {
-	BuildingCollapesLogic setVariable ["Gear",(_stats select 24)];
+	DTK_House_Logic setVariable ["Gear",(_stats select 24)];
 };
 
 

@@ -3,5 +3,6 @@
 "init",
 "spikes",
 "disarm",
-"panic"
+"panic",
+"SearchBox"
 ];

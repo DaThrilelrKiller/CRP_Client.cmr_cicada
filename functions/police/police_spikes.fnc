@@ -20,6 +20,7 @@ while {!isNull _this} do {
 		_vehicle setHit ["wheel_2_1_steering", 1];
 		_vehicle setHit ["wheel_1_2_steering", 1];
 		_vehicle setHit ["wheel_2_2_steering", 1];
+		_vehicle setFuel ((fuel _vehicle) - 0.25);
 		deleteVehicle _this;
 	};
 	sleep 0.01;

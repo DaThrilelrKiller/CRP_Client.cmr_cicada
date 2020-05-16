@@ -10,6 +10,10 @@ private ["_data","_img","_text","_color","_shop"];
 		_color = if ([_shop]call shops_illegal)then {"ColorRed"}else{"ColorBlue"};
 		
 		[("shop_" + str _ForEachIndex),getPos (_x select 0),nil,nil,_color,"mil_dot",[1,1],(_x select 1 select 1)]call core_createMarkerLocal;
+		
+		if (_color == "ColorRed" && {dtk_cop})then {
+			(_x select 0) addaction ["Search Shop","noscript.sqf",format["[%1]call police_SearchBox;",_ForEachIndex], 25, false, true, "LeanRight","player distance _target < 5 && {K9_id}"];
+		};
 
 		_data = _x select 1;
 		_img = _data select 0;

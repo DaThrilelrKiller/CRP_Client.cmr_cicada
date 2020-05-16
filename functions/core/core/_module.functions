@@ -31,5 +31,6 @@
 "reveal",
 "version",
 "typeOnline",
-"addAction"
+"addAction",
+"someoneLooking"
 ];

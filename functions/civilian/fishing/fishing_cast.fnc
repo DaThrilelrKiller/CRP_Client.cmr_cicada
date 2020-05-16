@@ -38,7 +38,7 @@ if (_amount == 0)then {
 }else
 {	
 	_name = _type call config_displayname;
-	[format ["You have caought %1 %2",_amount,_name],'\sfg_textures\items\fishing-pole']call tag_notify;
+	[format ["You have caught %1 %2",_amount,_name],'\sfg_textures\items\fishing-pole']call tag_notify;
 	[player,_type,_amount] call storage_add
 };
 

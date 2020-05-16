@@ -5,11 +5,6 @@ _house = _this select 0;
 _building  = nearestBuilding (getMarkerPos _house);
 _price = (typeOf _building)call house_price;
 
-if (call house_limitReached)exitWith {
-	systemchat format ["Sorry, you have reached you max house limit of %1",dtk_houseLimit];
-};
-
-
 if (markerText _house != format ["%1's House", name player])exitWith {
 	systemchat format ["Error: you %1 dont own this house",name player];
 };

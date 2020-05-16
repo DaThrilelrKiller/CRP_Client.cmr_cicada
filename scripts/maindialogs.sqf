@@ -113,15 +113,15 @@ if (_art == "coplog") then
 			_reason = (_civ getvariable ["cdb_warrants",[]]);
 			_bounty = _civ call cdb_bounty;
 			
-			
-			lbAdd [1, (format ["%1 (Bounty: %3): %2 is wanted for:", _civ, name _civ, _bounty])];
-			{
-				lbAdd [1, _x select 0]; 
-			
-			
-			}forEach _reason;
-			
-			lbAdd [1, _trennlinie];
+			if (count _reason > 0)then {
+				lbAdd [1, (format ["%1 (Bounty: %3): %2 is wanted for:", _civ, name _civ, _bounty])];
+				{
+					lbAdd [1, _x select 0]; 
+				
+				
+				}forEach _reason;
+				lbAdd [1, _trennlinie];
+			};
 			
 		};
 

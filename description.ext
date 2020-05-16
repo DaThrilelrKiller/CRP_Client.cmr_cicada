@@ -65,6 +65,7 @@ class MissionSQM
 #include "data\dialogs\codepad.hpp"
 #include "data\dialogs\test.hpp"
 #include "data\dialogs\factory_dialog.hpp"
+#include "data\dialogs\DTK_Lab.hpp"
 #include "data\dialogs\devcon.hpp"
 
 class RscTitles

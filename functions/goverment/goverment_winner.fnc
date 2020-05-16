@@ -24,7 +24,10 @@ for "_i" from 0 to 1 step 0 do {
 		_message = format ["The elections for governor had ended %1 has won the election with %2 votes",name (_winner select 0),(_winner select 1)];
 		server setVariable ["governor",(_winner select 0),true];
 		["ALL",["dtk_client","Elections",_message],"Main_Notification",true,false]call network_MPExec;
-		["ALL",[],{V_voted = false},false,false]call network_MPExec;
+		["ALL",[],{
+			V_voted = false
+			player setVariable ["Votes",nil,true];
+		},false,false]call network_MPExec;
 
 	};
 	sleep 900;

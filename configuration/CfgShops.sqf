@@ -116,6 +116,7 @@ _es = [
 	"hideout",												
 	"fishing_rod",
 	"radio",	
+	"Lab_Desk",
 	"bunnyhop"											
 ];
 
@@ -319,7 +320,20 @@ _sc8 =
 	"il_fordcv_black",										
 	"il_fordcv_darkblue",									
 	"il_fordcv_maroon",										
-	"il_fordcv_sandstone"								
+	"il_fordcv_sandstone"							
+];
+
+_jeep = [
+	"cl_wrangler_black",										
+	"cl_wrangler_blue",										
+	"cl_wrangler_brown",										
+	"cl_wrangler_darkgreen",										
+	"cl_wrangler_darkred",										
+	"cl_wrangler_gray",										
+	"cl_wrangler_green",										
+	"cl_wrangler_orange",											
+	"cl_wrangler_purple",										
+	"cl_wrangler_red"
 ];
 
 
@@ -1176,7 +1190,8 @@ _copswat1 = [
 	"RH_M4a1_swat",												
 	"RH_M4a1gl_swat",											
 	"6Rnd_Smoke_M203",										
-	"1Rnd_Smoke_M203_swat"								
+	"1Rnd_Smoke_M203_swat",
+	"bram"
 ];
 
 
@@ -1196,7 +1211,8 @@ _copswat2 = [
 	"RH_M4a1glaim_swat",									
 	"1Rnd_Smoke_M203_swat",								
 	"LEXX_M32_EP1_BLACK_swat",						
-	"6Rnd_Smoke_M203"											
+	"6Rnd_Smoke_M203",
+	"bram"
 ];
 
 
@@ -1218,7 +1234,8 @@ _copswat3 = [
 	"RH_M4a1glacog_swat",									
 	"1Rnd_Smoke_M203_swat",								
 	"LEXX_M32_EP1_BLACK_swat",						
-	"6Rnd_Smoke_M203"											
+	"6Rnd_Smoke_M203",
+	"bram"
 ];
 
 
@@ -1233,7 +1250,8 @@ _copswat4 = [
 	"20Rnd_762x51_DMR",										
 	"BAF_LRR_scoped_swat",								
 	"5Rnd_86x70_L115A1",									
-	"Binocular_Vector"										
+	"Binocular_Vector",
+	"bram"
 ];
 
 
@@ -1254,7 +1272,8 @@ _copswat5 = [
 	"RH_mk14ebrsp_swat",									
 	"20Rnd_762x51_DMR",										
 	"Stinger_swat",												
-	"Stinger_mag"													
+	"Stinger_mag",
+	"bram"
 ];
 
 
@@ -1573,7 +1592,8 @@ _td4 = [
 	"trashhook",
 	"firerake",
 	"fireshovel",
-	"firebroom"
+	"firebroom",
+	"hbar"
 ];
 
 
@@ -1593,7 +1613,8 @@ _td5 = [
 	"trashhook",
 	"firerake",
 	"fireshovel",
-	"firebroom"
+	"firebroom",
+	"hbar"
 ];
 
 
@@ -1998,12 +2019,12 @@ INV_ItemShops = [
     [["PD","Undercover Officer"], _undercover, _undercover, {Undercover_id},'DTK_Shop_UndercoverVehSpawn', true]
 ]],
 [DTK_Shop_LegalWeapon,["Rifle","Licensed Weapon Shop"], [
-    [["pistol","Licensed Pistols"], _pistol, _pistol, {true},'dummyobj', true],
-    [["submachine","Licensed Submachine Guns"], _sub, _sub, {true},'dummyobj', true],
-    [["Rifle","Licensed Rifle Guns"], _rifle, _rifle, {true},'dummyobj', true]
+    [["pistol","Licensed Pistols"], _pistol, _pistol, {dtk_civ},'dummyobj', true],
+    [["submachine","Licensed Submachine Guns"], _sub, _sub, {dtk_civ},'dummyobj', true],
+    [["Rifle","Licensed Rifle Guns"], _rifle, _rifle, {dtk_civ},'dummyobj', true]
 ]],
 [DTK_Shop_Guss,["Rifle","Illegal Weapons Dealer"], [
-    [["Rifle","Illegal Weapons"], _guss, _guss, {true},'dummyobj', true]
+    [["Rifle","Illegal Weapons"], _guss, _guss, {dtk_civ},'dummyobj', true]
 ]],
 [DTK_Shop_Fuel_1,["Gas pump","Mikes Hard Gas"], [
     [["Gas pump","Mikes Hard Gas"], _fs, _fs, {true},'dummyobj', false]
@@ -2048,7 +2069,7 @@ INV_ItemShops = [
     [["pub","Alcohol Shelf"], _pub, _pub, {true},'dummyobj', false]
 ]],
 [DTK_Shop_Assassin,["picture","Illegal Assassins Shop"], [
-    [["picture","Illegal Weapons"], _ass, _ass, {true},'dummyobj', true]
+    [["picture","Illegal Weapons"], _ass, _ass, {dtk_civ},'dummyobj', true]
 ]],
 [DTK_Shop_MayorWeapons,["picture","Government Security Shop"], [
     [["picture","Government Security"], _mgs, _mgs, {true},'DTK_Shop_MayorVehSpawn', true]
@@ -2060,70 +2081,71 @@ INV_ItemShops = [
     [["tools","Equipment"], _es, _es, {true},'dummyobj', true]
 ]],
 [DTK_Shop_UsedCars,["Car","Used Cars"], [
-    [["Car","Used Vehicle Dealership"], _cs1, _cs1, {true},'DTK_CIV_LANDSPAWN1', true]
+    [["Car","Used Vehicle Dealership"], _cs1, _cs1, {dtk_civ},'DTK_CIV_LANDSPAWN1', true]
 ]],
 [DTK_Shop_UsedCarsSheriff,["Car","Used Cars"], [
-    [["Car","Used Vehicle Dealership"], _cs1, _cs1, {true},'DTK_CIV_LANDSPAWN2', true]
+    [["Car","Used Vehicle Dealership"], _cs1, _cs1, {dtk_civ},'DTK_CIV_LANDSPAWN2', true]
 ]],
 [DTK_Shop_FarmEquipment,["Car","Farm Equipment"], [
-    [["Car","Farm Vehicles Dealership"], _cs2, _cs2, {true},nil, true]
+    [["Car","Farm Vehicles Dealership"], _cs2, _cs2, {dtk_civ},nil, true]
 ]],
 [DTK_Shop_MuscleCars,["Car","Muscle Cars"], [
-    [["Car","Muscle Cars Dealership"], _sc1, _sc1, {true},nil, true]
+    [["Car","Muscle Cars Dealership"], _sc1, _sc1, {dtk_civ},nil, true]
 ]],
 [DTK_Shop_ChargerMazda,["Car","Charger & Mazda Dealer"], [
-    [["Car","Charger & Mazda Dealership"], _sc2, _sc2, {true},nil, true]
+    [["Car","Charger & Mazda Dealership"], _sc2, _sc2, {dtk_civ},nil, true]
 ]],
 [DTK_Shop_LowEndSports,["Car","Low-End Sports Vehicles"], [
-    [["Car","Low-End Sports Dealership"], _sc3, _sc3, {true},nil, true]
+    [["Car","Low-End Sports Dealership"], _sc3, _sc3, {dtk_civ},nil, true]
 ]],
 [DTK_Shop_MidEndSports,["Car","Mid-Level Sports Vehicles"], [
-    [["Car","Mid-Level Sports Dealership"], _sc4, _sc4, {true},nil, true]
+    [["Car","Mid-Level Sports Dealership"], _sc4, _sc4, {dtk_civ},nil, true]
 ]],
 [DTK_Shop_HighEndSports,["Car","High-End Sports Vehicles"], [
-    [["Car","High-Level Sports Dealership"], _sc5, _sc5, {true},nil, true]
+    [["Car","High-Level Sports Dealership"], _sc5, _sc5, {dtk_civ},nil, true]
 ]],
 [DTK_Shop_Nissan,["Car","Nissan Vehicles"], [
-    [["Car","Nissan Dealership"], _sc6, _sc6, {true},'DTK_Shop_NissanVehSpawn', true],
-    [["Car","Nissan350z Dealership"], _sc7, _sc7, {true},'DTK_Shop_NissanVehSpawn', true]
+    [["Car","Nissan Dealership"], _sc6, _sc6, {dtk_civ},'DTK_Shop_NissanVehSpawn', true],
+    [["Car","Nissan350z Dealership"], _sc7, _sc7, {dtk_civ},'DTK_Shop_NissanVehSpawn', true]
 ]],
-[DTK_Shop_Ford,["Car","Ford Vehicles"], [
-    [["Car","Ford Dealership"], _sc8, _sc8, {true},nil, true]
+[DTK_Shop_Ford,["Car","Ford and Jeep Dealer"], [
+    [["Car","Ford Dealership"], _sc8, _sc8, {dtk_civ},nil, true],
+	[["Car","Jeep Dealership"], _jeep, _jeep, {dtk_civ},nil, true]
 ]],
 [DTK_Shop_BMW,["Car","BMW Vehicles"], [
-    [["Car","BMW Dealership"], _sc9, _sc9, {true},'DTK_Shop_BMWVehSpawn', true]
+    [["Car","BMW Dealership"], _sc9, _sc9, {dtk_civ},'DTK_Shop_BMWVehSpawn', true]
 ]],
 [DTK_Shop_Tahoe,["Car","Tahoe Vehicles"], [
-    [["Car","Tahoe Dealership"], _tahoe, _tahoe, {true},nil, true]
+    [["Car","Tahoe Dealership"], _tahoe, _tahoe, {dtk_civ},nil, true]
 ]],
 [DTK_Shop_Pickup,["Car","Pickup Vehicles"], [
-    [["Car","Pickup Dealership"], _ps, _ps, {true},nil, true]
+    [["Car","Pickup Dealership"], _ps, _ps, {dtk_civ},nil, true]
 ]],
 [DTK_Shop_Taxi,["Car","Taxi Vehicles"], [
-    [["Car","Taxi Dealership"], _tx, _tx, {true},nil, true]
+    [["Car","Taxi Dealership"], _tx, _tx, {dtk_civ},nil, true]
 ]],
 [DTK_Shop_Bicycle,["Car","Bicycles"], [
     [["Car","Bicycle Shop"], _bsj, _bsj, {true},'DTK_Shop_BicycleVehSpawn', true]
 ]],
 [DTK_Shop_BikeShop,["quad","Mikes Bikes"], [
-    [["quad","Motorcycle Dealership"], _mbs, _mbs, {true},nil, false],
-    [["quad","Quadbike Dealership"], _qbs, _qbs, {true},nil, true],
-    [["quad","Sports Motocycle Dealership"], _qbss, _qbss, {true},nil, true]
+    [["quad","Motorcycle Dealership"], _mbs, _mbs, {dtk_civ},nil, false],
+    [["quad","Quadbike Dealership"], _qbs, _qbs, {dtk_civ},nil, true],
+    [["quad","Sports Motocycle Dealership"], _qbss, _qbss, {dtk_civ},nil, true]
 ]],
 [DTK_Shop_Truckshop,["Car","Truck and Bus Shops"], [
-    [["Car","Truck & Bus Dealership"], _ts, _ts, {true},nil, true]
+    [["Car","Truck & Bus Dealership"], _ts, _ts, {dtk_civ},nil, true]
 ]],
 [DTK_Shop_SportsTruck,["Car","Sports Truck Shops"], [
-    [["Car","Sports Truck Dealership"], _sts, _sts, {true},nil, true]
+    [["Car","Sports Truck Dealership"], _sts, _sts, {dtk_civ},nil, true]
 ]],
 [DTK_Shop_AirShop,["heli","Aircraft Shops"], [
-    [["heli","Airplane Dealership"], _as, _as, {true},'DTK_Shop_AirShopVehSpawn', true],
-    [["plane","Commercial Airplane Dealership"], _asc, _asc, {true},'DTK_Shop_AirShopVehSpawn', true],
-    [["heli","Helicopters & Jets"], _assa, _assa, {true},'DTK_Shop_AirShopVehSpawn', true]
+    [["heli","Airplane Dealership"], _as, _as, {dtk_civ},'DTK_Shop_AirShopVehSpawn', true],
+    [["plane","Commercial Airplane Dealership"], _asc, _asc, {dtk_civ},'DTK_Shop_AirShopVehSpawn', true],
+    [["heli","Helicopters & Jets"], _assa, _assa, {dtk_civ},'DTK_Shop_AirShopVehSpawn', true]
 ]],
 [DTK_Shop_AirShopChalnik,["heli","Chalnik Aircraft Shop"], [
-    [["heli","Helicopters & Jets"], _assa, _assa, {true},'DTK_Shop_AirShopChalnikVehSpawn', true],
-    [["plane","Airplane Dealership"], _as, _as, {true},'DTK_Shop_AirShopChalnikVehSpawn', true]
+    [["heli","Helicopters & Jets"], _assa, _assa, {dtk_civ},'DTK_Shop_AirShopChalnikVehSpawn', true],
+    [["plane","Airplane Dealership"], _as, _as, {dtk_civ},'DTK_Shop_AirShopChalnikVehSpawn', true]
 ]],
 [DTK_Shop_Boat1,["Boat","Boat Shops"], [
     [["Boat","Boat Dealership"], _bs, _bs, {true},'DTK_Shop_BoatVehSpawn', true]
@@ -2135,19 +2157,19 @@ INV_ItemShops = [
     [["picture","Bank Insurance"], _ins, _ins, {true},'dummyobj', false]
 ]],
 [DTK_Shop_SellResource,["oil","Sell Resources"], [
-    [["oil","Sell Resourcese"], _rs, _rs, {true},'dummyobj', false],
-    [["oil","Oil Dealer"], _emptyshop, _os, {true},'dummyobj', false]
+    [["oil","Sell Resourcese"], _rs, _rs, {dtk_civ},'dummyobj', false],
+    [["oil","Oil Dealer"], _emptyshop, _os, {dtk_civ},'dummyobj', false]
 ]],
 [DTK_Shop_WhaleD,["Whale","Whale Dealer"], [
-    [["Whale","Whale Dealer"], _emptyshop, _ws, {true},'dummyobj', false]
+    [["Whale","Whale Dealer"], _emptyshop, _ws, {dtk_civ},'dummyobj', false]
 ]],
 [DTK_Shop_Terror,["picture","Terror Equipment"], [
-    [["picture","Terror Equipment"], _terrorshop, _terrorshop, {true},'DTK_Shop_TerrorVehSpawn', true],
-    [["picture","Terror Air Vehicles"], _terrorhelishop, _terrorhelishop, {true},'DTK_Shop_TerrorVehSpawn', true],
-    [["picture","Terror Boats"], _terrorboatshop, _terrorboatshop, {true},'DTK_Shop_TerrorBoatSpawn', true]
+    [["picture","Terror Equipment"], _terrorshop, _terrorshop, {dtk_civ},'DTK_Shop_TerrorVehSpawn', true],
+    [["picture","Terror Air Vehicles"], _terrorhelishop, _terrorhelishop, {dtk_civ},'DTK_Shop_TerrorVehSpawn', true],
+    [["picture","Terror Boats"], _terrorboatshop, _terrorboatshop, {dtk_civ},'DTK_Shop_TerrorBoatSpawn', true]
 ]],
 [DTK_Shop_BarelyLegal,["picture","Barely Legal"], [
-    [["picture","Barely Legal"], _shady, _shady, {true},'dummyobj', false]
+    [["picture","Barely Legal"], _shady, _shady, {dtk_civ},'dummyobj', false]
 ]],
 [DTK_Shop_GangBox1,["submachine",""], [
     [["submachine","Gang Shop"], _gangshop_buy, _gangshop_buy, {((call gang_name) == ['DTK_GangArea_Zone_1_Flag'] call zone_owner)},'dummyobj', true]
@@ -2162,25 +2184,25 @@ INV_ItemShops = [
     [["submachine","Gang Shop"], _gangshop_buy, _gangshop_buy, {((call gang_name) == ['DTK_GangArea_Zone_4_Flag'] call zone_owner)},'dummyobj', true]
 ]],
 [DTK_Shop_PawnShop,["picture","Pawn Shop"], [
-    [["picture","Diamond Pawn Shop"], _js, _js, {true},'dummyobj', false]
+    [["picture","Diamond Pawn Shop"], _js, _js, {dtk_civ},'dummyobj', false]
 ]],
 [DTK_Shop_Pharmacy,["picture","Pharmacy"], [
     [["picture","Pharmacy"], _psc, _emptyshop, {true},pharmspawn, false]
 ]],
 [DTK_Shop_Cocaine,["Cocaine","Cocaine Dealer"], [
-    [["Cocaine","Cocaine Dealer"], _dsc, _dsc, {true},'dummyobj', false]
+    [["Cocaine","Cocaine Dealer"], _dsc, _dsc, {dtk_civ},'dummyobj', false]
 ]],
 [DTK_Shop_Marijuana,["Marijuana","Marijuana Dealer"], [
-    [["Marijuana","Marijuana Dealer"], _dsm, _dsm, {true},'dummyobj', false]
+    [["Marijuana","Marijuana Dealer"], _dsm, _dsm, {dtk_civ},'dummyobj', false]
 ]],
 [DTK_Shop_LSD,["Marijuana","LSD Dealer"], [
-    [["Marijuana","LSD Dealer"], _emptyshop, _dsl, {true},'dummyobj', false]
+    [["Marijuana","LSD Dealer"], _emptyshop, _dsl, {dtk_civ},'dummyobj', false]
 ]],
 [DTK_Shop_Heroin,["meth","Heroin Dealer"], [
-    [["meth","Heroin Dealer"], _dsh, _dsh, {true},'dummyobj', false]
+    [["meth","Heroin Dealer"], _dsh, _dsh, {dtk_civ},'dummyobj', false]
 ]],
 [DTK_Shop_Meth,["meth","Meth Dealer"], [
-    [["meth","Meth Dealer"], _msc, _msc, {true},'dummyobj', false]
+    [["meth","Meth Dealer"], _msc, _msc, {dtk_civ},'dummyobj', false]
 ]],
 [DTK_COP_SHOP_BASIC2,["PD","Patrol Officer Equipment"], [
     [["PD","Basic Police Gear"], _copbasic, _copbasic, {dtk_cop},'dummyobj', true]

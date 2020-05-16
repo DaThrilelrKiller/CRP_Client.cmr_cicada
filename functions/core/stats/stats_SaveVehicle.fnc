@@ -1,4 +1,4 @@
-﻿private ["_vcl","_vclClass","_trunk","_speedupgrade","_save","_plate","_warrants","_license","_notes","_sirens","_name"];
+﻿private ["_vcl","_vclClass","_trunk","_speedupgrade","_save","_plate","_warrants","_license","_notes","_sirens","_name","_length","_data","_lengthAfer"];
 _vcl = (vehicle player);
 
 if (_vcl == player)then {
@@ -27,7 +27,17 @@ _notes = _vcl getVariable ["cdb_notes",[]];
 _textures = _vcl getVariable ["textures",[]];
 _sirens = _vcl getVariable ["dtk_sirens",[]];
 
-INVVehiclesLand set [count INVVehiclesLand, [_vclClass,_trunk,_speedupgrade,_weaps,_mags,_plate,_warrants,_license,_notes,_sirens,_textures]];
+_data = [_vclClass,_trunk,_speedupgrade,_weaps,_mags,_plate,_warrants,_license,_notes,_sirens,_textures];
+
+_length = count toArray str INVVehiclesLand;
+_lengthAfer = count toArray str _data;
+_lengthAfer = _lengthAfer + _length;
+
+if (_lengthAfer > 7000)exitWith {
+	systemChat"You have reaching your vehicle save limit, you are unable to store another one at this time";
+};
+
+INVVehiclesLand set [count INVVehiclesLand, _data];
 deleteVehicle _vcl;
 
 _save = [player, [ [dtk_side, "Vehicles", INVVehiclesLand] ] ];

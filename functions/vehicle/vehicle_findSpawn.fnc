@@ -5,7 +5,7 @@ _kind = [player,10]call stats_nearSave;
 if (_kind == "Land")exitWith {
 	_roads = (getPos player) nearRoads 10;
 	_return = if (count _roads != 0)exitWith {_roads select 0};
-	_logic = nearestobjects [getPos player, ["Logic"],20];
+	_logic = nearestobjects [getPos player, ["Logic"],50];
 	_return = if (count _logic != 0)exitWith {_logic select 0};
 };
 

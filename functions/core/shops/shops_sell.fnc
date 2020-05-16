@@ -39,13 +39,6 @@ switch(_itemtype)do
 	{
 		if ([player,_item] call storage_amount == 0) exitWith {systemChat  localize "STRS_inv_buyitems_sell_notenough";};								
 		if ([player,_item] call storage_amount < _amount) then {_amount = ([player,_item] call storage_amount);};
-				
-		if (_info call config_illegal && {_info call config_kind == "drug"}) then
-		{
-			_array = shop_object getvariable["druglist",[]];
-			_array set [count _array,[player, _amount, _cost/_amount]];
-			shop_object setvariable["druglist", _array, true];
-		};
 
 		if (_item in (v_questitems select 1))then 
 		{
@@ -54,7 +47,6 @@ switch(_itemtype)do
 			systemChat format ['You have made a extra %1$ by selling this item during your quest',_costIncreat];
 		};
 		
-		
 		_cost = _amount*_costwithTax; 
 		 _cost =  round (_cost);
 		
@@ -62,6 +54,14 @@ switch(_itemtype)do
 		[player,_item,-_amount] call storage_add;
 		if(primaryweapon player == "" and secondaryweapon player == "")then{player playmove "AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"}else{player playmove "AinvPknlMstpSlayWrflDnon"};																																														
 		systemChat  format [localize "STRS_inv_shop_sold", (_amount call string_intToString), (_info call config_displayname), (_cost call string_intToString)];			
+	
+		if (_info call config_illegal) then{
+			_array = shop_object getvariable["druglist",[]];
+			_array set [count _array,[player, _amount, (_cost/_amount),_item]];
+			shop_object setvariable["druglist", _array, true];
+		};
+	
+	
 	};
 	case "weapon":
 	{

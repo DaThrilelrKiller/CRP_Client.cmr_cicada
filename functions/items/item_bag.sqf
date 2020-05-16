@@ -6,14 +6,12 @@ if (_art == "use") then {
 	_deleted = 0;
 
 	if (vehicle player == player) then {	
-
 		{	
 			deleteVehicle _x;
 			_deleted = _deleted + 1;
 		} count (player nearObjects ["Suitcase", 10]);
 
 		systemChat  format[localize "STRS_inv_items_itemdeleted", _deleted];
-
 	} else {
 		systemChat  "You Must Be On Foot";
 	};

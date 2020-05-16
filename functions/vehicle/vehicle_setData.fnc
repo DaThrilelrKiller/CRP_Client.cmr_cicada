@@ -43,8 +43,8 @@ _vehicle setVariable ['textures',_color,true];
 [_Scriptname,_vehicle]call vehicle_texture;
 
 {
-	_vehicle addWeaponCargo [_x, (_weaps select 1 select _forEachIndex)];
+	_vehicle addWeaponCargoGlobal [_x, (_weaps select 1 select _forEachIndex)];
 }forEach (_weaps select 0);
 {
-	_vehicle addMagazineCargo [_x, (_mags select 1 select _forEachIndex)];
+	_vehicle addMagazineCargoGlobal [_x, (_mags select 1 select _forEachIndex)];
 }forEach (_mags select 0);	

@@ -18,5 +18,7 @@ for "_i" from 0 to 1 step 0 do {
 	if (!isNil "dtk_bank")then {
 		dtk_bank = dtk_bank + _income;
 	};
+	
+	[]call zone_paycheck;
 	[format ["%1 you recived a paycheck of %2$",(name player),_income],'\CA\misc\data\icons\picture_money_CA']call tag_notify;
 };

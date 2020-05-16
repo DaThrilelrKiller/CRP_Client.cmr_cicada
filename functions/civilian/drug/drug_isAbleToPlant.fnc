@@ -12,16 +12,8 @@ Prams:
 	none
 */
 
-
-
-private ["_return","_surface"];
-_return = false;
-_surface = surfaceType position player;
-
-_return = if (DTK_Shop_Gangarea1 distance player > 900) then {true}else {_return};
-_return = if (DTK_Shop_Gangarea2 distance player > 900) then {true}else {_return};
-_return = if (DTK_Shop_Gangarea3 distance player > 900) then {true}else {_return};
-_return = if (DTK_Shop_Gangarea4 distance player > 900) then {true}else {_return};
-_return = if (_surface != "#Default" && {_return})then {_return} else {false};
-
-_return
+if (player distance (getMarkerPos "lsdfield") < 200) exitWith {true};
+if (player distance (getMarkerPos "cocainefield_4_1") < 200) exitWith {true};
+if (player distance (getMarkerPos "herionfield_2") < 200) exitWith {true};
+if (player distance (getMarkerPos "herionfield_2") < 200) exitWith {true};
+(call house_nearHouse)

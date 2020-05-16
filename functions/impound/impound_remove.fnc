@@ -1,6 +1,10 @@
 ﻿private ["_index","_vehicle","_data","_owners","_owner","_name","_side","_unit","_trunk","_upgrade","_weapons","_magazines","_plate","_warrants","_license","_notes","_sirens","_displayname"];
 
 
+if ((lbCurSel 1) == -1)exitWith {
+	systemchat "No vehicle selected";
+};
+
 _index = parseNumber (lbData [1,(lbCurSel 1)]);
 _data = v_impound select _index;
 

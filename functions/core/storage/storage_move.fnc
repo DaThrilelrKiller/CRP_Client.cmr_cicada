@@ -26,12 +26,10 @@ _object = if (player == _from)then {_to}else{_from};
 if (_amount call storage_isNumber)then
 {
 	_amount = parseNumber _amount;
-	if ([_from,_item]call storage_amount <  _amount)exitwith 
-	{
+	if ([_from,_item]call storage_amount <  _amount)exitwith {
 		systemchat "you dont have that much";
 	};
-	if ([_to,_item,_amount]call storage_add)then 
-	{
+	if ([_to,_item,_amount]call storage_add)then {
 		[_from,_item, - _amount]call storage_add;
 		closedialog 0;
 		[_object] call storage_trunk;
